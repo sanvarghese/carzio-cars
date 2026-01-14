@@ -1,32 +1,6 @@
-/*
-Theme Name: RevAuto
-Author: namespace-it
-Author URI: https://themeforest.net/user/namespace-it
-Description: RevAuto - Car Dealer & Services Html Template
-Version: 1.0.0
-*/
 /* CSS Table Of Content Ends Here */
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&amp;display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap");
-/* :root {
-  --body: #fff;
-  --black: #000;
-  --white: #fff;
-  --theme: #4376fb;
-  --theme-fade: #4377fb21;
-  --theme-fade-2: #4377fb62;
-  --theme2: #ffbf25;
-  --header: #000000;
-  --text: #555555;
-  --text-2: #0a111e;
-  --text-fade: #5f5f5f;
-  --border: #d5d5d5;
-  --border-2: #e6e6e6;
-  --bg: #f4f6fa;
-  --box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.06);
-  --footer: #0a111e;
-  --max-width: 1380px;
-} */
 
 :root {
   --body: #070210;
@@ -1922,13 +1896,13 @@ span {
 
 .feature-car-wrapper .car-list-box .theme-btn {
   width: 100%;
-  background-color: var(--white);
+  background-color: var(--theme);
   color: var(--header);
   border-radius: 4px;
 }
 
 .feature-car-wrapper .car-list-box .theme-btn:hover {
-  color: var(--theme);
+  /* color: var(--theme); */
 }
 
 .feature-car-section {
@@ -9204,7 +9178,7 @@ span {
 }
 
 .car-box-items .car-list-items {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   padding: 20px;
   background-color: white;
 }
@@ -11524,8 +11498,6 @@ span {
   font-size: 15px;
 }
 
-
-
 /* ============ NEW ABOUT PAGE STYLES ============ */
 
 /* Section Titles */
@@ -11711,3 +11683,237 @@ span {
   background: radial-gradient(circle, rgba(255, 68, 68, 0.1) 0%, rgba(255, 68, 68, 0) 70%);
   z-index: -1;
 }
+
+/* Card Container */
+
+.car-box-items {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+  margin-bottom: 30px;
+}
+
+.car-box-items:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Badges */
+
+.badges {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.badge.on-sale {
+  background: var(--theme);
+}
+
+.badge.new {
+  background: #2ecc71;
+}
+
+.badge.sold {
+  background: #636e72;
+}
+
+.badge.in-transit {
+  background: #f39c12;
+}
+
+/* Car Image */
+
+.car-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.car-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.car-box-items:hover .car-image img {
+  transform: scale(1.08);
+}
+
+.price-items .finance-info {
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: #2d6a4f;
+  /* dark green for finance */
+  margin: 6px 0 0;
+  background: rgba(45, 106, 79, 0.08);
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* Wishlist Heart */
+
+.car-box-items .icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #777;
+  transition: all 0.3s;
+  z-index: 10;
+}
+
+
+/* Buttons Area */
+.price-items .d-flex {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Responsive Adjustments */
+
+@media (max-width: 991px) {
+  .car-image img {
+    height: 200px;
+  }
+  .car-titile h4 {
+    font-size: 1.25rem;
+  }
+  .price-items h3.highlighted-price {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .car-image img {
+    height: 180px;
+  }
+  .car-list-items {
+    padding: 18px;
+  }
+  .price-items {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.car-section.car-sock-section button {
+  color: white;
+}
+
+.car-section.car-sock-section .highlighted-price {
+color: var(--theme)!important;
+}
+.car-section.car-sock-section .highlighted-price span{
+color: var(--theme);
+font-size: 15px!important;
+font-weight: 400;
+}
+/* ==========================================
+   Pagination
+========================================== */
+
+.pagination-wrapper {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.pagination {
+    --bs-pagination-color: #555;
+    --bs-pagination-bg: #fff;
+    --bs-pagination-border-color: #e0e0e0;
+    --bs-pagination-hover-color: var(--theme-color);
+    --bs-pagination-hover-bg: #f8f9fa;
+    --bs-pagination-hover-border-color: #dee2e6;
+    --bs-pagination-active-color: #fff;
+    --bs-pagination-active-bg: var(--theme-color);
+    --bs-pagination-active-border-color: var(--theme-color);
+    --bs-pagination-disabled-color: #adb5bd;
+    --bs-pagination-disabled-bg: #fff;
+    --bs-pagination-disabled-border-color: #e0e0e0;
+
+    gap: 8px;
+}
+
+.page-item .page-link {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px !important;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.25s ease;
+    border: 1px solid #e0e0e0;
+    color: #555;
+    background-color: white;
+    margin: 0 4px;
+}
+
+.page-item .page-link:hover {
+    background-color: #f0f4ff;
+    color: var(--theme-color);
+    border-color: var(--theme-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.page-item.active .page-link {
+    background-color: var(--theme-color);
+    border-color: var(--theme-color);
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 6px 16px rgba(var(--theme-rgb), 0.25);
+}
+
+.page-item.disabled .page-link {
+    color: #adb5bd;
+    pointer-events: none;
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+}
+
+/* Larger touch target on mobile */
+@media (max-width: 576px) {
+    .page-item .page-link {
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
+    }
+}
+
+/* Optional: dots / ellipsis style */
+.page-item.ellipsis .page-link {
+    border: none;
+    background: none;
+    cursor: default;
+    color: #999;
+}
+

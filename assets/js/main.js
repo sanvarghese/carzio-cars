@@ -1,11 +1,4 @@
-/*-----------------------------------------------------------------
-
-Template Name: RevAuto - Car Dealer & Services Html Template
-Author:  namespace-it
-Author URI: https://themeforest.net/user/namespace-it/portfolio
-Version: 1.0.0
-Description: RevAuto - Car Dealer & Services Html Template<
-
+/*----------------------------------------------------------------
 -------------------------------------------------------------------
 CSS TABLE OF CONTENTS
 -------------------------------------------------------------------
@@ -1121,18 +1114,17 @@ if ($(".vehicle-type-swiper").length > 0) {
 
 
 // Featured Vehicles Swiper
-// Initialize Featured Vehicles Swiper
 if ($(".featured-vehicles-swiper").length > 0) {
   const featuredVehiclesSwiper = new Swiper(".featured-vehicles-swiper", {
     slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
     speed: 800,
-    autoplay: false,
-    // {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: 
+    {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".featured-vehicles-swiper .swiper-pagination",
       clickable: true,
