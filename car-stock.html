@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--<< Header Area >>-->
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="namespace-it" />
+    <meta name="description" content="carzio" />
+    <!-- ======== Page title ============ -->
+    <title>Carzio cars</title>
+    <!--<< Favcion >>-->
+    <link rel="shortcut icon" href="assets/img/carzio-favicon.png" />
+    <!--<< Bootstrap min.css >>-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!--<< All Min Css >>-->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!--<< Animate.css >>-->
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <!--<< Magnific Popup.css >>-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <!--<< MeanMenu.css >>-->
+    <link rel="stylesheet" href="assets/css/meanmenu.css" />
+    <!--<< Swiper Bundle.css >>-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <!--<< Nice Select.css >>-->
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <!--<< Color.css >>-->
+    <link rel="stylesheet" href="assets/css/color.css" />
+    <!--<< Main.css >>-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div id="preloader" class="preloader">
+        <div class="speedometer-preloader">
+            <div class="speedometer">
+                <div class="dial">
+                    <div class="needle"></div>
+                    <div class="center"></div>
+                </div>
+            </div>
+            <div class="brand">Carzio Cars</div>
+            <div class="status">Initializing...</div>
+        </div>
+    </div>
+
+    <div class="loader">
+        <div class="row">
+            <div class="col-3 loader-section section-left">
+                <div class="bg"></div>
+            </div>
+            <div class="col-3 loader-section section-left">
+                <div class="bg"></div>
+            </div>
+            <div class="col-3 loader-section section-right">
+                <div class="bg"></div>
+            </div>
+            <div class="col-3 loader-section section-right">
+                <div class="bg"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!--<< Mouse Cursor Start >>-->
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+
+    <!-- Back To Top Start -->
+    <button id="back-top" class="back-to-top">
+        <i class="fa-regular fa-arrow-up"></i>
+    </button>
+
+    <!-- Offcanvas Area Start -->
+    <div class="fix-area">
+        <div class="offcanvas__info">
+            <div class="offcanvas__wrapper">
+                <div class="offcanvas__content">
+                    <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                        <div class="offcanvas__logo">
+                            <a href="index.html">
+                                <img src="assets/img/logo/black-logo.svg" alt="logo-img" />
+                                <!-- In dark mode, you can swap to white-logo.svg via CSS if needed -->
+                            </a>
+                        </div>
+                        <div class="offcanvas__close">
+                            <button>
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text d-none d-xl-block">
+                        Nullam dignissim, ante scelerisque the is euismod fermentum odio sem semper the is erat, a
+                        feugiat leo urna
+                        eget eros. Duis Aenean a imperdiet risus.
+                    </p>
+                    <div class="mobile-menu fix mb-3"></div>
+                    <div class="offcanvas__contact">
+                        <h4>Contact Info</h4>
+                        <ul>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon">
+                                    <i class="fal fa-map-marker-alt"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a target="_blank" href="#">Main Street, Melbourne, Australia</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="fal fa-envelope"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a href="mailto:info@example.com"><span
+                                            class="mailto:info@example.com">info@example.com</span></a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="fal fa-clock"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a target="_blank" href="#">Mod-friday, 09am -05pm</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="far fa-phone"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a href="tel:+11002345909">+11002345909</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="header-button mt-4">
+                            <a href="contact.html" class="theme-btn text-center">
+                                Get A Quote
+                            </a>
+                        </div>
+                        <div class="social-icon d-flex align-items-center">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas__overlay"></div>
+
+    <!-- header  section start -->
+    <header id="header-sticky" class="navbar-2">
+        <div class="navbar-2-address-bar">
+            <div class="address-bar-content">
+                <div class="contact-icons">
+
+                    <p><i class="fa-regular fa-phone"></i> 0222 887 888
+                    </p>
+                    <p><i class="fa-regular fa-envelope"></i> contact@carziocars.co.nz
+                    </p>
+
+                </div>
+                <!-- <p><i class="fa-regular fa-mail"></i> Email: contact@carziocars.co.nz</p> -->
+                <!-- <p> -->
+                <!-- <span class="highlight">Address: 576 Hillside Road, Caversham, Dunedin -->
+                <div class="social-icon d-flex align-items-center">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-6 col-md-4">
+                    <div class="navbar-2-left">
+                        <div class="navbar-2-logo">
+                            <a href="index-4.html">
+                                <img src="assets/img/logo/logo.png" alt="Carzio" width="180">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-7">
+                    <div class="navbar-2-right">
+                        <!-- right -->
+                        <!-- general menu -->
+                        <div class="mean__menu-wrapper">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li class="has-dropdown active menu-thumb">
+                                            <a href="index.html"> Home </a>
+                                        </li>
+                                        <li class="has-dropdown active menu-thumb">
+                                            <a href="#"> About </a>
+                                        </li>
+                                        <li class="has-dropdown active menu-thumb">
+                                            <a href="#"> Car Stock </a>
+                                        </li>
+                                        <li class="has-dropdown active menu-thumb">
+                                            <a href="#"> Trade In </a>
+                                        </li>
+                                        <li class="has-dropdown active menu-thumb">
+                                            <a href="#"> Pre Order </a>
+                                        </li>
+                                        <li class="has-dropdown active menu-thumb">
+                                            <a href="#"> Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <!-- user options -->
+                        <div class="navbar-2-user-options">
+                            <div class="search-wrapper d-none d-md-block">
+                            </div>
+                            <div class="buttons">
+                                <div class="header__hamburger d-xl-none my-auto">
+                                    <div class="sidebar__toggle">
+                                        <i class="fas fa-bars"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Section Start -->
+    <div class="breadcrumb-wrapper section-bg bg-cover" style="background-image: url('assets/img/breadcrumb-bg2.jpg')">
+        <div class="container">
+            <div class="page-heading">
+                <div class="breadcrumb-sub-title">
+                    <h1 class="wow fadeInUp" data-wow-delay=".3s">Car stock</h1>
+                </div>
+                <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                    <li>
+                        <a href="index.html"> Home </a>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-chevrons-right"></i>
+                    </li>
+                    <li>Car stock</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Featured car section -->
+    <section class="feature-car-section">
+        <div class="car-shape">
+            <img src="assets/img/aston-martin.png" alt="car shape" style="width: 350px; ">
+        </div>
+
+        <div class="container">
+            <div class="feature-car-wrapper">
+                <div class="row g-4 align-items-center">
+                    <!-- Left Side - Heading Only -->
+                    <!-- <div class="col-lg-6">
+            <div class="feature-car-content">
+              <div class="section-title">
+                <h6>Quick Search</h6>
+                <h2>Find Your Perfect Car</h2>
+              </div>
+            </div>
+          </div> -->
+                    <!-- Right Side - Enhanced Search Form -->
+                    <div class="col-lg-12">
+                        <div class="car-list-box">
+                            <h2 class="text-center mb-5">Search Your Dream Car</h2>
+                            <form id="carSearchForm">
+                                <div class="row g-4">
+                                    <!-- Any Make -->
+                                    <div class="col-md-3">
+                                        <div class="form-clt">
+                                            <span>Any Make</span>
+                                            <select class="form-select" id="carMake">
+                                                <option value="">Select Make</option>
+                                                <option value="toyota">Toyota</option>
+                                                <option value="honda">Honda</option>
+                                                <option value="ford">Ford</option>
+                                                <option value="bmw">BMW</option>
+                                                <option value="mercedes">Mercedes-Benz</option>
+                                                <option value="audi">Audi</option>
+                                                <option value="nissan">Nissan</option>
+                                                <option value="hyundai">Hyundai</option>
+                                                <option value="mazda">Mazda</option>
+                                                <option value="volkswagen">Volkswagen</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Any Model -->
+                                    <div class="col-md-3">
+                                        <div class="form-clt">
+                                            <span>Any Model</span>
+                                            <select class="form-select" id="carModel">
+                                                <option value="">Select Model</option>
+                                                <option value="camry">Camry</option>
+                                                <option value="corolla">Corolla</option>
+                                                <option value="civic">Civic</option>
+                                                <option value="accord">Accord</option>
+                                                <option value="mustang">Mustang</option>
+                                                <option value="f150">F-150</option>
+                                                <option value="3series">3 Series</option>
+                                                <option value="5series">5 Series</option>
+                                                <option value="cclass">C-Class</option>
+                                                <option value="eclass">E-Class</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Any Body Type -->
+                                    <div class="col-md-3">
+                                        <div class="form-clt">
+                                            <span>Any Body Type</span>
+                                            <select class="form-select" id="bodyType">
+                                                <option value="">Select Body Type</option>
+                                                <option value="sedan">Sedan</option>
+                                                <option value="suv">SUV</option>
+                                                <option value="hatchback">Hatchback</option>
+                                                <option value="coupe">Coupe</option>
+                                                <option value="convertible">Convertible</option>
+                                                <option value="wagon">Wagon</option>
+                                                <option value="pickup">Pickup Truck</option>
+                                                <option value="minivan">Minivan</option>
+                                                <option value="sports">Sports Car</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Search Input -->
+                                    <div class="col-md-3">
+                                        <div class="form-clt">
+                                            <span>Search</span>
+                                            <input type="text" class="form-control" id="searchInput"
+                                                placeholder="e.g Model, Body, Color, Feature">
+                                        </div>
+                                    </div>
+
+                                    <!-- Price Range -->
+                                    <div class="col-md-6">
+                                        <div class="form-clt">
+                                            <span>Price Range: <span id="priceRangeDisplay">$5,000 -
+                                                    $200,000</span></span>
+                                            <div class="range-slider-container">
+                                                <input type="range" class="range-slider" id="priceMin" min="5000"
+                                                    max="200000" value="5000" step="5000">
+                                                <input type="range" class="range-slider" id="priceMax" min="5000"
+                                                    max="200000" value="200000" step="5000">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Year Range -->
+                                    <div class="col-md-6">
+                                        <div class="form-clt">
+                                            <span>Year Range: <span id="yearRangeDisplay">2015 - 2026</span></span>
+                                            <div class="range-slider-container">
+                                                <input type="range" class="range-slider" id="yearMin" min="2015"
+                                                    max="2026" value="2015" step="1">
+                                                <input type="range" class="range-slider" id="yearMax" min="2015"
+                                                    max="2026" value="2026" step="1">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Search Button -->
+                                    <div class="col-md-12">
+                                        <button type="submit" class="theme-btn">
+                                            Start Search <i class="fa-solid fa-magnifying-glass"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- vehicle type search section -->
+    <section class="vehicle-type-search-section">
+        <div class="container">
+            <div class="section-title-center">
+                <h6>Browse By Type</h6>
+                <h2>Find Your Perfect Vehicle</h2>
+                <p>Select a vehicle type to explore our wide range of quality cars</p>
+            </div>
+
+            <!-- Swiper Container -->
+            <div class="vehicle-type-swiper-container">
+                <div class="vehicle-type-swiper swiper swiper-initialized swiper-horizontal swiper-pointer-events">
+                    <div class="swiper-wrapper" id="swiper-wrapper-bc5af0fb2da9da7b" aria-live="off"
+                        style="cursor: grab; transition-duration: 0ms; transform: translate3d(-2300px, 0px, 0px);">
+                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate" data-type="sedan"
+                            data-swiper-slide-index="2" style="width: 200px; margin-right: 30px;" role="group"
+                            aria-label="3 / 8">
+                            <div class="vehicle-icon-wrapper">
+                                <img src="assets/img/icon/sedan.png" alt="Sedan">
+                            </div>
+                            <h6 class="vehicle-type-name">SEDAN</h6>
+                        </div>
+                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+                            data-type="coupe" data-swiper-slide-index="3" style="width: 200px; margin-right: 30px;"
+                            role="group" aria-label="4 / 8">
+                            <div class="vehicle-icon-wrapper">
+                                <img src="assets/img/icon/coupe.png" alt="Coupe">
+                            </div>
+                            <h6 class="vehicle-type-name">COUPE</h6>
+                        </div>
+                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                            data-type="wagon" data-swiper-slide-index="4" style="width: 200px; margin-right: 30px;"
+                            role="group" aria-label="5 / 8">
+                            <div class="vehicle-icon-wrapper">
+                                <img src="assets/img/icon/wagon.png" alt="Wagon">
+                            </div>
+                            <h6 class="vehicle-type-name">WAGON</h6>
+                        </div>
+                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
+                            data-type="mpv" data-swiper-slide-index="5" style="width: 200px; margin-right: 30px;"
+                            role="group" aria-label="6 / 8">
+                            <div class="vehicle-icon-wrapper">
+                                <img src="assets/img/icon/mpv.png" alt="MPV">
+                            </div>
+                            <h6 class="vehicle-type-name">MPV</h6>
+                        </div>
+                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate" data-type="wagon"
+                            data-swiper-slide-index="6" style="width: 200px; margin-right: 30px;" role="group"
+                            aria-label="7 / 8">
+                            <div class="vehicle-icon-wrapper">
+                                <img src="assets/img/icon/suv.png" alt="Wagon">
+                            </div>
+                            <h6 class="vehicle-type-name">SUV</h6>
+                        </div>
+                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate" data-type="mpv"
+                            data-swiper-slide-index="7" style="width: 200px; margin-right: 30px;" role="group"
+                            aria-label="8 / 8">
+                            <div class="vehicle-icon-wrapper">
+                                <img src="assets/img/icon/ute.png" alt="MPV">
+                            </div>
+                            <h6 class="vehicle-type-name">UTF</h6>
+                        </div>
+                        <!-- Hatchback -->
+                        <div class="vehicle-type-card swiper-slide" data-type="hatchback" data-swiper-slide-index="0"
+                            style="width: 200px; margin-right: 30px;" role="group" aria-label="1 / 8">
+                            <div class="vehicle-icon-wrapper">
+                                <img src="assets/img/icon/hybrid.png" alt="Hybrid">
+                            </div>
+                            <h6 class="vehicle-type-name">HYBRID</h6>
+                        </div>
+
+                        <!-- SUV -->
+                        <div class="vehicle-type-card swiper-slide" data-type="suv" data-swiper-slide-index="1"
+                            style="width: 200px; margin-right: 30px;" role="group" aria-label="2 / 8">
+                            <div class="vehicle-icon-wrapper">
+                                <img src="assets/img/icon/hatchback.png" alt="Hatchback">
+                            </div>
+                            <h6 class="vehicle-type-name">HATCHBACK</h6>
+                        </div>
+
+                        <!-- Sedan -->
+                        <div class="vehicle-type-card swiper-slide" data-type="sedan" data-swiper-slide-index="2"
+                            style="width: 200px; margin-right: 30px;" role="group" aria-label="3 / 8">
+                            <div class="vehicle-icon-wrapper">
+                                <img src="assets/img/icon/sedan.png" alt="Sedan">
+                            </div>
+                            <h6 class="vehicle-type-name">SEDAN</h6>
+                        </div>
+
+                        <!-- Coupe -->
+                        <div class="vehicle-type-card swiper-slide swiper-slide-prev" data-type="coupe"
+                            data-swiper-slide-index="3" style="width: 200px; margin-right: 30px;" role="group"
+                            aria-label="4 / 8">
+                            <div class="vehicle-icon-wrapper">
+                                <img src="assets/img/icon/coupe.png" alt="Coupe">
+                            </div>
+                            <h6 class="vehicle-type-name">COUPE</h6>
+                        </div>
+
+                        <!-- Wagon -->
+                        <div class="vehicle-type-card swiper-slide swiper-slide-active" data-type="wagon"
+                            data-swiper-slide-index="4" style="width: 200px; margin-right: 30px;" role="group"
+                            aria-label="5 / 8">
+                            <div class="vehicle-icon-wrapper">
+                                <img src="assets/img/icon/wagon.png" alt="Wagon">
+                            </div>
+                            <h6 class="vehicle-type-name">WAGON</h6>
+                        </div>
+
+                        <!-- MPV -->
+                        <div class="vehicle-type-card swiper-slide swiper-slide-next" data-type="mpv"
+                            data-swiper-slide-index="5" style="width: 200px; margin-right: 30px;" role="group"
+                            aria-label="6 / 8">
+                            <div class="vehicle-icon-wrapper">
+                                <img src="assets/img/icon/mpv.png" alt="MPV">
+                            </div>
+                            <h6 class="vehicle-type-name">MPV</h6>
+                        </div>
+
+                        <!-- Wagon -->
+                        <div class="vehicle-type-card swiper-slide" data-type="wagon" data-swiper-slide-index="6"
+                            style="width: 200px; margin-right: 30px;" role="group" aria-label="7 / 8">
+                            <div class="vehicle-icon-wrapper">
+                                <img src="assets/img/icon/suv.png" alt="Wagon">
+                            </div>
+                            <h6 class="vehicle-type-name">SUV</h6>
+                        </div>
+
+                        <!-- MPV -->
+                        <div class="vehicle-type-card swiper-slide" data-type="mpv" data-swiper-slide-index="7"
+                            style="width: 200px; margin-right: 30px;" role="group" aria-label="8 / 8">
+                            <div class="vehicle-icon-wrapper">
+                                <img src="assets/img/icon/ute.png" alt="MPV">
+                            </div>
+                            <h6 class="vehicle-type-name">UTF</h6>
+                        </div>
+                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate" data-type="hatchback"
+                            data-swiper-slide-index="0" style="width: 200px; margin-right: 30px;" role="group"
+                            aria-label="1 / 8">
+                            <div class="vehicle-icon-wrapper">
+                                <img src="assets/img/icon/hybrid.png" alt="Hybrid">
+                            </div>
+                            <h6 class="vehicle-type-name">HYBRID</h6>
+                        </div>
+                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate" data-type="suv"
+                            data-swiper-slide-index="1" style="width: 200px; margin-right: 30px;" role="group"
+                            aria-label="2 / 8">
+                            <div class="vehicle-icon-wrapper">
+                                <img src="assets/img/icon/hatchback.png" alt="Hatchback">
+                            </div>
+                            <h6 class="vehicle-type-name">HATCHBACK</h6>
+                        </div>
+                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate" data-type="sedan"
+                            data-swiper-slide-index="2" style="width: 200px; margin-right: 30px;" role="group"
+                            aria-label="3 / 8">
+                            <div class="vehicle-icon-wrapper">
+                                <img src="assets/img/icon/sedan.png" alt="Sedan">
+                            </div>
+                            <h6 class="vehicle-type-name">SEDAN</h6>
+                        </div>
+                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+                            data-type="coupe" data-swiper-slide-index="3" style="width: 200px; margin-right: 30px;"
+                            role="group" aria-label="4 / 8">
+                            <div class="vehicle-icon-wrapper">
+                                <img src="assets/img/icon/coupe.png" alt="Coupe">
+                            </div>
+                            <h6 class="vehicle-type-name">COUPE</h6>
+                        </div>
+                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                            data-type="wagon" data-swiper-slide-index="4" style="width: 200px; margin-right: 30px;"
+                            role="group" aria-label="5 / 8">
+                            <div class="vehicle-icon-wrapper">
+                                <img src="assets/img/icon/wagon.png" alt="Wagon">
+                            </div>
+                            <h6 class="vehicle-type-name">WAGON</h6>
+                        </div>
+                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
+                            data-type="mpv" data-swiper-slide-index="5" role="group" aria-label="6 / 8"
+                            style="width: 200px; margin-right: 30px;">
+                            <div class="vehicle-icon-wrapper">
+                                <img src="assets/img/icon/mpv.png" alt="MPV">
+                            </div>
+                            <h6 class="vehicle-type-name">MPV</h6>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <!-- <div class="swiper-button-next vehicle-swiper-next">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="swiper-button-prev vehicle-swiper-prev">
+          <i class="fas fa-chevron-left"></i>
+        </div> -->
+
+                </div>
+            </div>
+
+            <!-- Search Results Display -->
+            <div class="search-results hidden" id="searchResults">
+                <h3 id="resultTitle">Loading...</h3>
+                <p id="resultDescription">Please wait...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Car Section Start -->
+    <section class="car-section car-sock-section fix section-padding section-bg">
+        <div class="container">
+            <div class="section-title-area">
+                <div class="section-title">
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Car Stock</h2>
+                </div>
+            </div>
+            <div class="car-section-3-short">
+                <div class="left-section">
+                    <button class="car-section-3-active">All Stock</button>
+                    <button>In Stock</button>
+                    <button>In Transit</button>
+                    <button>Special</button>
+                    <button>Sold</button>
+                </div>
+                <div class="right-section">
+                    <button class="car-section-3-active-right">Latest</button>
+                    <button>Popular</button>
+                    <button>On Sale</button>
+                    <button class="d-flex align-items-center gap-1">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                            stroke-linecap="round" stroke-linejoin="round" height="200px" width="200px"
+                            xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: auto">
+                            <path d="m3 16 4 4 4-4"></path>
+                            <path d="M7 20V4"></path>
+                            <path d="m21 8-4-4-4 4"></path>
+                            <path d="M17 4v16"></path>
+                        </svg>
+                        <span>Price</span>
+                    </button>
+                </div>
+            </div>
+            <div class="tab-content">
+                <!-- All Stock Tab -->
+                <div id="AllStock" class="tab-pane fade show active">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-6 col-md-6">
+                            <div class="car-box-items">
+                                <!-- Badge Example: Add badges as spans with classes for styling (e.g., on-sale, new, sold, in-transit) -->
+                                <div class="badges">
+                                    <span class="badge on-sale">On Sale</span>
+                                    <span class="badge new">New</span>
+                                </div>
+                                <div class="car-image">
+                                    <img src="assets/img/car/11.jpg" alt="img" />
+                                </div>
+                                <div class="car-list-items">
+                                    <div class="car-titile">
+                                        <h4>
+                                            <a href="#">2018 Honda CR-V Hybrid / EX Masterpiece
+                                                Sunroof</a>
+                                        </h4>
+                                    </div>
+                                    <ul>
+                                        <li><i class="fa-regular fa-car"></i> RV/SUV</li>
+                                        <li><i class="fa-regular fa-location-crosshairs"></i> Dunedin</li>
+                                        <li><i class="fa-solid fa-steering-wheel"></i> Automatic</li>
+                                    </ul>
+                                    <ul>
+                                        <li><i class="fa-light fa-users"></i> 5 Seats</li>
+                                        <li><i class="fa-sharp fa-light fa-gauge"></i> 37,600 km</li>
+                                        <li><i class="fa-sharp fa-light fa-gas-pump"></i> 2,000 cc</li>
+                                    </ul>
+                                    <div class="price-items">
+                                        <!-- Highlighted Price: Use a class like 'highlighted-price' for styling (e.g., bold, color) -->
+                                        <h3 class="highlighted-price">
+                                            $37,990 <span>+ORC</span></h3>
+                                        <!-- Finance Info -->
+                                        <p class="finance-info">Finance from $187 weekly</p>
+                                    </div>
+                                    <div class="d-flex align-items-lg-center gap-2 mt-3">
+                                        <a href="#" class="theme-btn">View Detail</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Repeat similar car-box-items for other cars in this tab -->
+                        <div class="col-xl-4 col-lg-6 col-md-6">
+                            <div class="car-box-items">
+                                <!-- Badge Example: Add badges as spans with classes for styling (e.g., on-sale, new, sold, in-transit) -->
+                                <div class="badges">
+                                    <span class="badge on-sale">On Sale</span>
+                                    <span class="badge new">New</span>
+                                </div>
+                                <div class="car-image">
+                                    <img src="assets/img/car/11.jpg" alt="img" />
+                                </div>
+                                <div class="car-list-items">
+                                    <div class="car-titile">
+                                        <h4>
+                                            <a href="#">2018 Honda CR-V Hybrid / EX Masterpiece
+                                                Sunroof</a>
+                                        </h4>
+                                    </div>
+                                    <ul>
+                                        <li><i class="fa-regular fa-car"></i> RV/SUV</li>
+                                        <li><i class="fa-regular fa-location-crosshairs"></i> Dunedin</li>
+                                        <li><i class="fa-solid fa-steering-wheel"></i> Automatic</li>
+                                    </ul>
+                                    <ul>
+                                        <li><i class="fa-light fa-users"></i> 5 Seats</li>
+                                        <li><i class="fa-sharp fa-light fa-gauge"></i> 37,600 km</li>
+                                        <li><i class="fa-sharp fa-light fa-gas-pump"></i> 2,000 cc</li>
+                                    </ul>
+                                    <div class="price-items">
+                                        <!-- Highlighted Price: Use a class like 'highlighted-price' for styling (e.g., bold, color) -->
+                                        <h3 class="highlighted-price">
+                                            $37,990 <span>+ORC</span></h3>
+                                        <!-- Finance Info -->
+                                        <p class="finance-info">Finance from $187 weekly</p>
+                                    </div>
+                                    <div class="d-flex align-items-lg-center gap-2 mt-3">
+                                        <a href="#" class="theme-btn">View Detail</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 col-md-6">
+                            <div class="car-box-items">
+                                <!-- Badge Example: Add badges as spans with classes for styling (e.g., on-sale, new, sold, in-transit) -->
+                                <div class="badges">
+                                    <span class="badge on-sale">On Sale</span>
+                                    <span class="badge new">New</span>
+                                </div>
+                                <div class="car-image">
+                                    <img src="assets/img/car/11.jpg" alt="img" />
+                                </div>
+                                <div class="car-list-items">
+                                    <div class="car-titile">
+                                        <h4>
+                                            <a href="#">2018 Honda CR-V Hybrid / EX Masterpiece
+                                                Sunroof</a>
+                                        </h4>
+                                    </div>
+                                    <ul>
+                                        <li><i class="fa-regular fa-car"></i> RV/SUV</li>
+                                        <li><i class="fa-regular fa-location-crosshairs"></i> Dunedin</li>
+                                        <li><i class="fa-solid fa-steering-wheel"></i> Automatic</li>
+                                    </ul>
+                                    <ul>
+                                        <li><i class="fa-light fa-users"></i> 5 Seats</li>
+                                        <li><i class="fa-sharp fa-light fa-gauge"></i> 37,600 km</li>
+                                        <li><i class="fa-sharp fa-light fa-gas-pump"></i> 2,000 cc</li>
+                                    </ul>
+                                    <div class="price-items">
+                                        <!-- Highlighted Price: Use a class like 'highlighted-price' for styling (e.g., bold, color) -->
+                                        <h3 class="highlighted-price">
+                                            $37,990 <span>+ORC</span></h3>
+                                        <!-- Finance Info -->
+                                        <p class="finance-info">Finance from $187 weekly</p>
+                                    </div>
+                                    <div class="d-flex align-items-lg-center gap-2 mt-3">
+                                        <a href="#" class="theme-btn">View Detail</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more car items as needed -->
+                    </div>
+                </div>
+                <!-- In Stock Tab -->
+                <div id="InStock" class="tab-pane fade">
+                    <div class="row">
+                    </div>
+                </div>
+                <!-- In Transit Tab -->
+                <div id="InTransit" class="tab-pane fade">
+                    <!-- Similar row with car-box-items -->
+                </div>
+                <!-- Special Tab -->
+                <div id="Special" class="tab-pane fade">
+                    <!-- Similar row with car-box-items -->
+                </div>
+                <!-- Sold Tab -->
+                <div id="Sold" class="tab-pane fade">
+                    <!-- Similar row with car-box-items -->
+                </div>
+            </div>
+
+            <!-- ← Add pagination here -->
+            <div class="pagination-wrapper mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">«</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">»</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Footer section started -->
+    <footer class="footer-3">
+        <!-- contact info -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="footer-3-contact">
+                        <div class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="content">
+                            <span>Contact Us</span>
+                            <p> contact@carziocars.co.nz</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="footer-3-contact">
+                        <div class="icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="content">
+                            <span>Call Us</span>
+                            <p> Sales Manager: 0272242559</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="footer-3-contact">
+                        <div class="icon">
+                            <i class="fa-solid fa-location-crosshairs"></i>
+                        </div>
+                        <div class="content">
+                            <span>Location</span>
+                            <p>576 Hillside Road, Caversham, Dunedin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="container">
+            <div class="footer-widgets-wrapper">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="single-footer-widget">
+                            <img src="assets/img/logo/logo.png" alt="carzio" style="width: 150px;" />
+                            <p class="my-3 fs-6">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+
+                            <div class="footer-3-social-wrapper">
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="single-footer-widget">
+                            <div class="widget-head">
+                                <h3>Explore</h3>
+                            </div>
+                            <ul class="list-items">
+                                <li>
+                                    <a href="#"> Home</a>
+                                </li>
+                                <li>
+                                    <a href="#"> About</a>
+                                </li>
+                                <li>
+                                    <a href="#"> Car Stock</a>
+                                </li>
+                                <li>
+                                    <a href="#"> Trade In</a>
+                                </li>
+                                <li>
+                                    <a href="#"> Pre Order</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
+                        <div class="single-footer-widget">
+                            <div class="widget-head">
+                                <h3>Get In Touch</h3>
+                            </div>
+                            <ul class="contact-list">
+                                <li>576 Hillside Road, Caversham, Dunedin</li>
+                                <li>
+                                    <a href="tel:0222 887 888">Tel: 0222 887 888 </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-wrapper">
+                <p class="wow fadeInUp" data-wow-delay=".5s">
+                    © Carzio Cars <span id="currentYear"></span> All rights reserved. Developed by Xeventure
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!--<< All JS Plugins >>-->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!--<< Viewport Js >>-->
+    <script src="assets/js/viewport.jquery.js"></script>
+    <!--<< Bootstrap Js >>-->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!--<< Nice Select Js >>-->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!--<< Waypoints Js >>-->
+    <script src="assets/js/jquery.waypoints.js"></script>
+    <!--<< Counterup Js >>-->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!--<< Swiper Slider Js >>-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!--<< MeanMenu Js >>-->
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <!--<< Magnific Popup Js >>-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!--<< Wow Animation Js >>-->
+    <script src="assets/js/wow.min.js"></script>
+    <!--<< Main.js >>-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

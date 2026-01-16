@@ -5787,7 +5787,7 @@ span {
 
 .back-to-top:hover {
   background-color: var(--header);
-  color: var(--white);
+  color: var(--theme);
 }
 
 .back-to-top.show {
@@ -9214,7 +9214,7 @@ span {
 .car-box-items .car-list-items .price-items h3 {
   font-size: 18px;
   font-weight: 500;
-  color: #373343;
+  color: var(--theme);
 }
 
 .car-box-items .car-list-items .price-items .theme-btn {
