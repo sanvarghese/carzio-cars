@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="assets/css/color.css" />
   <!--<< Main.css >>-->
   <link rel="stylesheet" href="assets/css/main.css" />
+
 </head>
 
 <body>
@@ -233,385 +234,579 @@
       </div>
     </div>
   </div>
-  <!-- user options -->
-  </div>
-  </div>
-  </div>
-  </div>
-  </header>
 
-  <!-- Car Section Start -->
-  <section class="car-details-section fix section-padding">
+  <!-- Car Details Section Start -->
+  <section class="car-details-section fix section-padding section-bg ">
     <div class="container">
       <div class="car-details-wrapper">
+        <!-- Full Width Car Gallery - MODIFIED LAYOUT -->
+        <div class="row car-gallery-container wow fadeInUp" data-wow-delay=".3s">
+          <!-- Left Column for Thumbnails -->
+
+          <!-- Right Column for Main Image -->
+
+          <div class="col-lg-10 col-md-9 col-sm-12">
+            <div class="car-gallery-wrapper">
+              <!-- Car Badges -->
+              <!-- <div class="car-badges">
+                <span class="car-badge featured">Featured</span>
+                <span class="car-badge new">2024 Model</span>
+              </div> -->
+
+              <!-- Main Image with Magnific Popup -->
+              <a href="assets/img/car/details/car-11.jpg" class="main-car-image image-popup">
+                <img src="assets/img/car/details/car-11.jpg" alt="Toyota Supra - Front View" id="mainCarImage">
+                <div class="image-overlay">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col-sm-12">
+            <div class="car-thumbnails-vertical">
+              <div class="thumbnail-item active" data-image="assets/img/car/details/car-12.jpg">
+                <img src="assets/img/car/details/car-12.jpg" alt="Front View">
+              </div>
+              <div class="thumbnail-item" data-image="assets/img/car/details/car-13.jpg">
+                <img src="assets/img/car/details/car-13.jpg" alt="Side View">
+              </div>
+              <div class="thumbnail-item" data-image="assets/img/car/details/car-14.jpg">
+                <img src="assets/img/car/details/car-14.jpg" alt="Rear View">
+              </div>
+              <div class="thumbnail-item" data-image="assets/img/car/details/car-15.jpg">
+                <img src="assets/img/car/details/car-15.jpg" alt="Interior">
+              </div>
+              <div class="thumbnail-item" data-image="assets/img/car/details/car-16.jpg">
+                <img src="assets/img/car/details/car-16.jpg" alt="Dashboard">
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Continue with the rest of your code -->
+        <!-- Car Header with Title and Price -->
+        <div class="row car-details-header wow fadeInUp" data-wow-delay=".4s">
+
+          <div class="col-md-8">
+            <div class="car-title-section">
+              <h1>Toyota Supra 2024</h1>
+              <div class="car-subtitle">
+                Premium Sports Coupe | Manual Transmission | Low Mileage
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="car-price-section">
+              <div class="main-price">$38,570</div>
+              <div class="price-subtitle">Excluding on-road costs</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Content Area -->
         <div class="row">
-          <div class="col-lg-7">
-            <div class="car-details-image">
-              <div class="tab-content">
-                <div id="thumb1" class="tab-pane fade show active">
-                  <div class="car-thumb">
-                    <img src="assets/img/car/details-1.png" alt="img" />
+          <!-- Left Column - Main Content -->
+          <div class="col-lg-8">
+            <!-- Quick Info Section -->
+            <div class="car-quick-info wow fadeInUp" data-wow-delay=".5s">
+              <div class="info-item-box">
+                <i class="fa-regular fa-gas-pump"></i>
+                <span class="label">Fuel Type</span>
+                <span class="value">Diesel</span>
+              </div>
+              <div class="info-item-box">
+                <i class="fa-solid fa-steering-wheel"></i>
+                <span class="label">Transmission</span>
+                <span class="value">Manual</span>
+              </div>
+              <div class="info-item-box">
+                <i class="fa-light fa-users"></i>
+                <span class="label">Seats</span>
+                <span class="value">4 People</span>
+              </div>
+              <div class="info-item-box">
+                <i class="fa-sharp fa-light fa-gauge"></i>
+                <span class="label">Mileage</span>
+                <span class="value">1,270 km</span>
+              </div>
+              <div class="info-item-box">
+                <i class="fa-solid fa-palette"></i>
+                <span class="label">Color</span>
+                <span class="value">Red</span>
+              </div>
+              <div class="info-item-box">
+                <i class="fa-solid fa-calendar"></i>
+                <span class="label">Year</span>
+                <span class="value">2024</span>
+              </div>
+            </div>
+
+            <!-- Features Tabs Section -->
+            <div class="features-tabs wow fadeInUp" data-wow-delay=".6s">
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                  <a href="#interior-features" class="nav-link active" data-bs-toggle="tab">Interior Features</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#exterior-features" class="nav-link" data-bs-toggle="tab">Exterior Features</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#safety-features" class="nav-link" data-bs-toggle="tab">Safety Features</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#tech-features" class="nav-link" data-bs-toggle="tab">Technology</a>
+                </li>
+              </ul>
+
+              <div class="tab-content mt-4">
+                <div class="tab-pane fade show active" id="interior-features">
+                  <div class="features-grid">
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Leather Seats
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Dual Zone Climate Control
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Heated Seats
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Power Adjustable Seats
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Panoramic Sunroof
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Ambient Lighting
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Memory Seats
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Premium Audio System
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Wireless Charging
+                    </div>
                   </div>
                 </div>
-                <div id="thumb2" class="tab-pane fade">
-                  <div class="car-thumb">
-                    <img src="assets/img/car/details-1.png" alt="img" />
+
+                <div class="tab-pane fade" id="exterior-features">
+                  <div class="features-grid">
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      LED Headlights
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Panoramic Sunroof
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Power Folding Mirrors
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Rain Sensing Wipers
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Alloy Wheels
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Rear Spoiler
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Daytime Running Lights
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Heated Mirrors
+                    </div>
                   </div>
                 </div>
-                <div id="thumb3" class="tab-pane fade">
-                  <div class="car-thumb">
-                    <img src="assets/img/car/details-1.png" alt="img" />
+
+                <div class="tab-pane fade" id="safety-features">
+                  <div class="features-grid">
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      ABS Brakes
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Airbags (8)
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Stability Control
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Reverse Camera
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Parking Sensors
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Blind Spot Monitor
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Lane Keep Assist
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Adaptive Cruise Control
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="tech-features">
+                  <div class="features-grid">
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Apple CarPlay
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Android Auto
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Navigation System
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Bluetooth Connectivity
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Keyless Entry & Start
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Digital Dashboard
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Head-up Display
+                    </div>
+                    <div class="info-item">
+                      <i class="fa-solid fa-check text-success me-2"></i>
+                      Wireless Phone Charger
+                    </div>
                   </div>
                 </div>
               </div>
-              <ul class="nav mb-5">
-                <li class="nav-item">
-                  <a href="#thumb1" data-bs-toggle="tab" class="nav-link ps-0 active">
-                    <img src="assets/img/car/details-2.png" alt="img" />
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#thumb2" data-bs-toggle="tab" class="nav-link">
-                    <img src="assets/img/car/details-3.png" alt="img" />
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#thumb3" data-bs-toggle="tab" class="nav-link">
-                    <img src="assets/img/car/details-4.png" alt="img" />
-                  </a>
-                </li>
-              </ul>
             </div>
-            <div class="car-details-items">
-              <h2>Key Features</h2>
+
+            <!-- Finance Calculator Section -->
+            <div class="finance-section wow fadeInUp" data-wow-delay=".7s">
+              <div class="finance-calculator card-shadow">
+                <h3><i class="fa-solid fa-calculator me-2"></i> Apply Finance</h3>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="input-group-finance">
+                      <label for="vehicleCost">Vehicle Cost ($)</label>
+                      <input type="number" id="vehicleCost" placeholder="Enter vehicle cost" value="38570">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="input-group-finance">
+                      <label for="cashDeposit">Cash Deposit ($)</label>
+                      <input type="number" id="cashDeposit" placeholder="Enter cash deposit" value="5000">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="input-group-finance">
+                      <label for="tradeIn">Trade In ($)</label>
+                      <input type="number" id="tradeIn" placeholder="Enter trade-in value" value="0">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="input-group-finance">
+                  <label>Loan Term (months)</label>
+                  <div class="loan-term-buttons">
+                    <button class="loan-term-btn" data-months="24">24 mths</button>
+                    <button class="loan-term-btn" data-months="36">36 mths</button>
+                    <button class="loan-term-btn active" data-months="48">48 mths</button>
+                    <button class="loan-term-btn" data-months="60">60 mths</button>
+                    <button class="loan-term-btn" data-months="72">72 mths</button>
+                  </div>
+                </div>
+
+                <div class="row align-items-center">
+                  <div class="col-md-8">
+                    <div class="finance-summary">
+                      <h4 class="text-white">Estimated Monthly Payment: <span class="text-theme"
+                          id="monthlyPayment">$850</span></h4>
+                      <p class="text-muted mb-0">Based on 8.75% interest rate</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <button class="theme-btn w-100" id="applyFinanceBtn">
+                      <i class="fa-solid fa-file-contract me-2"></i> Apply Now
+                    </button>
+                  </div>
+                </div>
+
+                <div class="finance-disclaimer">
+                  * On Road Costs and Clean Car fee or rebate may apply. Finance calculation based on a 48 months month
+                  term, $5,000 cash deposit / $0 trade in and with an example annual fixed interest rate of 8.75%. The
+                  total payable amount is $46,731, which includes $8,161 of interest. Actual interest rate may be higher
+                  or lower. Includes an establishment fee of $495 & $8.00 per month account fee. Estimate only, not an
+                  offer of finance. Terms, conditions and lending criteria apply. Price Includes GST.
+                </div>
+              </div>
+            </div>
+
+            <!-- Details Grid Sections -->
+            <div class="details-grid wow fadeInUp" data-wow-delay=".8s">
+              <!-- Car Details Section -->
+              <div class="info-section card-shadow">
+                <h3><i class="fa-solid fa-car me-2"></i> Car Details</h3>
+                <div class="specifications-grid">
+                  <div class="spec-item">
+                    <span>Fuel Rating</span>
+                    <span>★★★★☆</span>
+                  </div>
+                  <div class="spec-item">
+                    <span>Fuel Economy</span>
+                    <span>7.2L/100km</span>
+                  </div>
+                  <div class="spec-item">
+                    <span>Fuel Costs</span>
+                    <span>$1,850/year</span>
+                  </div>
+                  <div class="spec-item">
+                    <span>CO2 Emissions</span>
+                    <span>167g/km</span>
+                  </div>
+                  <div class="spec-item">
+                    <span>Air Pollution</span>
+                    <span>Euro 6</span>
+                  </div>
+                  <div class="spec-item">
+                    <span>Safety Rating</span>
+                    <span>5 Star ANCAP</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar-card wow fadeInUp" data-wow-delay=".7s">
+                <h3><i class="fa-solid fa-list-check me-2"></i> Key Specifications</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex justify-content-between py-2 border-bottom">
+                    <span class="text-muted">Engine:</span>
+                    <span class="fw-medium">2.0L Turbo</span>
+                  </li>
+                  <li class="d-flex justify-content-between py-2 border-bottom">
+                    <span class="text-muted">Power:</span>
+                    <span class="fw-medium">255 HP</span>
+                  </li>
+                  <li class="d-flex justify-content-between py-2 border-bottom">
+                    <span class="text-muted">Torque:</span>
+                    <span class="fw-medium">295 lb-ft</span>
+                  </li>
+                  <li class="d-flex justify-content-between py-2 border-bottom">
+                    <span class="text-muted">0-100 km/h:</span>
+                    <span class="fw-medium">5.0 sec</span>
+                  </li>
+                  <li class="d-flex justify-content-between py-2 border-bottom">
+                    <span class="text-muted">Top Speed:</span>
+                    <span class="fw-medium">250 km/h</span>
+                  </li>
+                  <li class="d-flex justify-content-between py-2 border-bottom">
+                    <span class="text-muted">Fuel Tank:</span>
+                    <span class="fw-medium">52L</span>
+                  </li>
+                  <li class="d-flex justify-content-between py-2 border-bottom">
+                    <span class="text-muted">Boot Space:</span>
+                    <span class="fw-medium">290L</span>
+                  </li>
+                  <li class="d-flex justify-content-between py-2">
+                    <span class="text-muted">Warranty:</span>
+                    <span class="fw-medium">3 Years</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- Description Section -->
+            <div class="info-section wow fadeInUp" data-wow-delay=".9s">
+              <h3><i class="fa-solid fa-file-alt me-2"></i> Vehicle Description</h3>
               <p>
-                IronCaptivate with this shirt’s versatile urban look that
-                works as well at happy hour as it does in the crocodile
-                complete...
+                Introducing the stunning 2024 Toyota Supra - a perfect blend of performance, style, and technology.
+                This sports coupe has been meticulously maintained with only 1,270 km on the odometer, making it
+                practically brand new.
               </p>
-              <ul class="nav" role="tablist">
-                <li class="nav-item">
-                  <a href="#Interior" data-bs-toggle="tab" class="nav-link" aria-selected="false" role="tab"
-                    tabindex="-1">
-                    Interior Features
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#Exterior" data-bs-toggle="tab" class="nav-link active" aria-selected="true" role="tab">
-                    Exterior Features
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#Body" data-bs-toggle="tab" class="nav-link" aria-selected="false" role="tab" tabindex="-1">
-                    Body Features
-                  </a>
-                </li>
-              </ul>
-              <div class="tab-content">
-                <div id="Interior" class="tab-pane fade" role="tabpanel">
-                  <div class="tab-site-item">
-                    <ul class="icon-list">
-                      <li>
-                        <i class="fa-solid fa-check"></i>
-                        Excellent Service and Quality
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-check"></i>
-                        Perfect Fit and Fast Shipping
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-check"></i>
-                        Top-notch Accessories
-                      </li>
-                    </ul>
-                    <ul class="icon-list">
-                      <li>
-                        <i class="fa-solid fa-check"></i>
-                        Excellent Service and Quality
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-check"></i>
-                        Perfect Fit and Fast Shipping
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-check"></i>
-                        Top-notch Accessories
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div id="Exterior" class="tab-pane fade active show" role="tabpanel">
-                  <div class="tab-site-item">
-                    <ul class="icon-list">
-                      <li>
-                        <i class="fa-solid fa-check"></i>
-                        Excellent Service and Quality
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-check"></i>
-                        Perfect Fit and Fast Shipping
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-check"></i>
-                        Top-notch Accessories
-                      </li>
-                    </ul>
-                    <ul class="icon-list">
-                      <li>
-                        <i class="fa-solid fa-check"></i>
-                        Excellent Service and Quality
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-check"></i>
-                        Perfect Fit and Fast Shipping
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-check"></i>
-                        Top-notch Accessories
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div id="Body" class="tab-pane fade" role="tabpanel">
-                  <div class="tab-site-item">
-                    <ul class="icon-list">
-                      <li>
-                        <i class="fa-solid fa-check"></i>
-                        Excellent Service and Quality
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-check"></i>
-                        Perfect Fit and Fast Shipping
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-check"></i>
-                        Top-notch Accessories
-                      </li>
-                    </ul>
-                    <ul class="icon-list">
-                      <li>
-                        <i class="fa-solid fa-check"></i>
-                        Excellent Service and Quality
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-check"></i>
-                        Perfect Fit and Fast Shipping
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-check"></i>
-                        Top-notch Accessories
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="feature-box">
-              <h3>Others Features</h3>
               <p>
-                I ordered new LED headlights, and they look amazing! The
-                pricing is great, and when I had a question about
-                installation, customer support was quick to help. I’m super
-                satisfied! I've bought several products like seat cushions and
-                trunk organizers from here, and they have all been excellent.
-                The quality and prices are unbeatable,I purchased a steering
-                wheel cover that not only looks stylish but also provides a
-                great grip. My driving experience is much better now, and I’ll
-                definitely shop here again.
+                The Supra features a powerful 2.0L turbocharged engine paired with a smooth manual transmission,
+                delivering exhilarating performance while maintaining excellent fuel efficiency. The exterior
+                sports a sleek Pearl White finish that turns heads wherever you go, complemented by premium
+                alloy wheels and LED lighting.
+              </p>
+              <p>
+                Inside, you'll find a luxurious cabin with leather seats, dual-zone climate control, and
+                state-of-the-art technology including Apple CarPlay, Android Auto, and a premium audio system.
+                Safety is paramount with 5-star ANCAP rating, featuring advanced driver assistance systems
+                including adaptive cruise control, lane keep assist, and blind spot monitoring.
+              </p>
+              <p>
+                This vehicle comes with full service history and balance of factory warranty. Perfect for
+                enthusiasts seeking a thrilling driving experience without compromising on comfort and
+                practicality.
               </p>
             </div>
           </div>
-          <div class="col-lg-5">
-            <div class="car-details-right-items">
-              <div class="car-details-box-items">
-                <h2>Toyota Supra</h2>
-                <ul class="list-items">
-                  <li>
-                    <i class="fa-regular fa-gas-pump"></i>
-                    Diesel
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-steering-wheel"></i>
-                    Manual
-                  </li>
-                  <li>
-                    <i class="fa-light fa-users"></i>
-                    4 People
-                  </li>
-                  <li>
-                    <i class="fa-sharp fa-light fa-gauge"></i>
-                    1270 km
-                  </li>
-                </ul>
-                <p>
-                  I bought a set of windshield wipers and they were a perfect
-                  fit for my car. Plus, they arrived sooner than expected!
-                  Great service and highly recommended.
-                </p>
-                <h3>Specifications</h3>
-                <ul class="details-list">
-                  <li>Mileage <span>4500</span></li>
-                  <li>Transmission <span>Automatic</span></li>
-                  <li>Seats <span>6</span></li>
-                  <li>Baggage <span>6</span></li>
-                  <li>Year <span>2024</span></li>
-                  <li>Type <span>SUV</span></li>
-                  <li>Brand <span>Audi</span></li>
-                  <li>Location <span>Downtown Dubai</span></li>
-                </ul>
-              </div>
-              <div class="car-details-form">
-                <h3>
-                  Contact RevAuto for Sales, Service, Financing, and More
-                </h3>
-                <form action="#" id="contact-form" method="POST" class="contact-form-items mt-3 mt-md-0">
-                  <div class="row g-4">
-                    <div class="col-lg-12">
-                      <div class="form-clt">
-                        <span>Your Name*</span>
-                        <input type="text" name="name" id="name" placeholder="Your Name" />
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="form-clt">
-                        <span>Email Address*</span>
-                        <input type="text" name="email" id="email" placeholder="Your Email" />
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="form-clt">
-                        <span>Phone Number*</span>
-                        <input type="text" name="phone" id="phone" placeholder="phone" />
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <button type="submit" class="theme-btn">SUBMIT</button>
-                    </div>
+
+          <!-- Right Column - Sidebar -->
+          <div class="col-lg-4">
+            <!-- Contact Card -->
+            <div class="sidebar-card wow fadeInUp" data-wow-delay=".6s">
+              <h3><i class="fa-solid fa-phone me-2"></i> Contact Dealer</h3>
+
+              <div class="dealer-info mb-4">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="me-3">
+                    <i class="fa-solid fa-user text-theme fs-4"></i>
                   </div>
+                  <div>
+                    <h6 class="mb-0">0272242559</h6>
+                    <p class="text-muted mb-0">Sales Manager</p>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center mb-3">
+                  <div class="me-3">
+                    <i class="fa-solid fa-phone text-theme fs-4"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">0222 887 888 </h6>
+                    <p class="text-muted mb-0">Direct Line</p>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center mb-3">
+                  <div class="me-3">
+                    <i class="fa-solid fa-envelope text-theme fs-4"></i>
+                  </div>
+                  <div>
+                    <a href="mailto:contact@carziocars.co.nz" class="mb-0">contact@carziocars.co.nz</a>
+                    <p class="text-muted mb-0">Email</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="action-buttons">
+                <button class="theme-btn">
+                  <i class="fa-solid fa-phone me-2"></i> Call Now
+                </button>
+                <a href="mailto:contact@carziocars.co.nz" class="theme-btn-3">
+                  <i class="fa-solid fa-envelope me-2"></i> Email Inquiry
+                </a>
+              </div>
+
+              <!-- Contact Form -->
+              <div class="sidebar-contact-form">
+                <h4 class="mb-4">Quick Contact Form</h4>
+                <form id="sidebar-contact-form">
+                  <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Your Email" required>
+                  </div>
+                  <div class="mb-3">
+                    <input type="tel" class="form-control" placeholder="Phone Number" required>
+                  </div>
+                  <div class="mb-3">
+                    <textarea class="form-control" rows="3" placeholder="Subject"></textarea>
+                  </div>
+                  <button type="submit" class="theme-btn w-100">
+                    <i class="fa-solid fa-paper-plane me-2"></i> Send Message
+                  </button>
                 </form>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Car Section Start -->
-  <section class="car-section fix section-padding pt-0">
-    <div class="container">
-      <div class="row">
-        <div class="section-title-area">
-          <div class="section-title">
-            <h2 class="wow fadeInUp" data-wow-delay=".3s">Featured Cars</h2>
-          </div>
-          <a href="car.html" class="theme-btn wow fadeInUp" data-wow-delay=".5s">View More <i
-              class="fa-regular fa-car"></i></a>
-        </div>
-        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-          <div class="car-box-items item-bg-color">
-            <div class="car-titile">
-              <h4><a href="car-details.html">Chevrolet Camaro</a></h4>
-              <p>Sport</p>
-            </div>
-            <a href="wishlist.html" class="icon"><i class="fa-solid fa-heart"></i></a>
-            <div class="car-image">
-              <img src="assets/img/car/04.png" alt="img" />
-            </div>
-            <div class="car-list-items">
-              <ul>
-                <li>
-                  <i class="fa-regular fa-gas-pump"></i>
-                  Diesel
-                </li>
-                <li>
-                  <i class="fa-solid fa-steering-wheel"></i>
-                  Manual
-                </li>
-                <li>
-                  <i class="fa-light fa-users"></i>
-                  4 People
-                </li>
-                <li>
-                  <i class="fa-sharp fa-light fa-gauge"></i>
-                  1270 km
-                </li>
-              </ul>
-              <div class="price-items">
-                <h3>$120,100</h3>
-                <a href="car-details.html" class="theme-btn">View More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-          <div class="car-box-items item-bg-color">
-            <div class="car-titile">
-              <h4><a href="car-details.html">BMW M3</a></h4>
-              <p>Sport</p>
-            </div>
-            <a href="wishlist.html" class="icon"><i class="fa-solid fa-heart"></i></a>
-            <div class="car-image">
-              <img src="assets/img/car/05.png" alt="img" />
-            </div>
-            <div class="car-list-items">
-              <ul>
-                <li>
-                  <i class="fa-regular fa-gas-pump"></i>
-                  Diesel
-                </li>
-                <li>
-                  <i class="fa-solid fa-steering-wheel"></i>
-                  Manual
-                </li>
-                <li>
-                  <i class="fa-light fa-users"></i>
-                  4 People
-                </li>
-                <li>
-                  <i class="fa-sharp fa-light fa-gauge"></i>
-                  1270 km
-                </li>
-              </ul>
-              <div class="price-items">
-                <h3>$240,450</h3>
-                <a href="car-details.html" class="theme-btn">View More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-          <div class="car-box-items item-bg-color">
-            <div class="car-titile">
-              <h4><a href="car-details.html">Ferrari F8 Tributo</a></h4>
-              <p>Sport</p>
-            </div>
-            <a href="wishlist.html" class="icon"><i class="fa-solid fa-heart"></i></a>
-            <div class="car-image">
-              <img src="assets/img/car/06.png" alt="img" />
-            </div>
-            <div class="car-list-items">
-              <ul>
-                <li>
-                  <i class="fa-regular fa-gas-pump"></i>
-                  Diesel
-                </li>
-                <li>
-                  <i class="fa-solid fa-steering-wheel"></i>
-                  Manual
-                </li>
-                <li>
-                  <i class="fa-light fa-users"></i>
-                  4 People
-                </li>
-                <li>
-                  <i class="fa-sharp fa-light fa-gauge"></i>
-                  1270 km
-                </li>
-              </ul>
-              <div class="price-items">
-                <h3>$125,500</h3>
-                <a href="car-details.html" class="theme-btn">View More</a>
+
+
+            <div class="info-section card-shadow">
+              <h3><i class="fa-solid fa-info-circle me-2"></i> Essential Information</h3>
+              <div class="specifications-grid">
+                <div class="spec-item">
+                  <span>Stock No</span>
+                  <span>CARZ-2024-001</span>
+                </div>
+                <div class="spec-item">
+                  <span>Doors</span>
+                  <span>4</span>
+                </div>
+                <div class="spec-item">
+                  <span>Transmission</span>
+                  <span>Automatic</span>
+                </div>
+                <div class="spec-item">
+                  <span>Registration</span>
+                  <span>ABC123</span>
+                </div>
+                <div class="spec-item">
+                  <span>Kilometers</span>
+                  <span>12,500 km</span>
+                </div>
+                <div class="spec-item">
+                  <span>Seats</span>
+                  <span>5</span>
+                </div>
+                <div class="spec-item">
+                  <span>Make</span>
+                  <span>Toyota</span>
+                </div>
+                <div class="spec-item">
+                  <span>Body Style</span>
+                  <span>Sedan</span>
+                </div>
+                <div class="spec-item">
+                  <span>Wof Expires</span>
+                  <span>15/08/2024</span>
+                </div>
+                <div class="spec-item">
+                  <span>Fuel Type</span>
+                  <span>Petrol</span>
+                </div>
+                <div class="spec-item">
+                  <span>Engine Size</span>
+                  <span>2.0L</span>
+                </div>
+                <div class="spec-item">
+                  <span>Color</span>
+                  <span>Pearl White</span>
+                </div>
+                <div class="spec-item">
+                  <span>Owners</span>
+                  <span>1</span>
+                </div>
+                <div class="spec-item">
+                  <span>Cylinders</span>
+                  <span>4</span>
+                </div>
               </div>
             </div>
           </div>
@@ -659,7 +854,6 @@
           </div>
         </div>
       </div>
-
       <hr />
     </div>
 
@@ -670,18 +864,16 @@
             <div class="single-footer-widget">
               <img src="assets/img/logo/logo.png" alt="carzio" style="width: 150px;" />
               <p class="my-3 fs-6">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Carzio Cars delivers premium Japanese imports with certified compliance, flexible finance, and trusted
+                service.
               </p>
-
               <div class="footer-3-social-wrapper">
                 <a href="#">
                   <i class="fa-brands fa-facebook-f"></i>
                 </a>
-
                 <a href="#">
                   <i class="fa-brands fa-twitter"></i>
                 </a>
-
                 <a href="#">
                   <i class="fa-brands fa-linkedin-in"></i>
                 </a>
@@ -763,7 +955,113 @@
   <script src="assets/js/wow.min.js"></script>
   <!--<< Main.js >>-->
   <script src="assets/js/main.js"></script>
-</body>
 
+  <script>
+    // Set current year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Initialize Wow.js
+    new WOW().init();
+
+    // Finance Calculator Logic
+    document.addEventListener('DOMContentLoaded', function () {
+      // Loan term buttons functionality
+      const loanTermButtons = document.querySelectorAll('.loan-term-btn');
+      loanTermButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          // Remove active class from all buttons
+          loanTermButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          this.classList.add('active');
+        });
+      });
+
+      // Apply Finance Button functionality
+      const applyFinanceBtn = document.getElementById('applyFinanceBtn');
+      if (applyFinanceBtn) {
+        applyFinanceBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          // Get values from input fields
+          const vehicleCost = parseFloat(document.getElementById('vehicleCost').value) || 0;
+          const cashDeposit = parseFloat(document.getElementById('cashDeposit').value) || 0;
+          const tradeIn = parseFloat(document.getElementById('tradeIn').value) || 0;
+
+          // Get selected loan term
+          const activeTermBtn = document.querySelector('.loan-term-btn.active');
+          const loanTerm = activeTermBtn ? parseInt(activeTermBtn.getAttribute('data-months')) : 48;
+
+          // Calculate loan amount
+          const loanAmount = vehicleCost - cashDeposit - tradeIn;
+
+          // Simple interest calculation (8.75% annual rate)
+          const annualInterestRate = 0.0875;
+          const monthlyInterestRate = annualInterestRate / 12;
+          const totalInterest = loanAmount * annualInterestRate * (loanTerm / 12);
+          const totalPayable = loanAmount + totalInterest;
+          const monthlyPayment = totalPayable / loanTerm;
+
+          // Show alert with calculation (in real implementation, you would show this in a modal or dedicated section)
+          alert(`Finance Calculation:\n\n` +
+            `Loan Amount: $${loanAmount.toFixed(2)}\n` +
+            `Loan Term: ${loanTerm} months\n` +
+            `Monthly Payment: $${monthlyPayment.toFixed(2)}\n` +
+            `Total Payable: $${totalPayable.toFixed(2)}\n` +
+            `Total Interest: $${totalInterest.toFixed(2)}\n\n` +
+            `This is an estimate. Please contact us for accurate finance options.`);
+        });
+      }
+
+      // Image Gallery Functionality
+      const mainCarImage = document.getElementById('mainCarImage');
+      const thumbnailItems = document.querySelectorAll('.car-thumbnails-vertical .thumbnail-item');
+
+      // Thumbnail click event for vertical layout
+      thumbnailItems.forEach(thumb => {
+        thumb.addEventListener('click', function () {
+          // Remove active class from all thumbnails
+          thumbnailItems.forEach(item => item.classList.remove('active'));
+
+          // Add active class to clicked thumbnail
+          this.classList.add('active');
+
+          // Get the image source from data attribute
+          const newImageSrc = this.getAttribute('data-image');
+
+          // Update main image
+          mainCarImage.src = newImageSrc;
+
+          // Update main image link for popup
+          const mainImageLink = document.querySelector('.main-car-image');
+          mainImageLink.href = newImageSrc;
+
+          // Optional: Scroll the clicked thumbnail into view if it's partially visible
+          this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+      });
+
+      // Initialize Magnific Popup for image gallery
+      $('.image-popup').magnificPopup({
+        type: 'image',
+        gallery: {
+          enabled: true
+        },
+        zoom: {
+          enabled: true,
+          duration: 300,
+          easing: 'ease-in-out',
+          opener: function (openerElement) {
+            return openerElement.is('img') ? openerElement : openerElement.find('img');
+          }
+        }
+      });
+
+      // Initialize tooltips if needed
+      $('[data-bs-toggle="tooltip"]').tooltip();
+    });
+
+
+  </script>
+</body>
 
 </html>
