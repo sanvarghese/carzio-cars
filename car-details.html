@@ -12,7 +12,7 @@
   <!-- ======== Page title ============ -->
   <title>Carzio</title>
   <!--<< Favcion >>-->
-  <link rel="shortcut icon" href="assets/img/favicon.svg" />
+  <link rel="shortcut icon" href="assets/img/carzio-favicon.png" />
   <!--<< Bootstrap min.css >>-->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
   <!--<< All Min Css >>-->
@@ -58,6 +58,7 @@
     <i class="fa-regular fa-arrow-up"></i>
   </button>
 
+  
   <!-- Offcanvas Area Start -->
   <div class="fix-area">
     <div class="offcanvas__info">
@@ -66,7 +67,8 @@
           <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
             <div class="offcanvas__logo">
               <a href="index.html">
-                <img src="assets/img/logo/black-logo.svg" alt="logo-img" />
+                <img src="assets/img/logo/logo.png" alt="logo-img" />
+                <!-- In dark mode, you can swap to white-logo.svg via CSS if needed -->
               </a>
             </div>
             <div class="offcanvas__close">
@@ -75,10 +77,6 @@
               </button>
             </div>
           </div>
-          <p class="text d-none d-xl-block">
-            Nullam dignissim, ante scelerisque the is euismod fermentum odio sem semper the is erat, a feugiat leo urna
-            eget eros. Duis Aenean a imperdiet risus.
-          </p>
           <div class="mobile-menu fix mb-3"></div>
           <div class="offcanvas__contact">
             <h4>Contact Info</h4>
@@ -88,7 +86,7 @@
                   <i class="fal fa-map-marker-alt"></i>
                 </div>
                 <div class="offcanvas__contact-text">
-                  <a target="_blank" href="#">Main Street, Melbourne, Australia</a>
+                  <a target="_blank" href="#">576 Hillside Road, Caversham, Dunedin</a>
                 </div>
               </li>
               <li class="d-flex align-items-center">
@@ -96,23 +94,25 @@
                   <i class="fal fa-envelope"></i>
                 </div>
                 <div class="offcanvas__contact-text">
-                  <a href="mailto:info@example.com"><span class="mailto:info@example.com">info@example.com</span></a>
+                  <a href="mailto: contact@carziocars.co.nz"><span class="mailto:info@example.com">
+                      contact@carziocars.co.nz
+                    </span></a>
                 </div>
               </li>
-              <li class="d-flex align-items-center">
+              <!-- <li class="d-flex align-items-center">
                 <div class="offcanvas__contact-icon mr-15">
                   <i class="fal fa-clock"></i>
                 </div>
                 <div class="offcanvas__contact-text">
                   <a target="_blank" href="#">Mod-friday, 09am -05pm</a>
                 </div>
-              </li>
+              </li> -->
               <li class="d-flex align-items-center">
                 <div class="offcanvas__contact-icon mr-15">
                   <i class="far fa-phone"></i>
                 </div>
                 <div class="offcanvas__contact-text">
-                  <a href="tel:+11002345909">+11002345909</a>
+                  <a href="tel:+0222 887 888"> 0222 887 888</a>
                 </div>
               </li>
             </ul>
@@ -123,9 +123,8 @@
             </div>
             <div class="social-icon d-flex align-items-center">
               <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
               <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
           </div>
         </div>
@@ -135,32 +134,33 @@
   <div class="offcanvas__overlay"></div>
 
   <!-- header  section start -->
-
   <header id="header-sticky" class="navbar-2">
     <div class="navbar-2-address-bar">
       <div class="address-bar-content">
         <div class="contact-icons">
-          <p><i class="fa-regular fa-phone"></i> 0222 887 888
+          <p>
+            <i class="fa-regular fa-phone"></i> 0222 887 888
           </p>
-          <p><i class="fa-regular fa-envelope"></i> contact@carziocars.co.nz
+          <p>
+            <i class="fa-regular fa-envelope"></i> contact@carziocars.co.nz
           </p>
         </div>
+        <!-- <p><i class="fa-regular fa-mail"></i> Email: contact@carziocars.co.nz</p> -->
         <div class="social-icon d-flex align-items-center">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
         </div>
       </div>
     </div>
-
     <div class="container">
       <div class="row justify-content-between align-items-center">
         <div class="col-6 col-md-4">
           <div class="navbar-2-left">
             <div class="navbar-2-logo">
               <a href="index-4.html">
-                <img src="assets/img/logo/logo.png" alt="Carzio" width="180">
+                <img src="assets/img/logo/logo.png" alt="RevAuto" width="180">
               </a>
             </div>
           </div>
@@ -173,35 +173,45 @@
               <div class="main-menu">
                 <nav id="mobile-menu">
                   <ul>
-                    <li class="has-dropdown active menu-thumb">
-                      <a href="index.html"> Home </a>
+                    <li class="has-dropdown active d-xl-none">
+                      <a href="#" class="border-none"> Home</a>
                     </li>
-                    <li class="has-dropdown active menu-thumb">
-                      <a href="#"> About </a>
+                    <li>
+                      <a href="#" class="border-none"> About</a>
                     </li>
-                    <li class="has-dropdown active menu-thumb">
-                      <a href="#"> Car Stock </a>
+                    <li>
+                      <a href="#" class="border-none"> Car Stock</a>
                     </li>
-                    <li class="has-dropdown active menu-thumb">
-                      <a href="#"> Trade In </a>
+                    <li>
+                      <a href="#" class="border-none"> Trade In</a>
                     </li>
-                    <li class="has-dropdown active menu-thumb">
-                      <a href="#"> Pre Order </a>
+                    <li>
+                      <a href="#" class="border-none"> Finance</a>
                     </li>
-                    <li class="has-dropdown active menu-thumb">
-                      <a href="#"> Contact Us</a>
+                    <li>
+                      <a href="#" class="border-none"> Pre Order</a>
                     </li>
+                    <li>
+                      <a href="#" class="border-none"> Contact Us</a>
+                    </li>
+                  </ul>
                   </ul>
                 </nav>
               </div>
             </div>
-
             <!-- user options -->
             <div class="navbar-2-user-options">
               <div class="search-wrapper d-none d-md-block">
-
               </div>
               <div class="buttons">
+                <!-- <a href="shop-cart.html" class="cart-button" data-count="10">
+                  <i class="fa-sharp fa-regular fa-bag-shopping"></i>
+                  <span id="cart-count">0</span>
+                </a>
+                <a href="login.html">
+                  <i class="fa-light fa-user"></i>
+                </a> -->
+
                 <div class="header__hamburger d-xl-none my-auto">
                   <div class="sidebar__toggle">
                     <i class="fas fa-bars"></i>
