@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="assets/css/color.css" />
   <!--<< Main.css >>-->
   <link rel="stylesheet" href="assets/css/main.css" />
+
 </head>
 
 <body>
@@ -236,710 +237,696 @@
     </div>
   </div>
   <!-- Finance section start -->
-
-  <!-- Finance section start -->
   <div class="finace-section section-bg section-padding">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-12">
           <div class="finance-wizard-container">
-            <!-- Wizard Header -->
-            <div class="wizard-header text-center mb-5">
-              <h1 class="mb-3">Apply for Finance Online</h1>
-              <div class="wizard-options">
+
+            <!-- <div class="wizard-header text-center mb-5">
+              <h1 class="mb-5">Apply for Finance Online</h1>
+              <div class="wizard-options mb-5">
                 <button class="btn btn-outline-theme me-3 active" id="fullApplicationBtn">FULL APPLICATION FORM</button>
                 <button class="btn btn-outline-theme" id="quickApplicationBtn">QUICK APPLICATION FORM</button>
               </div>
-            </div>
+            </div> -->
 
-            <!-- Wizard Progress Steps -->
-            <div class="wizard-progress mb-5">
-              <div class="progress-steps d-flex justify-content-between position-relative">
-                <div class="step position-relative active" data-step="1">
-                  <div class="step-circle">1</div>
-                  <div class="step-label">Start</div>
+            <!-- Wizard Header with Calculator -->
+            <div class="row mb-5">
+              <div class="col-lg-8">
+                <div class="wizard-header">
+                  <h1 class="mb-4">Apply for Finance Online</h1>
+                  <div class="wizard-options">
+                    <button class="btn btn-outline-theme me-3 active" id="fullApplicationBtn">Full Application
+                      Form</button>
+                    <button class="btn btn-outline-theme" id="quickApplicationBtn">Quick Application Form</button>
+                  </div>
                 </div>
-                <div class="step position-relative" data-step="2">
-                  <div class="step-circle">2</div>
-                  <div class="step-label">Personal Details</div>
+              </div>
+              <div class="col-lg-4">
+                <!-- Finance Calculator Button -->
+                <div class="finance-calculator-btn-wrapper text-center text-lg-end">
+                  <button class="btn btn-theme btn-lg" id="showCalculatorBtn">
+                    <i class="fas fa-calculator me-2"></i>Finance Calculator
+                  </button>
                 </div>
-                <div class="step position-relative" data-step="3">
-                  <div class="step-circle">3</div>
-                  <div class="step-label">Residential</div>
-                </div>
-                <div class="step position-relative" data-step="4">
-                  <div class="step-circle">4</div>
-                  <div class="step-label">Employment</div>
-                </div>
-                <div class="step position-relative" data-step="5">
-                  <div class="step-circle">5</div>
-                  <div class="step-label">Income</div>
-                </div>
-                <div class="step position-relative" data-step="6">
-                  <div class="step-circle">6</div>
-                  <div class="step-label">Expenditure</div>
-                </div>
-                <div class="step position-relative" data-step="7">
-                  <div class="step-circle">7</div>
-                  <div class="step-label">Loan Detail</div>
-                </div>
-                <div class="progress-bar position-absolute"></div>
               </div>
             </div>
 
-            <!-- Wizard Forms -->
-            <div class="wizard-forms">
-              <!-- Step 1: Start -->
-              <div class="wizard-step active" id="step1">
-                <div class="finance-form-card">
-                  <h3 class="mb-4">Let's get started!</h3>
-                  <p class="mb-4">Will you be applying for finance with someone else?</p>
-
-                  <div class="d-flex gap-4 mb-5">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="jointApplication" id="jointYes" value="yes">
-                      <label class="form-check-label" for="jointYes">
-                        <span class="d-block fs-5">YES</span>
-                        <small class="text-muted">Joint application</small>
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="jointApplication" id="jointNo" value="no"
-                        checked>
-                      <label class="form-check-label" for="jointNo">
-                        <span class="d-block fs-5">NO</span>
-                        <small class="text-muted">Single application</small>
-                      </label>
-                    </div>
+            <!-- Full Application Form (Wizard) -->
+            <div class="form-type-content active" id="fullApplicationForm">
+              <!-- Wizard Progress Steps -->
+              <div class="wizard-progress mb-5">
+                <div class="progress-steps d-flex justify-content-between position-relative">
+                  <div class="step position-relative active" data-step="1">
+                    <div class="step-circle">1</div>
+                    <div class="step-label">Start</div>
                   </div>
-
-                  <div class="form-navigation">
-                    <button class="theme-btn next-step" data-next="2">Next</button>
+                  <div class="step position-relative" data-step="2">
+                    <div class="step-circle">2</div>
+                    <div class="step-label">Personal Details</div>
                   </div>
+                  <div class="step position-relative" data-step="3">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">Residential</div>
+                  </div>
+                  <div class="step position-relative" data-step="4">
+                    <div class="step-circle">4</div>
+                    <div class="step-label">Employment</div>
+                  </div>
+                  <div class="step position-relative" data-step="5">
+                    <div class="step-circle">5</div>
+                    <div class="step-label">Income</div>
+                  </div>
+                  <div class="step position-relative" data-step="6">
+                    <div class="step-circle">6</div>
+                    <div class="step-label">Expenditure</div>
+                  </div>
+                  <div class="step position-relative" data-step="7">
+                    <div class="step-circle">7</div>
+                    <div class="step-label">Loan Detail</div>
+                  </div>
+                  <div class="progress-bar position-absolute"></div>
                 </div>
               </div>
 
-              <!-- Step 2: Personal Details -->
-              <div class="wizard-step" id="step2">
-                <div class="finance-form-card">
-                  <h3 class="mb-4">Personal Details</h3>
+              <!-- Wizard Forms -->
+              <div class="wizard-forms">
+                <!-- Step 1: Start -->
+                <div class="wizard-step active" id="step1">
+                  <div class="finance-form-card">
+                    <h3 class="mb-4">Let's get started!</h3>
+                    <p class="mb-4">Will you be applying for finance with someone else?</p>
 
-                  <div class="row g-4">
-                    <div class="col-md-6">
-                      <label class="form-label">Title *</label>
-                      <select class="form-select" name="title">
-                        <option value="">Select</option>
-                        <option value="mr">Mr</option>
-                        <option value="mrs">Mrs</option>
-                        <option value="miss">Miss</option>
-                        <option value="ms">Ms</option>
-                        <option value="dr">Dr</option>
-                      </select>
+                    <div class="d-flex gap-4 mb-5">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="jointApplication" id="jointYes" value="yes">
+                        <label class="form-check-label" for="jointYes">
+                          <span class="d-block fs-5">YES</span>
+                          <small class="text-muted">Joint application</small>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="jointApplication" id="jointNo" value="no"
+                          checked>
+                        <label class="form-check-label" for="jointNo">
+                          <span class="d-block fs-5">NO</span>
+                          <small class="text-muted">Single application</small>
+                        </label>
+                      </div>
                     </div>
 
-                      <div class="col-md-6">
-                      <label class="form-label">First Name *</label>
-                      <input type="text" class="form-control" name="first_name" placeholder="Enter first name" required>
+                    <div class="form-navigation">
+                      <button class="theme-btn next-step" data-next="2">Next</button>
                     </div>
-
-                    <div class="col-md-6">
-                      <label class="form-label">Middle Name</label>
-                      <input type="text" class="form-control" name="middle_name" placeholder="Enter middle name">
-                    </div>
-
-                    <div class="col-md-6">
-                      <label class="form-label">Last Name *</label>
-                      <input type="text" class="form-control" name="last_name" placeholder="Enter last name" required>
-                    </div>
-                    <div class="col-md-6">
-                      <label class="form-label">Gender *</label>
-                      <select class="form-select" name="gender" required>
-                        <option value="">Select gender</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-
-                    <div class="col-md-6">
-                      <label class="form-label">Date Of Birth *</label>
-                      <input type="date" class="form-control" name="dob" required>
-                    </div>
-
-                    <div class="col-md-6">
-                      <label class="form-label">Driver License Type *</label>
-                      <select class="form-select" name="license_type" required>
-                        <option value="">Select driver license type</option>
-                        <option value="full">Full License</option>
-                        <option value="restricted">Restricted</option>
-                        <option value="learner">Learner</option>
-                        <option value="international">International</option>
-                      </select>
-                    </div>
-
-                    <div class="col-md-6">
-                      <label class="form-label">Residency Status *</label>
-                      <select class="form-select" name="residency_status" required>
-                        <option value="">Select residency status</option>
-                        <option value="citizen">Citizen</option>
-                        <option value="resident">Resident</option>
-                        <option value="work_visa">Work Visa</option>
-                        <option value="student">Student Visa</option>
-                        <option value="visitor">Visitor</option>
-                      </select>
-                    </div>
-
-                    <div class="col-md-6">
-                      <label class="form-label">Email *</label>
-                      <input type="email" class="form-control" name="email" placeholder="Enter email address" required>
-                    </div>
-
-                    <div class="col-md-6">
-                      <label class="form-label">Mobile Phone *</label>
-                      <input type="tel" class="form-control" name="mobile" placeholder="Enter mobile phone" required>
-                    </div>
-
-                    <div class="col-md-6">
-                      <label class="form-label">Marital Status *</label>
-                      <select class="form-select" name="marital_status" required>
-                        <option value="">Select marital status</option>
-                        <option value="single">Single</option>
-                        <option value="married">Married</option>
-                        <option value="divorced">Divorced</option>
-                        <option value="separated">Separated</option>
-                        <option value="defacto">De Facto</option>
-                      </select>
-                    </div>
-
-                    <div class="col-md-6">
-                      <label class="form-label">Depends *</label>
-                      <input type="number" class="form-control" name="dependants"
-                        placeholder="Enter number of dependants" min="0" required>
-                    </div>
-
-                    <div class="col-md-6">
-                      <label class="form-label">Driver License Number *</label>
-                      <input type="text" class="form-control" name="license_number"
-                        placeholder="Enter driver license number" required>
-                    </div>
-
-                    <div class="col-md-6">
-                      <label class="form-label">Driver License Version Number *</label>
-                      <input type="text" class="form-control" name="license_version"
-                        placeholder="Enter driver license version number" required>
-                    </div>
-
-                    <div class="col-md-6">
-                      <label class="form-label">Driver License Expiry Date *</label>
-                      <input type="date" class="form-control" name="license_expiry"
-                        placeholder="Select driver license expiry date" required>
-
-                    </div>
-
-                    <div class="col-md-6">
-                      <label class="form-label">Upload Driver License</label>
-                      <input type="file" class="form-control" name="license_upload" accept="image/*,.pdf">
-                      <small class="text-muted">Upload front and back (JPG, PNG or PDF)</small>
-                    </div>
-                  </div>
-
-                  <div class="form-navigation mt-4">
-                    <button class="theme-btn-3 me-3 prev-step" data-prev="1">Back</button>
-                    <button class="theme-btn next-step" data-next="3">Next</button>
                   </div>
                 </div>
-              </div>
-              <!-- Step 3: Residential -->
-              <div class="wizard-step" id="step3">
-                <div class="finance-form-card">
-                  <h3 class="mb-4">Residential Details</h3>
 
-                  <!-- Main Applicant -->
-                  <div class="mb-5">
-                    <h5 class="mb-3">Main Applicant - Residential</h5>
+                <!-- Step 2: Personal Details -->
+                <div class="wizard-step" id="step2">
+                  <div class="finance-form-card">
+                    <h3 class="mb-4">Personal Details</h3>
+
                     <div class="row g-4">
                       <div class="col-md-6">
-                        <label class="form-label">Residential Situation *</label>
-                        <select class="form-select" name="main_residential_situation" required>
-                          <option value="">Select house status</option>
-                          <option value="own">Own</option>
-                          <option value="rent">Rent</option>
-                          <option value="board">Board</option>
-                          <option value="living_with_family">Living with Family</option>
+                        <label class="form-label">Title *</label>
+                        <select class="form-select" name="title">
+                          <option value="">Select</option>
+                          <option value="mr">Mr</option>
+                          <option value="mrs">Mrs</option>
+                          <option value="miss">Miss</option>
+                          <option value="ms">Ms</option>
+                          <option value="dr">Dr</option>
+                        </select>
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">First Name *</label>
+                        <input type="text" class="form-control" name="first_name" placeholder="Enter first name">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">Middle Name</label>
+                        <input type="text" class="form-control" name="middle_name" placeholder="Enter middle name">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">Last Name *</label>
+                        <input type="text" class="form-control" name="last_name" placeholder="Enter last name">
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label">Gender *</label>
+                        <select class="form-select" name="gender">
+                          <option value="">Select gender</option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
                           <option value="other">Other</option>
                         </select>
                       </div>
 
                       <div class="col-md-6">
-                        <label class="form-label">Address *</label>
-                        <input type="text" class="form-control" name="main_address"
-                          placeholder="Enter your current address" required>
+                        <label class="form-label">Date Of Birth *</label>
+                        <input type="date" class="form-control" name="dob">
                       </div>
 
                       <div class="col-md-6">
-                        <label class="form-label">Move In Date *</label>
-                        <input type="date" class="form-control" name="main_move_in_date"
-                          placeholder="Select move in date" required>
-                      </div>
-
-                      <div class="col-md-6">
-                        <label class="form-label">Home Phone</label>
-                        <input type="tel" class="form-control" name="main_home_phone"
-                          placeholder="Enter home phone number">
-                      </div>
-
-                      <div class="col-md-6">
-                        <label class="form-label">Previous Address</label>
-                        <input type="text" class="form-control" name="main_previous_address"
-                          placeholder="Enter your previous address">
-                      </div>
-
-                      <div class="col-md-6">
-                        <label class="form-label">Previous Address Move In Date</label>
-                        <input type="date" class="form-control" name="main_previous_move_in_date"
-                          placeholder="Select previous move in date">
-                      </div>
-                    </div>
-
-                    <div class="reference-section mt-4">
-                      <h6 class="mb-3">Reference One</h6>
-                      <div class="row g-4">
-                        <div class="col-md-6">
-                          <label class="form-label">Full Name *</label>
-                          <input type="text" class="form-control" name="main_ref1_name" placeholder="Enter full name"
-                            required>
-                        </div>
-
-                        <div class="col-md-6">
-                          <label class="form-label">Mobile *</label>
-                          <input type="tel" class="form-control" name="main_ref1_mobile"
-                            placeholder="Enter mobile phone" required>
-                        </div>
-
-                        <div class="col-md-6">
-                          <label class="form-label">Relationship *</label>
-                          <select class="form-select" name="main_ref1_relationship" required>
-                            <option value="">Select relationship</option>
-                            <option value="family">Family</option>
-                            <option value="friend">Friend</option>
-                            <option value="colleague">Colleague</option>
-                            <option value="landlord">Landlord</option>
-                            <option value="other">Other</option>
-                          </select>
-                        </div>
-
-                        <div class="col-md-6">
-                          <label class="form-label">Email</label>
-                          <input type="email" class="form-control" name="main_ref1_email"
-                            placeholder="Enter email address">
-                        </div>
-
-                        <div class="col-12">
-                          <label class="form-label">Address *</label>
-                          <input type="text" class="form-control" name="main_ref1_address" placeholder="Enter address"
-                            required>
-                        </div>
-                      </div>
-                      <button type="button" class="btn btn-outline-theme mt-3 add-reference">
-                        <i class="fas fa-plus me-2"></i>Add Another Reference
-                      </button>
-                    </div>
-                  </div>
-
-                  <!-- Joint Applicant (Hidden by default) -->
-                  <div class="joint-applicant-section" style="display: none;">
-                    <h5 class="mb-3">Joint Applicant - Residential</h5>
-                    <div class="row g-4">
-                      <div class="col-md-6">
-                        <label class="form-label">Residential Situation *</label>
-                        <select class="form-select" name="joint_residential_situation">
-                          <option value="">Select house status</option>
-                          <option value="own">Own</option>
-                          <option value="rent">Rent</option>
-                          <option value="board">Board</option>
-                          <option value="living_with_family">Living with Family</option>
-                          <option value="other">Other</option>
+                        <label class="form-label">Driver License Type *</label>
+                        <select class="form-select" name="license_type">
+                          <option value="">Select driver license type</option>
+                          <option value="full">Full License</option>
+                          <option value="restricted">Restricted</option>
+                          <option value="learners">Learners</option>
+                          <option value="foreign-licence">Foreign Licence</option>
                         </select>
                       </div>
 
                       <div class="col-md-6">
-                        <label class="form-label">Address *</label>
-                        <input type="text" class="form-control" name="joint_address" placeholder="Enter your place">
-                      </div>
-
-                      <div class="col-md-6">
-                        <label class="form-label">Move In Date *</label>
-                        <input type="text" class="form-control datepicker" name="joint_move_in_date"
-                          placeholder="Select move in date">
-                      </div>
-
-                      <div class="col-md-6">
-                        <label class="form-label">Home Phone</label>
-                        <input type="tel" class="form-control" name="joint_home_phone"
-                          placeholder="Enter home phone number">
-                      </div>
-
-                      <div class="col-md-6">
-                        <label class="form-label">Previous Address</label>
-                        <input type="text" class="form-control" name="joint_previous_address"
-                          placeholder="Enter your previous place">
-                      </div>
-
-                      <div class="col-md-6">
-                        <label class="form-label">Previous Address Move In Date</label>
-                        <input type="text" class="form-control datepicker" name="joint_previous_move_in_date"
-                          placeholder="Select previous move in date">
-                      </div>
-
-                      <div class="col-md-6">
-                        <label class="form-label">Mobile *</label>
-                        <input type="tel" class="form-control" name="joint_mobile" placeholder="Enter mobile phone">
-                      </div>
-
-                      <div class="col-md-6">
-                        <label class="form-label">Relationship to Main Applicant *</label>
-                        <select class="form-select" name="joint_relationship">
-                          <option value="">Select relationship</option>
-                          <option value="spouse">Spouse</option>
-                          <option value="partner">Partner</option>
-                          <option value="family">Family Member</option>
-                          <option value="friend">Friend</option>
-                          <option value="business">Business Partner</option>
+                        <label class="form-label">Residency Status *</label>
+                        <select class="form-select" name="residency_status">
+                          <option value="">Select residency status</option>
+                          <option value="citizen-nz">Citizen NZ</option>
+                          <option value="non-resident">Non Resident</option>
+                          <option value="permanent-resident">Permanent Resident</option>
+                          <option value="work-permit">Work Permit</option>
                         </select>
                       </div>
 
                       <div class="col-md-6">
                         <label class="form-label">Email *</label>
-                        <input type="email" class="form-control" name="joint_email" placeholder="Enter email address">
+                        <input type="email" class="form-control" name="email" placeholder="Enter email address">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">Mobile Phone *</label>
+                        <input type="tel" class="form-control" name="mobile" placeholder="Enter mobile phone">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">Marital Status *</label>
+                        <select class="form-select" name="marital_status">
+                          <option value="">Select marital status</option>
+                          <option value="single">Single</option>
+                          <option value="married">Married</option>
+                          <option value="divorced">Divorced</option>
+                          <option value="separated">Separated</option>
+                          <option value="defacto">Defacto</option>
+                          <option value="widowed">Widowed</option>
+                        </select>
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">Depends *</label>
+                        <input type="number" class="form-control" name="dependants"
+                          placeholder="Enter number of dependants" min="0">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">Driver License Number *</label>
+                        <input type="text" class="form-control" name="license_number"
+                          placeholder="Enter driver license number">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">Driver License Version Number *</label>
+                        <input type="text" class="form-control" name="license_version"
+                          placeholder="Enter driver license version number">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">Driver License Expiry Date *</label>
+                        <input type="date" class="form-control" name="license_expiry"
+                          placeholder="Select driver license expiry date">
+
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">Upload Driver License</label>
+                        <input type="file" class="form-control" name="license_upload" accept="image/*,.pdf">
+                        <small class="text-muted">Upload front and back (JPG, PNG or PDF)</small>
                       </div>
                     </div>
 
-                    <div class="reference-section mt-4">
-                      <h6 class="mb-3">Joint Applicant Reference</h6>
+                    <div class="form-navigation mt-4">
+                      <button class="theme-btn-3 me-3 prev-step" data-prev="1">Back</button>
+                      <button class="theme-btn next-step" data-next="3">Next</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Step 3: Residential -->
+                <div class="wizard-step" id="step3">
+                  <div class="finance-form-card">
+                    <h3 class="mb-4">Residential Details</h3>
+
+                    <!-- Main Applicant -->
+                    <div class="mb-5">
+                      <h5 class="mb-3">Main Applicant - Residential</h5>
                       <div class="row g-4">
                         <div class="col-md-6">
-                          <label class="form-label">Full Name *</label>
-                          <input type="text" class="form-control" name="joint_ref1_name" placeholder="Enter full name">
-                        </div>
-
-                        <div class="col-md-6">
-                          <label class="form-label">Mobile *</label>
-                          <input type="tel" class="form-control" name="joint_ref1_mobile"
-                            placeholder="Enter mobile phone">
-                        </div>
-
-                        <div class="col-md-6">
-                          <label class="form-label">Relationship *</label>
-                          <select class="form-select" name="joint_ref1_relationship">
-                            <option value="">Select relationship</option>
-                            <option value="family">Family</option>
-                            <option value="friend">Friend</option>
-                            <option value="colleague">Colleague</option>
-                            <option value="landlord">Landlord</option>
+                          <label class="form-label">Residential Situation *</label>
+                          <select class="form-select" name="main_residential_situation">
+                            <option value="">Select house status</option>
+                            <option value="own">Own</option>
+                            <option value="rent">Rent</option>
+                            <option value="board">Board</option>
+                            <option value="living_with_family">Living with Family</option>
                             <option value="other">Other</option>
                           </select>
                         </div>
 
                         <div class="col-md-6">
-                          <label class="form-label">Email</label>
-                          <input type="email" class="form-control" name="joint_ref1_email"
-                            placeholder="Enter email address">
-                        </div>
-
-                        <div class="col-12">
                           <label class="form-label">Address *</label>
-                          <input type="text" class="form-control" name="joint_ref1_address" placeholder="Enter address">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="form-navigation mt-4">
-                    <button class="theme-btn-3 me-3 prev-step" data-prev="2">Back</button>
-                    <button class="theme-btn-3 me-3 fill-later">Fill in later</button>
-                    <button class="theme-btn next-step" data-next="4">Next</button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Step 4: Employment -->
-              <!-- Step 4: Employment -->
-              <div class="wizard-step" id="step4">
-                <div class="finance-form-card">
-                  <h3 class="mb-4">Employment Details</h3>
-
-                  <!-- Main Applicant Employment -->
-                  <div class="mb-5">
-                    <h5 class="mb-3">Main Applicant - Employment</h5>
-                    <div class="row g-4">
-                      <div class="col-md-6">
-                        <label class="form-label">Employment *</label>
-                        <select class="form-select" name="main_employment" required>
-                          <option value="">Select employment</option>
-                          <option value="employed">Employed</option>
-                          <option value="self_employed">Self-Employed</option>
-                          <option value="unemployed">Unemployed</option>
-                          <option value="student">Student</option>
-                          <option value="retired">Retired</option>
-                          <option value="beneficiary">Beneficiary</option>
-                        </select>
-                      </div>
-
-                      <div class="col-md-6">
-                        <label class="form-label">Employment Start Date *</label>
-                        <input type="date" class="form-control" name="main_employment_start_date" required>
-                      </div>
-
-                      <div class="col-md-6">
-                        <label class="form-label">Employer Phone *</label>
-                        <input type="tel" class="form-control" name="main_employer_phone"
-                          placeholder="Enter employer phone" required>
-                      </div>
-
-                      <div class="col-md-6">
-                        <label class="form-label">Employer Address *</label>
-                        <input type="text" class="form-control" name="main_employer_address"
-                          placeholder="Enter employer place" required>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Joint Applicant Employment -->
-                  <div class="joint-applicant-section" style="display: none;">
-                    <h5 class="mb-3">Joint Applicant - Employment</h5>
-                    <div class="row g-4">
-                      <div class="col-md-6">
-                        <label class="form-label">Employment *</label>
-                        <select class="form-select" name="joint_employment">
-                          <option value="">Select employment</option>
-                          <option value="employed">Employed</option>
-                          <option value="self_employed">Self-Employed</option>
-                          <option value="unemployed">Unemployed</option>
-                          <option value="student">Student</option>
-                          <option value="retired">Retired</option>
-                          <option value="beneficiary">Beneficiary</option>
-                        </select>
-                      </div>
-
-                      <div class="col-md-6">
-                        <label class="form-label">Employment Start Date *</label>
-                        <input type="date" class="form-control" name="joint_employment_start_date">
-                      </div>
-
-                      <div class="col-md-6">
-                        <label class="form-label">Employer Phone *</label>
-                        <input type="tel" class="form-control" name="joint_employer_phone"
-                          placeholder="Enter employer phone">
-                      </div>
-
-                      <div class="col-md-6">
-                        <label class="form-label">Employer Address *</label>
-                        <input type="text" class="form-control" name="joint_employer_address"
-                          placeholder="Enter employer place">
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="form-navigation mt-4">
-                    <button class="theme-btn-3 me-3 prev-step" data-prev="3">Back</button>
-                    <button class="theme-btn-3 me-3 fill-later">Fill in later</button>
-                    <button class="theme-btn next-step" data-next="5">Next</button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Step 5: Income -->
-              <div class="wizard-step" id="step5">
-                <div class="finance-form-card">
-                  <h3 class="mb-4">Income Details</h3>
-
-                  <!-- Main Applicant Income -->
-                  <div class="mb-5">
-                    <h5 class="mb-3">Main Applicant - Income</h5>
-                    <div class="table-responsive">
-                      <table class="table table-dark">
-                        <thead>
-                          <tr>
-                            <th>Income Type</th>
-                            <th>Frequency</th>
-                            <th>Amount</th>
-                            <th>Provider</th>
-                            <th></th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <select class="form-select form-select-sm">
-                                <option>Select income type ▼</option>
-                                <option>Employment</option>
-                                <option>Self-Employment</option>
-                                <option>Rental Income</option>
-                                <option>Investment</option>
-                                <option>Other</option>
-                              </select>
-                            </td>
-                            <td>
-                              <select class="form-select form-select-sm">
-                                <option>Select frequency ▼</option>
-                                <option>Weekly</option>
-                                <option>Fortnightly</option>
-                                <option>Monthly</option>
-                                <option>Annually</option>
-                              </select>
-                            </td>
-                            <td>
-                              <div class="input-group input-group-sm">
-                                <span class="input-group-text">$</span>
-                                <input type="number" class="form-control" placeholder="Enter amount">
-                              </div>
-                            </td>
-                            <td>
-                              <input type="text" class="form-control form-control-sm" placeholder="Enter provider">
-                            </td>
-                            <td></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <button class="btn btn-outline-theme btn-sm">
-                      <i class="fas fa-plus me-1"></i> Add Income
-                    </button>
-
-                    <div class="mt-3">
-                      <label class="form-label">Upload proof of income</label>
-                      <input type="file" class="form-control">
-                    </div>
-                  </div>
-
-                  <!-- Joint Applicant Income -->
-                  <div class="joint-applicant-section" style="display: none;">
-                    <h5 class="mb-3">Joint Applicant - Income</h5>
-                    <div class="table-responsive">
-                      <table class="table table-dark">
-                        <thead>
-                          <tr>
-                            <th>Income Type</th>
-                            <th>Frequency</th>
-                            <th>Amount</th>
-                            <th>Provider</th>
-                            <th></th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <select class="form-select form-select-sm">
-                                <option>Select income type ▼</option>
-                                <option>Employment</option>
-                                <option>Self-Employment</option>
-                                <option>Rental Income</option>
-                                <option>Investment</option>
-                                <option>Other</option>
-                              </select>
-                            </td>
-                            <td>
-                              <select class="form-select form-select-sm">
-                                <option>Select frequency ▼</option>
-                                <option>Weekly</option>
-                                <option>Fortnightly</option>
-                                <option>Monthly</option>
-                                <option>Annually</option>
-                              </select>
-                            </td>
-                            <td>
-                              <div class="input-group input-group-sm">
-                                <span class="input-group-text">$</span>
-                                <input type="number" class="form-control" placeholder="Enter amount">
-                              </div>
-                            </td>
-                            <td>
-                              <input type="text" class="form-control form-control-sm" placeholder="Enter provider">
-                            </td>
-                            <td></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <button class="btn btn-outline-theme btn-sm">
-                      <i class="fas fa-plus me-1"></i> Add Income
-                    </button>
-                  </div>
-
-                  <div class="form-navigation mt-4">
-                    <button class="theme-btn-3 me-3 prev-step" data-prev="4">Back</button>
-                    <button class="theme-btn-3 me-3 fill-later">Fill in later</button>
-                    <button class="theme-btn next-step" data-next="6">Next</button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Step 6: Expenditure -->
-              <div class="wizard-step" id="step6">
-                <div class="finance-form-card">
-                  <h3 class="mb-4">Expenditure Details</h3>
-
-                  <!-- Main Applicant Expenditure -->
-                  <div class="mb-5">
-                    <h5 class="mb-3">Main Applicant - Expenditure</h5>
-
-                    <div class="expenditure-section">
-                      <div class="row g-4 mb-4">
-                        <div class="col-md-3">
-                          <label class="form-label">Expense Type</label>
-                          <select class="form-select">
-                            <option>Select expense type</option>
-                            <option>Rent/Mortgage</option>
-                            <option>Utilities</option>
-                            <option>Insurance</option>
-                            <option>Credit Cards</option>
-                            <option>Other Loans</option>
-                            <option>Living Expenses</option>
-                          </select>
+                          <input type="text" class="form-control" name="main_address" placeholder="Enter your place">
                         </div>
 
-                        <div class="col-md-3">
-                          <label class="form-label">Frequency</label>
-                          <select class="form-select">
-                            <option>Select frequency</option>
-                            <option>Weekly</option>
-                            <option>Fortnightly</option>
-                            <option>Monthly</option>
-                            <option>Annually</option>
-                          </select>
+                        <div class="col-md-6">
+                          <label class="form-label">Move In Date *</label>
+                          <input type="date" class="form-control" name="main_move_in_date"
+                            placeholder="Select move in date">
                         </div>
 
-                        <div class="col-md-3">
-                          <label class="form-label">Amount</label>
-                          <div class="input-group">
-                            <span class="input-group-text">$</span>
-                            <input type="number" class="form-control" placeholder="Enter amount">
+                        <div class="col-md-6">
+                          <label class="form-label">Home Phone</label>
+                          <input type="tel" class="form-control" name="main_home_phone"
+                            placeholder="Enter home phone number">
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">Previous Address</label>
+                          <input type="text" class="form-control" name="main_previous_address"
+                            placeholder="Enter your previous address">
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">Previous Address Move In Date</label>
+                          <input type="date" class="form-control" name="main_previous_move_in_date"
+                            placeholder="Select previous move in date">
+                        </div>
+                      </div>
+
+                      <div class="reference-section mt-4">
+                        <h6 class="mb-3">Reference One</h6>
+                        <div class="row g-4">
+                          <div class="col-md-6">
+                            <label class="form-label">Full Name *</label>
+                            <input type="text" class="form-control" name="main_ref1_name" placeholder="Enter full name">
+                          </div>
+
+                          <div class="col-md-6">
+                            <label class="form-label">Mobile *</label>
+                            <input type="tel" class="form-control" name="main_ref1_mobile"
+                              placeholder="Enter mobile phone">
+                          </div>
+
+                          <div class="col-md-6">
+                            <label class="form-label">Relationship *</label>
+                            <select class="form-select" name="main_ref1_relationship">
+                              <option value="">Select relationship</option>
+                              <option value="family">Family</option>
+                              <option value="friend">Friend</option>
+                              <option value="colleague">Colleague</option>
+                              <option value="landlord">Landlord</option>
+                              <option value="other">Other</option>
+                            </select>
+                          </div>
+
+                          <div class="col-md-6">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" name="main_ref1_email"
+                              placeholder="Enter email address">
+                          </div>
+
+                          <div class="col-12">
+                            <label class="form-label">Address *</label>
+                            <input type="text" class="form-control" name="main_ref1_address"
+                              placeholder="Enter address">
                           </div>
                         </div>
+                        <button type="button" class="btn btn-outline-theme mt-3 add-reference">
+                          <i class="fas fa-plus me-2"></i>Add Another Reference
+                        </button>
+                      </div>
+                    </div>
 
-                        <div class="col-md-3">
-                          <label class="form-label">Paid To</label>
-                          <input type="text" class="form-control" placeholder="Enter paid to">
+                    <!-- Joint Applicant (Hidden by default) -->
+                    <div class="joint-applicant-section" style="display: none;">
+                      <h5 class="mb-3">Joint Applicant - Residential</h5>
+                      <div class="row g-4">
+                        <div class="col-md-6">
+                          <label class="form-label">Residential Situation *</label>
+                          <select class="form-select" name="joint_residential_situation">
+                            <option value="">Select house status</option>
+                            <option value="mortgage">mortgage</option>
+                            <option value="rent">Rent</option>
+                            <option value="board">Board</option>
+                            <option value="living_with_family">Living with Family</option>
+                            <option value="hnz">HNZ</option>
+                          </select>
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">Address *</label>
+                          <input type="text" class="form-control" name="joint_address" placeholder="Enter your place">
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">Move In Date *</label>
+                          <input type="date" class="form-control datepicker" name="joint_move_in_date"
+                            placeholder="Select move in date">
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">Home Phone</label>
+                          <input type="tel" class="form-control" name="joint_home_phone"
+                            placeholder="Enter home phone number">
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">Previous Address</label>
+                          <input type="text" class="form-control" name="joint_previous_address"
+                            placeholder="Enter your previous place">
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">Previous Address Move In Date</label>
+                          <input type="date" class="form-control datepicker" name="joint_previous_move_in_date"
+                            placeholder="Select previous move in date">
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">Mobile *</label>
+                          <input type="tel" class="form-control" name="joint_mobile" placeholder="Enter mobile phone">
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">Relationship to Main Applicant *</label>
+                          <input type="text" class="form-control" name="joint_relationship"
+                            placeholder="Enter relationship">
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">Email *</label>
+                          <input type="email" class="form-control" name="joint_email" placeholder="Enter email address">
                         </div>
                       </div>
 
-                      <button class="btn btn-outline-theme btn-sm mb-4">
-                        <i class="fas fa-plus me-1"></i> Add Expense
+                      <div class="reference-section mt-4">
+                        <h6 class="mb-3">Joint Applicant Reference</h6>
+                        <div class="row g-4">
+                          <div class="col-md-6">
+                            <label class="form-label">Full Name *</label>
+                            <input type="text" class="form-control" name="joint_ref1_name"
+                              placeholder="Enter full name">
+                          </div>
+
+                          <div class="col-md-6">
+                            <label class="form-label">Mobile *</label>
+                            <input type="tel" class="form-control" name="joint_ref1_mobile"
+                              placeholder="Enter mobile phone">
+                          </div>
+
+                          <div class="col-md-6">
+                            <label class="form-label">Relationship *</label>
+                            <select class="form-select" name="joint_ref1_relationship">
+                              <option value="">Select relationship</option>
+                              <option value="family">Family</option>
+                              <option value="friend">Friend</option>
+                              <option value="colleague">Colleague</option>
+                              <option value="landlord">Landlord</option>
+                              <option value="other">Other</option>
+                            </select>
+                          </div>
+
+                          <div class="col-md-6">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" name="joint_ref1_email"
+                              placeholder="Enter email address">
+                          </div>
+
+                          <div class="col-12">
+                            <label class="form-label">Address *</label>
+                            <input type="text" class="form-control" name="joint_ref1_address"
+                              placeholder="Enter address">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-navigation mt-4">
+                      <button class="theme-btn-3 me-3 prev-step" data-prev="2">Back</button>
+                      <button class="theme-btn-3 me-3 fill-later">Fill in later</button>
+                      <button class="theme-btn next-step" data-next="4">Next</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 4: Employment -->
+                <div class="wizard-step" id="step4">
+                  <div class="finance-form-card">
+                    <h3 class="mb-4">Employment Details</h3>
+
+                    <!-- Main Applicant Employment -->
+                    <div class="mb-5">
+                      <h5 class="mb-3">Main Applicant - Employment</h5>
+                      <div class="row g-4">
+                        <div class="col-md-6">
+                          <label class="form-label">Employment *</label>
+                          <select class="form-select" name="main_employment">
+                            <option value="">Select employment</option>
+                            <option value="employed">Employed</option>
+                            <option value="self_employed">Self-Employed</option>
+                            <option value="unemployed">Unemployed</option>
+                            <option value="student">Student</option>
+                            <option value="retired">Retired</option>
+                            <option value="beneficiary">Beneficiary</option>
+                          </select>
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">Employment Start Date *</label>
+                          <input type="date" class="form-control" name="main_employment_start_date"
+                            placeholder="Select employment start date">
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">Occupation *</label>
+                          <input type="text" class="form-control" name="main_occupation" placeholder="Enter occupation">
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">Employer *</label>
+                          <input type="text" class="form-control" name="main_employer" placeholder="Enter employer">
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">Employer Phone *</label>
+                          <input type="tel" class="form-control" name="main_employer_phone"
+                            placeholder="Enter employer phone">
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">Employer Address *</label>
+                          <input type="text" class="form-control" name="main_employer_address"
+                            placeholder="Enter employer place">
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Joint Applicant Employment -->
+                    <div class="joint-applicant-section" style="display: none;">
+                      <h5 class="mb-3">Joint Applicant - Employment</h5>
+                      <div class="row g-4">
+                        <div class="col-md-6">
+                          <label class="form-label">Employment *</label>
+                          <select class="form-select" name="joint_employment">
+                            <option value="">Select employment</option>
+                            <option value="beneficiary">Beneficiary</option>
+                            <option value="full-time"> Full-time</option>
+                            <option value="homemaker">Homemaker</option>
+                            <option value="part-time">Part-time</option>
+                            <option value="retired">Retired</option>
+                            <option value="self_employed">self-employed</option>
+                            <option value="acc">ACC</option>
+                            <option value="student">student</option>
+                            <option value="unemployed">Unemployed</option>
+                            <option value="casual">casual</option>
+                            <option value="seasonal-worker">seasonal worker</option>
+                            <option value="working-for-families">Working for families</option>
+                          </select>
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">Employment Start Date *</label>
+                          <input type="date" class="form-control" name="joint_employment_start_date">
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">Employer Phone *</label>
+                          <input type="tel" class="form-control" name="joint_employer_phone"
+                            placeholder="Enter employer phone">
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">Employer Address *</label>
+                          <input type="text" class="form-control" name="joint_employer_address"
+                            placeholder="Enter employer place">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-navigation mt-4">
+                      <button class="theme-btn-3 me-3 prev-step" data-prev="3">Back</button>
+                      <button class="theme-btn-3 me-3 fill-later">Fill in later</button>
+                      <button class="theme-btn next-step" data-next="5">Next</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 5: Income -->
+                <div class="wizard-step" id="step5">
+                  <div class="finance-form-card">
+                    <h3 class="mb-4">Income Details</h3>
+
+                    <!-- Main Applicant Income -->
+                    <div class="mb-5">
+                      <h5 class="mb-3">Main Applicant - Income</h5>
+                      <div class="table-responsive">
+                        <table class="table table-dark">
+                          <thead>
+                            <tr>
+                              <th>Income Type</th>
+                              <th>Frequency</th>
+                              <th>Amount</th>
+                              <th>Provider</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <select class="form-select form-select-sm">
+                                  <option>Select income type ▼</option>
+                                  <option value="winz-benefit">WINZ Benefit</option>
+                                  <option value="working-for-families">Working for families</option>
+                                  <option value="wages-after-tax">Salary/ wages after tax</option>
+                                  <option value="other-income">Other income</option>
+                                  <option value="sickness-benefit">Sickness Benefit</option>
+                                  <option value="boarders-income">Boarders Income</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select class="form-select form-select-sm">
+                                  <option>Select frequency ▼</option>
+                                  <option>Weekly</option>
+                                  <option>Fortnightly</option>
+                                  <option>Monthly</option>
+                                  <option>Annually</option>
+                                </select>
+                              </td>
+                              <td>
+                                <div class="input-group input-group-sm">
+                                  <span class="input-group-text">$</span>
+                                  <input type="number" class="form-control" placeholder="Enter amount">
+                                </div>
+                              </td>
+                              <td>
+                                <input type="text" class="form-control form-control-sm" placeholder="Enter provider">
+                              </td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <button class="btn btn-outline-theme btn-sm">
+                        <i class="fas fa-plus me-1"></i> Add Income
                       </button>
 
-                      <!-- Loan Repayment Section -->
-                      <div class="loan-repayment-section">
-                        <h6 class="mb-3">Loan Repayments</h6>
-                        <div class="row g-4">
+                      <div class="mt-3">
+                        <label class="form-label">Upload proof of income</label>
+                        <input type="file" class="form-control">
+                      </div>
+                    </div>
+
+                    <!-- Joint Applicant Income -->
+                    <div class="joint-applicant-section" style="display: none;">
+                      <h5 class="mb-3">Joint Applicant - Income</h5>
+                      <div class="table-responsive">
+                        <table class="table table-dark">
+                          <thead>
+                            <tr>
+                              <th>Income Type</th>
+                              <th>Frequency</th>
+                              <th>Amount</th>
+                              <th>Provider</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <select class="form-select form-select-sm">
+                                  <option>Select income type ▼</option>
+                                  <option>Employment</option>
+                                  <option>Self-Employment</option>
+                                  <option>Rental Income</option>
+                                  <option>Investment</option>
+                                  <option>Other</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select class="form-select form-select-sm">
+                                  <option>Select frequency ▼</option>
+                                  <option>Weekly</option>
+                                  <option>Fortnightly</option>
+                                  <option>Monthly</option>
+                                  <option>Annually</option>
+                                </select>
+                              </td>
+                              <td>
+                                <div class="input-group input-group-sm">
+                                  <span class="input-group-text">$</span>
+                                  <input type="number" class="form-control" placeholder="Enter amount">
+                                </div>
+                              </td>
+                              <td>
+                                <input type="text" class="form-control form-control-sm" placeholder="Enter provider">
+                              </td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <button class="btn btn-outline-theme btn-sm">
+                        <i class="fas fa-plus me-1"></i> Add Income
+                      </button>
+                    </div>
+
+                    <div class="form-navigation mt-4">
+                      <button class="theme-btn-3 me-3 prev-step" data-prev="4">Back</button>
+                      <button class="theme-btn-3 me-3 fill-later">Fill in later</button>
+                      <button class="theme-btn next-step" data-next="6">Next</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 6: Expenditure -->
+                <div class="wizard-step" id="step6">
+                  <div class="finance-form-card">
+                    <h3 class="mb-4">Expenditure Details</h3>
+
+                    <!-- Main Applicant Expenditure -->
+                    <div class="mb-5">
+                      <h5 class="mb-3">Main Applicant - Expenditure</h5>
+
+                      <div class="expenditure-section">
+                        <div class="row g-4 mb-4">
                           <div class="col-md-3">
-                            <label class="form-label">Loan Repayment Type</label>
+                            <label class="form-label">Expense Type</label>
                             <select class="form-select">
-                              <option>Select loan repayment type</option>
-                              <option>Personal Loan</option>
-                              <option>Car Loan</option>
-                              <option>Student Loan</option>
-                              <option>Mortgage</option>
-                              <option>Other</option>
+                              <option>Select expense type</option>
+                              <option>Rent/Mortgage</option>
+                              <option>Utilities</option>
+                              <option>Insurance</option>
+                              <option>Credit Cards</option>
+                              <option>Other Loans</option>
+                              <option>Living Expenses</option>
                             </select>
                           </div>
 
@@ -966,110 +953,257 @@
                             <label class="form-label">Paid To</label>
                             <input type="text" class="form-control" placeholder="Enter paid to">
                           </div>
+                        </div>
 
-                          <div class="col-md-3">
-                            <label class="form-label">Remaining Balance</label>
-                            <input type="number" class="form-control" placeholder="$">
+                        <button class="btn btn-outline-theme btn-sm mb-4">
+                          <i class="fas fa-plus me-1"></i> Add Expense
+                        </button>
+
+                        <!-- Loan Repayment Section -->
+                        <div class="loan-repayment-section">
+                          <h6 class="mb-3">Loan Repayments</h6>
+                          <div class="row g-4">
+                            <div class="col-md-3">
+                              <label class="form-label">Loan Repayment Type</label>
+                              <select class="form-select">
+                                <option>Select loan repayment type</option>
+                                <option>Personal Loan</option>
+                                <option>Car Loan</option>
+                                <option>Student Loan</option>
+                                <option>Mortgage</option>
+                                <option>Other</option>
+                              </select>
+                            </div>
+
+                            <div class="col-md-3">
+                              <label class="form-label">Frequency</label>
+                              <select class="form-select">
+                                <option>Select frequency</option>
+                                <option>Weekly</option>
+                                <option>Fortnightly</option>
+                                <option>Monthly</option>
+                                <option>Annually</option>
+                              </select>
+                            </div>
+
+                            <div class="col-md-3">
+                              <label class="form-label">Amount</label>
+                              <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="number" class="form-control" placeholder="Enter amount">
+                              </div>
+                            </div>
+
+                            <div class="col-md-3">
+                              <label class="form-label">Paid To</label>
+                              <input type="text" class="form-control" placeholder="Enter paid to">
+                            </div>
+
+                            <div class="col-md-3">
+                              <label class="form-label">Remaining Balance</label>
+                              <input type="number" class="form-control" placeholder="$">
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  <!-- Joint Applicant Expenditure -->
-                  <div class="joint-applicant-section" style="display: none;">
-                    <h5 class="mb-3">Joint Applicant - Expenditure</h5>
-                    <!-- Same structure as above -->
-                  </div>
+                    <!-- Joint Applicant Expenditure -->
+                    <div class="joint-applicant-section" style="display: none;">
+                      <h5 class="mb-3">Joint Applicant - Expenditure</h5>
+                      <!-- Same structure as above -->
+                    </div>
 
-                  <div class="form-navigation mt-4">
-                    <button class="theme-btn-3 me-3 prev-step" data-prev="5">Back</button>
-                    <button class="theme-btn-3 me-3 fill-later">Fill in later</button>
-                    <button class="theme-btn next-step" data-next="7">Next</button>
+                    <div class="form-navigation mt-4">
+                      <button class="theme-btn-3 me-3 prev-step" data-prev="5">Back</button>
+                      <button class="theme-btn-3 me-3 fill-later">Fill in later</button>
+                      <button class="theme-btn next-step" data-next="7">Next</button>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Step 7: Loan Detail -->
-              <div class="wizard-step" id="step7">
-                <div class="finance-form-card">
-                  <h3 class="mb-4">Loan Details</h3>
+                <!-- Step 7: Loan Detail -->
+                <div class="wizard-step" id="step7">
+                  <div class="finance-form-card">
+                    <h3 class="mb-4">Loan Details</h3>
 
-                  <!-- Loan Details Section -->
-                  <div class="loan-details-section mb-5">
-                    <div class="row g-4">
-                      <div class="col-md-6">
-                        <label class="form-label">Loan Amount</label>
-                        <div class="input-group">
-                          <span class="input-group-text">$</span>
-                          <input type="number" class="form-control" placeholder="Enter loan amount">
+                    <!-- Loan Details Section -->
+                    <div class="loan-details-section mb-5">
+                      <div class="row g-4">
+                        <div class="col-md-6">
+                          <label class="form-label">Loan Amount</label>
+                          <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="number" class="form-control" placeholder="Enter loan amount">
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">Deposit</label>
+                          <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="number" class="form-control" placeholder="Enter deposit">
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">Trade In Amount</label>
+                          <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="number" class="form-control" placeholder="Enter trade in amount">
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">Loan Term</label>
+                          <select class="form-select">
+                            <option>Select loan term</option>
+                            <option>12 months</option>
+                            <option>24 months</option>
+                            <option>36 months</option>
+                            <option>48 months</option>
+                            <option>60 months</option>
+                            <option>72 months</option>
+                          </select>
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">Loan Repayments</label>
+                          <select class="form-select">
+                            <option>Select loan repayments</option>
+                            <option>Weekly</option>
+                            <option>Fortnightly</option>
+                            <option>Monthly</option>
+                          </select>
                         </div>
                       </div>
 
-                      <div class="col-md-6">
-                        <label class="form-label">Deposit</label>
-                        <div class="input-group">
-                          <span class="input-group-text">$</span>
-                          <input type="number" class="form-control" placeholder="Enter deposit">
+                      <button class="btn btn-outline-theme mt-4">
+                        <i class="fas fa-plus me-2"></i>Add Additional Document
+                      </button>
+                    </div>
+
+                    <!-- Car Details Section -->
+                    <div class="car-details-section">
+                      <h5 class="mb-3">Car Details</h5>
+                      <div class="row g-4">
+                        <div class="col-md-12">
+                          <label class="form-label">Search Car</label>
+                          <div class="input-group">
+                            <input type="text" class="form-control"
+                              placeholder="Search by stock no, make, model etc...">
+                            <button class="btn btn-theme" type="button">
+                              <i class="fas fa-search"></i>
+                            </button>
+                          </div>
                         </div>
-                      </div>
-
-                      <div class="col-md-6">
-                        <label class="form-label">Trade In Amount</label>
-                        <div class="input-group">
-                          <span class="input-group-text">$</span>
-                          <input type="number" class="form-control" placeholder="Enter trade in amount">
-                        </div>
-                      </div>
-
-                      <div class="col-md-6">
-                        <label class="form-label">Loan Term</label>
-                        <select class="form-select">
-                          <option>Select loan term</option>
-                          <option>12 months</option>
-                          <option>24 months</option>
-                          <option>36 months</option>
-                          <option>48 months</option>
-                          <option>60 months</option>
-                          <option>72 months</option>
-                        </select>
-                      </div>
-
-                      <div class="col-md-6">
-                        <label class="form-label">Loan Repayments</label>
-                        <select class="form-select">
-                          <option>Select loan repayments</option>
-                          <option>Weekly</option>
-                          <option>Fortnightly</option>
-                          <option>Monthly</option>
-                        </select>
                       </div>
                     </div>
 
-                    <button class="btn btn-outline-theme mt-4">
-                      <i class="fas fa-plus me-2"></i>Add Additional Document
-                    </button>
+                    <div class="form-navigation mt-5">
+                      <button class="theme-btn-3 me-3 prev-step" data-prev="6">Back</button>
+                      <button class="theme-btn apply-finance">
+                        <i class="fas fa-paper-plane me-2"></i>Apply for Finance
+                      </button>
+                    </div>
                   </div>
+                </div>
+              </div>
+            </div>
 
-                  <!-- Car Details Section -->
-                  <div class="car-details-section">
-                    <h5 class="mb-3">Car Details</h5>
+            <!-- Quick Application Form -->
+            <div class="form-type-content" id="quickApplicationForm">
+              <div class="quick-form-container">
+                <div class="finance-form-card">
+                  <h3 class="mb-4 text-center">Quick Application Form</h3>
+                  <p class="text-center mb-5">Please fill in your basic details to get started with your finance
+                    application</p>
+
+                  <div class="quick-form-section">
+                    <h5 class="mb-4">Personal Details</h5>
                     <div class="row g-4">
+                      <div class="col-md-6">
+                        <label class="form-label">Residency Status *</label>
+                        <select class="form-select" name="quick_residency_status">
+                          <option value="">Select residency status</option>
+                          <option value="citizen-nz">Citizen NZ</option>
+                          <option value="non-resident">Non Resident</option>
+                          <option value="permanent-resident">Permanent Resident</option>
+                          <option value="work-permit">Work Permit</option>
+                        </select>
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">First Name *</label>
+                        <input type="text" class="form-control" name="quick_first_name" placeholder="Enter first name">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">Last Name *</label>
+                        <input type="text" class="form-control" name="quick_last_name" placeholder="Enter last name">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">Email *</label>
+                        <input type="email" class="form-control" name="quick_email" placeholder="Enter email address">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">Mobile Phone *</label>
+                        <input type="tel" class="form-control" name="quick_mobile" placeholder="Enter mobile phone">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">Date Of Birth *</label>
+                        <input type="date" class="form-control" name="quick_dob">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">Address *</label>
+                        <input type="text" class="form-control" name="quick_address" placeholder="Enter your place">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">Driver License Type *</label>
+                        <select class="form-select" name="quick_license_type">
+                          <option value="">Select driver license type</option>
+                          <option value="full">Full License</option>
+                          <option value="restricted">Restricted</option>
+                          <option value="learners">Learners</option>
+                          <option value="foreign-licence">Foreign Licence</option>
+                        </select>
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">Driver License Number *</label>
+                        <input type="text" class="form-control" name="quick_license_number"
+                          placeholder="Enter driver license number">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">Driver License Version Number *</label>
+                        <input type="text" class="form-control" name="quick_license_version"
+                          placeholder="Enter driver license version number">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label">Driver License Expiry Date *</label>
+                        <input type="date" class="form-control" name="quick_license_expiry"
+                          placeholder="Select driver license expiry date">
+                      </div>
+
                       <div class="col-md-12">
-                        <label class="form-label">Search Car</label>
+                        <label class="form-label">Upload Driver License</label>
                         <div class="input-group">
-                          <input type="text" class="form-control" placeholder="Search by stock no, make, model etc...">
-                          <button class="btn btn-theme" type="button">
-                            <i class="fas fa-search"></i>
-                          </button>
+                          <input type="file" class="form-control" name="quick_license_upload" accept="image/*,.pdf">
                         </div>
+                        <small class="text-muted">Upload front and back of your driver license (JPG, PNG or PDF)</small>
                       </div>
                     </div>
                   </div>
 
                   <div class="form-navigation mt-5">
-                    <button class="theme-btn-3 me-3 prev-step" data-prev="6">Back</button>
-                    <button class="theme-btn apply-finance">
+                    <button class="theme-btn" id="quickApplyBtn">
                       <i class="fas fa-paper-plane me-2"></i>Apply for Finance
                     </button>
                   </div>
@@ -1079,9 +1213,223 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 
+  <!-- Privacy Declaration Popup -->
+  <div id="privacy-declaration-popup" class="theme-popup mfp-hide">
+    <div class="popup-content">
+      <h3 class="mb-4">Privacy Act 2020 (NZ) Declaration</h3>
+
+      <div class="privacy-content">
+        <p class="mb-3"><strong>Carzio Cars</strong> is collecting financial and personal information about you which
+          will be used by third party lenders (the Finance Company/ies) to determine whether to open a credit account in
+          your name. In assessing whether to open a credit account in your name, information collected and held about
+          you may be exchanged with organisations including other related companies, credit reporting agencies,
+          financial institutions, and government agencies. The information may be used by the Finance Company/ies for
+          credit assessment and control purposes and to register security interests. The information obtained,
+          exchanged, and held may include, but is not limited to, Driver Licence Checks, Fines Checks, Credit Checks,
+          and Police Checks.</p>
+
+        <p class="mb-3">Under the Privacy Act 2020 (NZ) (Privacy Act), you have rights to access and correct personal
+          information. You may also request full details of every organisation or person to whom Carzio Cars and the
+          Finance Company/ies has disclosed information about you.</p>
+
+        <p class="mb-3">The Finance Company/ies may exchange information about you with credit reporting agencies and
+          Government Departments on an ongoing basis for purposes relating to the provision of credit account to you.
+          The credit reporting agencies and Government Departments will hold that information about you on their systems
+          and use it to provide their credit reporting and other services.</p>
+
+        <p class="mb-3">By lodging an application with Carzio Cars you consent to:</p>
+
+        <ul class="mb-3">
+          <li>Carzio Cars sending this information to the Finance Company/ies and</li>
+          <li>Carzio Cars and the Finance Company/ies carrying out electronic ID verification using biometric checks,
+            global watchlists and Australian and New Zealand data sources to obtain information about you, including but
+            not limited to identification data (i.e. name, address, telephone number, email address), profile
+            information (i.e. age, gender), and electronic identification data (i.e. IP addresses, MACIDs, cookies)</li>
+        </ul>
+
+        <p class="mb-3">The information we collect may be used for communicating with you electronically, this may
+          include promotional and other materials about the products and services, and generally to do business with
+          you.</p>
+
+        <p class="mb-3">In order to assess your loan application, Carzio Cars and the Finance Company/ies may need to
+          verify certain information from another person or entity who is not an applicant on the loan. This Privacy
+          Declaration outlines the reason why we collect certain information, who we share it with, and how we use that
+          information. You should ensure that you have permission to use and provide this information. For more details,
+          please see our Privacy Policy.</p>
+
+        <p class="mb-3">You understand and agree to the terms and conditions provided above. You also confirm that all
+          the information you provide is accurate, up to date, complete, and relevant. You also confirm that information
+          about you provided to Carzio Cars may be disclosed to the Finance Company/ies, including their related
+          companies, agents, associates, and transferees.</p>
+
+        <p class="mb-3">You also consent to:</p>
+
+        <ul class="mb-4">
+          <li>Being sent promotional and other materials</li>
+          <li>ID checks</li>
+          <li>Driver checks</li>
+          <li>Fines checks</li>
+          <li>Credit checks</li>
+          <li>Police checks</li>
+        </ul>
+      </div>
+
+      <div class="declaration-checkbox mt-4">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="privacyAgreement">
+          <label class="form-check-label" for="privacyAgreement">
+            <strong>By ticking this box you declare that all applicants have read, understood and agreed to the privacy
+              act declaration above</strong>
+          </label>
+        </div>
+      </div>
+
+      <div class="popup-actions mt-4 pt-3 border-top">
+        <button type="button" class="btn btn-theme me-3" id="confirmPrivacyBtn">Confirm and Submit</button>
+        <button type="button" class="btn btn-outline-theme close-popup">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Message Popup -->
+  <div id="success-popup" class="theme-popup mfp-hide">
+    <div class="popup-content text-center">
+      <div class="success-icon mb-4">
+        <i class="fas fa-check-circle fa-4x text-success"></i>
+      </div>
+      <h3 class="mb-3">Application Submitted!</h3>
+      <p class="mb-4">Your finance application has been submitted successfully. We will contact you shortly.</p>
+      <button type="button" class="btn btn-theme close-popup">OK</button>
+    </div>
+  </div>
+
+  <!-- Finance Calculator Modal -->
+  <div id="finance-calculator-modal" class="theme-popup mfp-hide">
+    <div class="popup-content">
+      <div class="calculator-header text-center mb-4">
+        <h3 class="mb-2">Finance Calculator</h3>
+        <p class="text-muted">Calculate your estimated weekly payments</p>
+      </div>
+
+      <!-- Calculator Summary -->
+      <div class="calculator-summary mb-5">
+        <div class="row g-3 text-center">
+          <div class="col-6">
+            <div class="summary-box">
+              <div class="summary-label">Estimated weekly payment</div>
+              <div class="summary-value">$0</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="summary-box">
+              <div class="summary-label">Cash Deposit</div>
+              <div class="summary-value">$0</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="summary-box">
+              <div class="summary-label">Interest</div>
+              <div class="summary-value">$0</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="summary-box">
+              <div class="summary-label">Total Payment</div>
+              <div class="summary-value">$0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calculator Form - UI Only -->
+      <div class="calculator-form">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <label class="form-label">Vehicle Cost ($)</label>
+            <div class="input-group">
+              <span class="input-group-text">$</span>
+              <input type="text" class="form-control" value="0" readonly>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Cash Deposit ($)</label>
+            <div class="input-group">
+              <span class="input-group-text">$</span>
+              <input type="text" class="form-control" value="0" readonly>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Trade In ($)</label>
+            <div class="input-group">
+              <span class="input-group-text">$</span>
+              <input type="text" class="form-control" value="0" readonly>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Finance Rate (%)</label>
+            <div class="input-group">
+              <input type="text" class="form-control" value="8.75" readonly>
+              <span class="input-group-text">%</span>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Establish Fee ($)</label>
+            <div class="input-group">
+              <span class="input-group-text">$</span>
+              <input type="text" class="form-control" value="495" readonly>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Maintenance ($)</label>
+            <div class="input-group">
+              <span class="input-group-text">$</span>
+              <input type="text" class="form-control" value="8.00" readonly>
+            </div>
+            <small class="text-muted">Per month</small>
+          </div>
+
+          <div class="col-12">
+            <label class="form-label mb-3">Loan Term (months)</label>
+            <div class="loan-term-buttons">
+              <div class="btn-group w-100" role="group">
+                <button type="button" class="btn btn-outline-theme term-btn">6</button>
+                <button type="button" class="btn btn-outline-theme term-btn">12</button>
+                <button type="button" class="btn btn-outline-theme term-btn">24</button>
+                <button type="button" class="btn btn-outline-theme term-btn active">36</button>
+                <button type="button" class="btn btn-outline-theme term-btn">48</button>
+                <button type="button" class="btn btn-outline-theme term-btn">60</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="calculator-actions mt-5">
+          <button class="btn btn-theme btn-lg w-100 calculate-btn">
+            <i class="fas fa-calculator me-2"></i>Calculate
+          </button>
+        </div>
+
+        <div class="calculator-disclaimer mt-4 pt-3 border-top">
+          <p class="small text-muted">
+            *On Road Costs and Clean Car fee or rebate may apply. Finance calculation based on a 60 months term, 0 cash
+            deposit / trade in and with an example annual fixed interest rate of 8.75%. The total payable amount is $0,
+            which includes $0 of interest. Actual interest rate may be higher or lower. Includes an establishment fee of
+            $495 & $8.00 per month account fee. Estimate only, not an offer of finance. Terms, conditions and lending
+            criteria apply. Price Includes GST.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer section started -->
   <footer class="footer-3">
@@ -1202,14 +1550,234 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Initialize variables
+      // Initialize Flatpickr for date inputs in full form
+      flatpickr(".datepicker", {
+        dateFormat: "d/m/Y",
+        allowInput: true,
+        disableMobile: true
+      });
+
+      // Form type toggle functionality
+      const fullAppBtn = document.getElementById('fullApplicationBtn');
+      const quickAppBtn = document.getElementById('quickApplicationBtn');
+      const fullForm = document.getElementById('fullApplicationForm');
+      const quickForm = document.getElementById('quickApplicationForm');
+
+      // Initialize with full form active
+      fullAppBtn.classList.add('active');
+      fullForm.classList.add('active');
+      quickForm.classList.remove('active');
+
+      // Full Application button click
+      fullAppBtn.addEventListener('click', function () {
+        this.classList.add('active');
+        quickAppBtn.classList.remove('active');
+        fullForm.classList.add('active');
+        quickForm.classList.remove('active');
+
+        // Reset wizard to step 1 when switching to full form
+        if (typeof goToStep === 'function') {
+          goToStep(1);
+        }
+      });
+
+      // Quick Application button click
+      quickAppBtn.addEventListener('click', function () {
+        this.classList.add('active');
+        fullAppBtn.classList.remove('active');
+        quickForm.classList.add('active');
+        fullForm.classList.remove('active');
+      });
+
+      // Quick Apply button - Show privacy popup instead of immediate submission
+      const quickApplyBtn = document.getElementById('quickApplyBtn');
+      if (quickApplyBtn) {
+        quickApplyBtn.addEventListener('click', function () {
+          if (validateQuickForm()) {
+            // Open privacy declaration popup
+            $.magnificPopup.open({
+              items: {
+                src: '#privacy-declaration-popup',
+                type: 'inline'
+              },
+              callbacks: {
+                open: function () {
+                  // Reset checkbox when popup opens
+                  document.getElementById('privacyAgreement').checked = false;
+                  document.getElementById('confirmPrivacyBtn').disabled = true;
+                }
+              }
+            });
+          }
+        });
+      }
+
+      // Privacy agreement checkbox change handler
+      const privacyCheckbox = document.getElementById('privacyAgreement');
+      if (privacyCheckbox) {
+        privacyCheckbox.addEventListener('change', function () {
+          document.getElementById('confirmPrivacyBtn').disabled = !this.checked;
+        });
+      }
+
+      // Confirm Privacy button
+      const confirmPrivacyBtn = document.getElementById('confirmPrivacyBtn');
+      if (confirmPrivacyBtn) {
+        confirmPrivacyBtn.addEventListener('click', function () {
+          if (document.getElementById('privacyAgreement').checked) {
+            submitQuickApplication();
+          }
+        });
+      }
+
+      // Close popup buttons
+      document.querySelectorAll('.close-popup').forEach(button => {
+        button.addEventListener('click', function () {
+          $.magnificPopup.close();
+        });
+      });
+
+      // Function to validate quick form
+      function validateQuickForm() {
+        const quickForm = document.getElementById('quickApplicationForm');
+        const requiredFields = quickForm.querySelectorAll('[required]');
+        let isValid = true;
+
+        requiredFields.forEach(field => {
+          if (!field.value.trim()) {
+            isValid = false;
+            field.classList.add('is-invalid');
+
+            // Add validation message if not exists
+            if (!field.nextElementSibling || !field.nextElementSibling.classList.contains('invalid-feedback')) {
+              const errorDiv = document.createElement('div');
+              errorDiv.className = 'invalid-feedback';
+              errorDiv.textContent = 'This field is required';
+              field.parentNode.appendChild(errorDiv);
+            }
+          } else {
+            field.classList.remove('is-invalid');
+            const errorDiv = field.nextElementSibling;
+            if (errorDiv && errorDiv.classList.contains('invalid-feedback')) {
+              errorDiv.remove();
+            }
+          }
+        });
+
+        // Validate email format
+        const emailField = quickForm.querySelector('input[type="email"]');
+        if (emailField && emailField.value) {
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailPattern.test(emailField.value)) {
+            isValid = false;
+            emailField.classList.add('is-invalid');
+            if (!emailField.nextElementSibling || !emailField.nextElementSibling.classList.contains('invalid-feedback')) {
+              const errorDiv = document.createElement('div');
+              errorDiv.className = 'invalid-feedback';
+              errorDiv.textContent = 'Please enter a valid email address';
+              emailField.parentNode.appendChild(errorDiv);
+            }
+          }
+        }
+
+        // Validate date fields
+        const dateFields = quickForm.querySelectorAll('input[type="date"]');
+        dateFields.forEach(field => {
+          if (field.hasAttribute('required') && !field.value) {
+            isValid = false;
+            field.classList.add('is-invalid');
+            if (!field.nextElementSibling || !field.nextElementSibling.classList.contains('invalid-feedback')) {
+              const errorDiv = document.createElement('div');
+              errorDiv.className = 'invalid-feedback';
+              errorDiv.textContent = 'Please select a date';
+              field.parentNode.appendChild(errorDiv);
+            }
+          }
+        });
+
+        if (!isValid) {
+          // Scroll to first invalid field
+          const firstInvalid = quickForm.querySelector('.is-invalid');
+          if (firstInvalid) {
+            firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+          return false;
+        }
+
+        return true;
+      }
+
+      // Function to submit quick application
+      function submitQuickApplication() {
+        // Collect form data
+        const formData = new FormData();
+        const quickForm = document.getElementById('quickApplicationForm');
+        const formFields = quickForm.querySelectorAll('input, select, textarea');
+
+        formFields.forEach(field => {
+          if (field.name && field.name.startsWith('quick_')) {
+            if (field.type === 'file' && field.files.length > 0) {
+              formData.append(field.name, field.files[0]);
+            } else {
+              formData.append(field.name, field.value);
+            }
+          }
+        });
+
+        // Add privacy agreement to form data
+        formData.append('privacy_agreed', 'yes');
+
+        // Show loading state
+        const confirmBtn = document.getElementById('confirmPrivacyBtn');
+        const originalText = confirmBtn.innerHTML;
+        confirmBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Processing...';
+        confirmBtn.disabled = true;
+
+        // Simulate API call
+        setTimeout(() => {
+          // Close privacy popup
+          $.magnificPopup.close();
+
+          // Show success popup
+          setTimeout(() => {
+            $.magnificPopup.open({
+              items: {
+                src: '#success-popup',
+                type: 'inline'
+              }
+            });
+          }, 300);
+
+          // Reset quick form
+          quickForm.querySelectorAll('input, select, textarea').forEach(field => {
+            if (field.type !== 'submit' && field.type !== 'button' && field.type !== 'file') {
+              field.value = '';
+            }
+            if (field.type === 'file') {
+              field.value = '';
+            }
+          });
+
+          // Reset button state
+          confirmBtn.innerHTML = originalText;
+          confirmBtn.disabled = false;
+        }, 1500);
+      }
+
+      // Function to switch from quick to full form
+      window.switchToFullForm = function () {
+        fullAppBtn.click();
+      };
+
+      // Your existing wizard code remains here (Step 1-7 functionality)
       let currentStep = 1;
       const totalSteps = 7;
       let isJointApplication = false;
 
-      // Get DOM elements
+      // Get DOM elements for wizard
       const wizardSteps = document.querySelectorAll('.wizard-step');
       const progressSteps = document.querySelectorAll('.step');
       const nextButtons = document.querySelectorAll('.next-step');
@@ -1255,33 +1823,34 @@
         });
       });
 
-      // Apply for Finance button
+      // Apply for Finance button in full form - Add privacy popup here too
       const applyButton = document.querySelector('.apply-finance');
       if (applyButton) {
         applyButton.addEventListener('click', function () {
           if (validateStep(7)) {
-            submitApplication();
+            // Open privacy declaration popup for full form
+            $.magnificPopup.open({
+              items: {
+                src: '#privacy-declaration-popup',
+                type: 'inline'
+              },
+              callbacks: {
+                open: function () {
+                  // Reset checkbox when popup opens
+                  document.getElementById('privacyAgreement').checked = false;
+                  document.getElementById('confirmPrivacyBtn').disabled = true;
+
+                  // Change confirm button to handle full form submission
+                  const confirmBtn = document.getElementById('confirmPrivacyBtn');
+                  confirmBtn.onclick = function () {
+                    if (document.getElementById('privacyAgreement').checked) {
+                      submitFullApplication();
+                    }
+                  };
+                }
+              }
+            });
           }
-        });
-      }
-
-      // Form type toggle (Full/Quick)
-      const fullAppBtn = document.getElementById('fullApplicationBtn');
-      const quickAppBtn = document.getElementById('quickApplicationBtn');
-
-      if (fullAppBtn && quickAppBtn) {
-        fullAppBtn.addEventListener('click', function () {
-          this.classList.add('active');
-          quickAppBtn.classList.remove('active');
-          // Show all steps for full application
-          // You can add specific logic here
-        });
-
-        quickAppBtn.addEventListener('click', function () {
-          this.classList.add('active');
-          fullAppBtn.classList.remove('active');
-          // Hide some steps for quick application
-          // You can add specific logic here
         });
       }
 
@@ -1308,15 +1877,20 @@
         currentStep = step;
 
         // Scroll to top of form
-        document.querySelector('.wizard-forms').scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
+        const wizardForms = document.querySelector('.wizard-forms');
+        if (wizardForms) {
+          wizardForms.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
       }
 
       // Function to validate current step
       function validateStep(step) {
         const currentStepElement = document.getElementById(`step${step}`);
+        if (!currentStepElement) return true;
+
         const requiredFields = currentStepElement.querySelectorAll('[required]');
         let isValid = true;
 
@@ -1352,6 +1926,23 @@
         return isValid;
       }
 
+      // Function to validate current step (modified to not validate anything)
+      function validateStep(step) {
+        // Remove any existing invalid classes
+        const currentStepElement = document.getElementById(`step${step}`);
+        const fields = currentStepElement.querySelectorAll('.is-invalid');
+        fields.forEach(field => {
+          field.classList.remove('is-invalid');
+          const errorDiv = field.nextElementSibling;
+          if (errorDiv && errorDiv.classList.contains('invalid-feedback')) {
+            errorDiv.remove();
+          }
+        });
+
+        // Always return true since fields are not required
+        return true;
+      }
+
       // Function to toggle joint applicant sections
       function toggleJointApplicantSections(show) {
         jointApplicantSections.forEach(section => {
@@ -1363,35 +1954,82 @@
       function updateProgress() {
         const progressBar = document.querySelector('.progress-bar');
         const percentage = ((currentStep - 1) / (totalSteps - 1)) * 100;
-        progressBar.style.background = `linear-gradient(to right, var(--theme) ${percentage}%, var(--border) ${percentage}%)`;
+        if (progressBar) {
+          progressBar.style.background = `linear-gradient(to right, var(--theme) ${percentage}%, var(--border) ${percentage}%)`;
+        }
       }
 
-      // Function to submit application
-      function submitApplication() {
+      const showCalculatorBtn = document.getElementById('showCalculatorBtn');
+      if (showCalculatorBtn) {
+        showCalculatorBtn.addEventListener('click', function () {
+          $.magnificPopup.open({
+            items: {
+              src: '#finance-calculator-modal',
+              type: 'inline'
+            },
+            mainClass: 'mfp-fade',
+            removalDelay: 300
+          });
+        });
+      }
+
+      // Close popup when clicking on close buttons
+      document.querySelectorAll('.close-popup').forEach(button => {
+        button.addEventListener('click', function () {
+          $.magnificPopup.close();
+        });
+      });
+
+
+      // Function to submit full application
+      function submitFullApplication() {
         // Collect form data
         const formData = new FormData();
 
-        // Add all form fields
-        const formFields = document.querySelectorAll('input, select, textarea');
+        // Add all form fields from full form
+        const formFields = document.querySelectorAll('#fullApplicationForm input, #fullApplicationForm select, #fullApplicationForm textarea');
         formFields.forEach(field => {
           if (field.name) {
-            formData.append(field.name, field.value);
+            if (field.type === 'file' && field.files.length > 0) {
+              formData.append(field.name, field.files[0]);
+            } else {
+              formData.append(field.name, field.value);
+            }
           }
         });
 
+        // Add privacy agreement to form data
+        formData.append('privacy_agreed', 'yes');
+
         // Show loading state
-        applyButton.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Processing...';
-        applyButton.disabled = true;
+        const confirmBtn = document.getElementById('confirmPrivacyBtn');
+        const originalText = confirmBtn.innerHTML;
+        confirmBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Processing...';
+        confirmBtn.disabled = true;
 
         // Simulate API call
         setTimeout(() => {
-          alert('Application submitted successfully! We will contact you shortly.');
-          applyButton.innerHTML = '<i class="fas fa-check me-2"></i>Application Submitted';
+          // Close privacy popup
+          $.magnificPopup.close();
 
-          // Reset form after 2 seconds
+          // Show success popup
+          setTimeout(() => {
+            $.magnificPopup.open({
+              items: {
+                src: '#success-popup',
+                type: 'inline'
+              }
+            });
+          }, 300);
+
+          // Reset full form after success
           setTimeout(() => {
             window.location.reload();
-          }, 2000);
+          }, 3000);
+
+          // Reset button state
+          confirmBtn.innerHTML = originalText;
+          confirmBtn.disabled = false;
         }, 1500);
       }
 
@@ -1421,91 +2059,7 @@
           referenceSection.parentNode.insertBefore(referenceClone, referenceSection.nextSibling);
         }
       });
-
-      // Add input formatting
-      document.addEventListener('input', function (e) {
-        // Format currency inputs
-        if (e.target.type === 'number' && e.target.closest('.input-group')) {
-          const value = parseFloat(e.target.value);
-          if (!isNaN(value)) {
-            const formatted = value.toLocaleString('en-NZ', {
-              style: 'currency',
-              currency: 'NZD',
-              minimumFractionDigits: 0,
-              maximumFractionDigits: 0
-            });
-            e.target.value = value;
-          }
-        }
-
-        // Format date inputs
-        if (e.target.placeholder && e.target.placeholder.includes('dd/mm/yyyy')) {
-          let value = e.target.value.replace(/\D/g, '');
-          if (value.length > 2 && value.length <= 4) {
-            value = value.slice(0, 2) + '/' + value.slice(2);
-          } else if (value.length > 4) {
-            value = value.slice(0, 2) + '/' + value.slice(2, 4) + '/' + value.slice(4, 8);
-          }
-          e.target.value = value;
-        }
-      });
     });
-
-    // Initialize Flatpickr for date inputs
-    document.addEventListener('DOMContentLoaded', function () {
-      // Initialize date pickers
-      // flatpickr(".datepicker", {
-      //   dateFormat: "d/m/Y",
-      //   allowInput: true,
-      //   disableMobile: true
-      // });
-
-      // Show/hide self-employed fields based on employment status
-      const mainEmploymentStatus = document.querySelector('[name="main_employment_status"]');
-      const selfEmployedSection = document.querySelector('.self-employed-section');
-
-      if (mainEmploymentStatus && selfEmployedSection) {
-        mainEmploymentStatus.addEventListener('change', function () {
-          selfEmployedSection.style.display = this.value === 'self_employed' ? 'block' : 'none';
-        });
-      }
-
-      // Add reference functionality
-      document.addEventListener('click', function (e) {
-        if (e.target.classList.contains('add-reference')) {
-          e.preventDefault();
-          const referenceSection = e.target.closest('.reference-section');
-          const referenceClone = referenceSection.cloneNode(true);
-
-          // Clear input values in cloned section
-          referenceClone.querySelectorAll('input').forEach(input => {
-            if (!input.name.includes('_ref1_')) {
-              input.name = input.name.replace('_ref1_', '_ref2_');
-            }
-            input.value = '';
-          });
-
-          // Change button text
-          const button = referenceClone.querySelector('.add-reference');
-          if (button) {
-            button.innerHTML = '<i class="fas fa-times me-2"></i>Remove Reference';
-            button.classList.remove('add-reference');
-            button.classList.add('remove-reference');
-            button.classList.remove('btn-outline-theme');
-            button.classList.add('btn-outline-danger');
-          }
-
-          referenceSection.parentNode.insertBefore(referenceClone, referenceSection.nextSibling);
-        }
-
-        // Remove reference functionality
-        if (e.target.classList.contains('remove-reference')) {
-          e.preventDefault();
-          e.target.closest('.reference-section').remove();
-        }
-      });
-    });
-
   </script>
 
   <!--<< All JS Plugins >>-->

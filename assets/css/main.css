@@ -13927,7 +13927,7 @@ span {
 }
 
 .wizard-options .btn-outline-theme {
-  border: 2px solid var(--theme);
+  border: 2px solid var(--white);
   color: var(--white);
   padding: 12px 24px;
   font-weight: 600;
@@ -13939,6 +13939,7 @@ span {
 .wizard-options .btn-outline-theme:hover {
   background: var(--theme);
   color: var(--white);
+  border-color: var(--theme);
   transform: translateY(-2px);
 }
 
@@ -14223,4 +14224,388 @@ span {
   border-radius: 8px;
   margin-top: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* privacy act pop up style */
+
+/* Privacy Declaration Popup Styles */
+/* Privacy Declaration Popup Styles - Dark Theme */
+.theme-popup {
+  position: relative;
+  background: rgba(30, 30, 35, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  width: auto;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  animation: popupFadeIn 0.3s ease;
+}
+
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popup-content {
+  color: var(--white);
+}
+
+.popup-content h3 {
+  color: var(--white);
+  font-weight: 600;
+  border-bottom: 2px solid var(--theme);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.privacy-content {
+  color: var(--text);
+  line-height: 1.6;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 15px;
+  margin-bottom: 20px;
+}
+
+.privacy-content p {
+  margin-bottom: 15px;
+}
+
+.privacy-content ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.privacy-content li {
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.declaration-checkbox {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid var(--theme);
+}
+
+.declaration-checkbox .form-check-input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
+}
+
+.declaration-checkbox .form-check-input:checked {
+  background-color: var(--theme);
+  border-color: var(--theme);
+}
+
+.declaration-checkbox .form-check-label {
+  color: var(--white) !important;
+  /* font-weight: 500; */
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.success-icon {
+  color: #28a745;
+}
+
+/* Magnific Popup overlay - Dark theme */
+.mfp-bg {
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0.95;
+}
+
+.mfp-close {
+  color: var(--white);
+  font-size: 40px;
+  right: 10px;
+  top: 10px;
+}
+
+.mfp-close:hover {
+  color: var(--theme);
+}
+
+/* Scrollbar styling for privacy content */
+.privacy-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.privacy-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.privacy-content::-webkit-scrollbar-thumb {
+  background: var(--theme);
+  border-radius: 4px;
+}
+
+.privacy-content::-webkit-scrollbar-thumb:hover {
+  background: #a50a06;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .theme-popup {
+    padding: 25px;
+    margin: 10px;
+    max-width: 95%;
+  }
+
+  .popup-actions {
+    flex-direction: column;
+  }
+
+  .popup-actions .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .privacy-content {
+    max-height: 300px;
+  }
+}
+
+
+/* Section spacing */
+.reference-section,
+.self-employed-section {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hide elements by default */
+.form-type-content {
+  display: none;
+}
+
+.form-type-content.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Quick form specific styles */
+.quick-form-container {
+  /* max-width: 800px;
+  margin: 0 auto; */
+}
+
+.quick-form-section {
+  margin-bottom: 30px;
+}
+
+.theme-popup .declaration-checkbox .form-check{
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Finance Calculator Styles */
+/* Finance Calculator Styles */
+.finance-calculator-btn-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#showCalculatorBtn {
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.calculator-header {
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.calculator-header h3 {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.calculator-summary {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.summary-box {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.summary-box:hover {
+  transform: translateY(-2px);
+  border-color: var(--theme);
+  box-shadow: 0 5px 15px rgba(189, 12, 7, 0.2);
+}
+
+.summary-label {
+  color: var(--text-fade);
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.summary-value {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--theme);
+}
+
+/* Calculator Form Styles */
+.calculator-form .form-label {
+  color: var(--white);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.calculator-form .input-group-text {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
+  color: var(--white);
+}
+
+.calculator-form .form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
+  color: var(--white);
+  padding: 12px 15px;
+  border-radius: 8px;
+}
+
+.calculator-form .form-control:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--theme);
+  box-shadow: 0 0 0 3px rgba(189, 12, 7, 0.1);
+  color: var(--white);
+}
+
+/* Loan Term Buttons */
+.loan-term-buttons .btn-group {
+  gap: 5px;
+}
+
+.loan-term-buttons .btn-group .btn {
+  flex: 1;
+  padding: 12px 5px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.loan-term-buttons .btn-group .btn:hover {
+  background: rgba(189, 12, 7, 0.1);
+  color: var(--theme);
+  border-color: var(--theme);
+}
+
+.loan-term-buttons .btn-group .btn.active {
+  background: var(--theme);
+  color: var(--white);
+  border-color: var(--theme);
+  box-shadow: 0 0 0 3px rgba(189, 12, 7, 0.2);
+}
+
+/* Calculator Actions */
+.calculator-actions .calculate-btn {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.calculator-actions .calculate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(189, 12, 7, 0.3);
+}
+
+/* Calculator Disclaimer */
+.calculator-disclaimer {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.calculator-disclaimer p {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .finance-calculator-btn-wrapper {
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+  
+  .calculator-summary .summary-box {
+    padding: 12px;
+  }
+  
+  .summary-value {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .loan-term-buttons .btn-group {
+    flex-wrap: wrap;
+  }
+  
+  .loan-term-buttons .btn-group .btn {
+    flex: 0 0 calc(33.333% - 4px);
+    margin-bottom: 5px;
+  }
+  
+  .calculator-summary .row > div {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .loan-term-buttons .btn-group .btn {
+    flex: 0 0 calc(50% - 4px);
+  }
+  
+  .calculator-summary .row > div {
+    flex: 0 0 50%;
+  }
 }
