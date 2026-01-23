@@ -13539,7 +13539,7 @@ span {
 
 .trade-in-form-wrapper .text-muted {
   color: var(--text-fade) !important;
-  font-size: 13px;
+  font-size: 14px;
   display: block;
   margin-top: 5px;
 }
@@ -13737,7 +13737,7 @@ span {
 
 .text-muted {
   color: var(--text-fade) !important;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 /* Required field asterisk */
