@@ -13927,7 +13927,7 @@ span {
 }
 
 .wizard-options .btn-outline-theme {
-  border: 2px solid var(--white);
+  border: 1px solid var(--white);
   color: var(--white);
   padding: 12px 24px;
   font-weight: 600;
@@ -14549,7 +14549,7 @@ span {
 /* Calculator Actions */
 .calculator-actions .calculate-btn {
   padding: 15px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   transition: all 0.3s ease;
 }
