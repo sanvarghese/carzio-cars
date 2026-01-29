@@ -245,134 +245,257 @@
         </div>
     </div>
 
-
-    <!-- Featured car section -->
+    <!-- Feature Car Section Start -->
     <section class="feature-car-section">
-        <div class="car-shape">
-            <img src="assets/img/aston-martin.png" alt="car shape" style="width: 350px; ">
-        </div>
-
         <div class="container">
             <div class="feature-car-wrapper">
                 <div class="row g-4 align-items-center">
-                    <!-- Left Side - Heading Only -->
-                    <!-- <div class="col-lg-6">
-            <div class="feature-car-content">
-              <div class="section-title">
-                <h6>Quick Search</h6>
-                <h2>Find Your Perfect Car</h2>
-              </div>
-            </div>
-          </div> -->
                     <!-- Right Side - Enhanced Search Form -->
                     <div class="col-lg-12">
                         <div class="car-list-box">
-                            <h2 class="text-center mb-5">Search Your Dream Car</h2>
-                            <form id="carSearchForm">
-                                <div class="row g-4">
-                                    <!-- Any Make -->
-                                    <div class="col-md-3">
-                                        <div class="form-clt">
-                                            <span>Any Make</span>
-                                            <select class="form-select" id="carMake">
-                                                <option value="">Select Make</option>
-                                                <option value="toyota">Toyota</option>
-                                                <option value="honda">Honda</option>
-                                                <option value="ford">Ford</option>
-                                                <option value="bmw">BMW</option>
-                                                <option value="mercedes">Mercedes-Benz</option>
-                                                <option value="audi">Audi</option>
-                                                <option value="nissan">Nissan</option>
-                                                <option value="hyundai">Hyundai</option>
-                                                <option value="mazda">Mazda</option>
-                                                <option value="volkswagen">Volkswagen</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <!-- Any Model -->
-                                    <div class="col-md-3">
-                                        <div class="form-clt">
-                                            <span>Any Model</span>
-                                            <select class="form-select" id="carModel">
-                                                <option value="">Select Model</option>
-                                                <option value="camry">Camry</option>
-                                                <option value="corolla">Corolla</option>
-                                                <option value="civic">Civic</option>
-                                                <option value="accord">Accord</option>
-                                                <option value="mustang">Mustang</option>
-                                                <option value="f150">F-150</option>
-                                                <option value="3series">3 Series</option>
-                                                <option value="5series">5 Series</option>
-                                                <option value="cclass">C-Class</option>
-                                                <option value="eclass">E-Class</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <!-- Any Body Type -->
-                                    <div class="col-md-3">
-                                        <div class="form-clt">
-                                            <span>Any Body Type</span>
-                                            <select class="form-select" id="bodyType">
-                                                <option value="">Select Body Type</option>
-                                                <option value="sedan">Sedan</option>
-                                                <option value="suv">SUV</option>
-                                                <option value="hatchback">Hatchback</option>
-                                                <option value="coupe">Coupe</option>
-                                                <option value="convertible">Convertible</option>
-                                                <option value="wagon">Wagon</option>
-                                                <option value="pickup">Pickup Truck</option>
-                                                <option value="minivan">Minivan</option>
-                                                <option value="sports">Sports Car</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <!-- Search Input -->
-                                    <div class="col-md-3">
-                                        <div class="form-clt">
-                                            <span>Search</span>
-                                            <input type="text" class="form-control" id="searchInput"
-                                                placeholder="e.g Model, Body, Color, Feature">
-                                        </div>
-                                    </div>
-
-                                    <!-- Price Range -->
-                                    <div class="col-md-6">
-                                        <div class="form-clt">
-                                            <span>Price Range: <span id="priceRangeDisplay">$5,000 -
-                                                    $200,000</span></span>
-                                            <div class="range-slider-container">
-                                                <input type="range" class="range-slider" id="priceMin" min="5000"
-                                                    max="200000" value="5000" step="5000">
-                                                <input type="range" class="range-slider" id="priceMax" min="5000"
-                                                    max="200000" value="200000" step="5000">
+                            <h2 class="text-center mb-5">Search Your Dream Car</h3>
+                                <form id="carSearchForm">
+                                    <div class="row g-4">
+                                        <!-- Any Make -->
+                                        <div class="col-md-3">
+                                            <div class="form-clt">
+                                                <span>Any Make</span>
+                                                <select class="form-select" id="carMake">
+                                                    <option value="">Select Make</option>
+                                                    <option value="toyota">Toyota</option>
+                                                    <option value="honda">Honda</option>
+                                                    <option value="ford">Ford</option>
+                                                    <option value="bmw">BMW</option>
+                                                    <option value="mercedes">Mercedes-Benz</option>
+                                                    <option value="audi">Audi</option>
+                                                    <option value="nissan">Nissan</option>
+                                                    <option value="hyundai">Hyundai</option>
+                                                    <option value="mazda">Mazda</option>
+                                                    <option value="volkswagen">Volkswagen</option>
+                                                </select>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- Year Range -->
-                                    <div class="col-md-6">
-                                        <div class="form-clt">
-                                            <span>Year Range: <span id="yearRangeDisplay">2015 - 2026</span></span>
-                                            <div class="range-slider-container">
-                                                <input type="range" class="range-slider" id="yearMin" min="2015"
-                                                    max="2026" value="2015" step="1">
-                                                <input type="range" class="range-slider" id="yearMax" min="2015"
-                                                    max="2026" value="2026" step="1">
+                                        <!-- Any Model -->
+                                        <div class="col-md-3">
+                                            <div class="form-clt">
+                                                <span>Any Model</span>
+                                                <select class="form-select" id="carModel">
+                                                    <option value="">Select Model</option>
+                                                    <option value="camry">Camry</option>
+                                                    <option value="corolla">Corolla</option>
+                                                    <option value="civic">Civic</option>
+                                                    <option value="accord">Accord</option>
+                                                    <option value="mustang">Mustang</option>
+                                                    <option value="f150">F-150</option>
+                                                    <option value="3series">3 Series</option>
+                                                    <option value="5series">5 Series</option>
+                                                    <option value="cclass">C-Class</option>
+                                                    <option value="eclass">E-Class</option>
+                                                </select>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- Search Button -->
-                                    <div class="col-md-12">
-                                        <button type="submit" class="theme-btn">
-                                            Start Search <i class="fa-solid fa-magnifying-glass"></i>
-                                        </button>
-                                    </div>
+                                        <!-- Any Body Type -->
+                                        <div class="col-md-3">
+                                            <div class="form-clt">
+                                                <span>Any Body Type</span>
+                                                <select class="form-select" id="bodyType">
+                                                    <option value="">Select Body Type</option>
+                                                    <option value="sedan">Sedan</option>
+                                                    <option value="suv">SUV</option>
+                                                    <option value="hatchback">Hatchback</option>
+                                                    <option value="coupe">Coupe</option>
+                                                    <option value="convertible">Convertible</option>
+                                                    <option value="wagon">Wagon</option>
+                                                    <option value="pickup">Pickup Truck</option>
+                                                    <option value="minivan">Minivan</option>
+                                                    <option value="sports">Sports Car</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- Search Input -->
+                                        <div class="col-md-3">
+                                            <div class="form-clt">
+                                                <span>Search</span>
+                                                <input type="text" class="form-control" id="searchInput"
+                                                    placeholder="e.g Model, Body, Color, Feature">
+                                            </div>
+                                        </div>
+
+                                        <!-- Price Range -->
+                                        <div class="col-md-6">
+                                            <div class="form-clt">
+                                                <span>Price Range: <span id="priceRangeDisplay">$5,000 -
+                                                        $200,000</span></span>
+                                                <div class="range-slider-container">
+                                                    <input type="range" class="range-slider" id="priceMin" min="5000"
+                                                        max="200000" value="5000" step="5000">
+                                                    <input type="range" class="range-slider" id="priceMax" min="5000"
+                                                        max="200000" value="200000" step="5000">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Year Range -->
+                                        <div class="col-md-6">
+                                            <div class="form-clt">
+                                                <span>Year Range: <span id="yearRangeDisplay">2015 - 2026</span></span>
+                                                <div class="range-slider-container">
+                                                    <input type="range" class="range-slider" id="yearMin" min="2015"
+                                                        max="2026" value="2015" step="1">
+                                                    <input type="range" class="range-slider" id="yearMax" min="2015"
+                                                        max="2026" value="2026" step="1">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Search Button -->
+                                        <div class="col-md-12">
+                                            <button type="submit" class="theme-btn">
+                                                Start Search <i class="fa-solid fa-magnifying-glass"></i>
+                                            </button>
+                                        </div>
+
+                                        <section class="vehicle-type-search-section">
+                                            <div class="container">
+                                                <!-- <div class="section-title-center">
+                          <h6>Browse By Type</h6>
+                          <h2>Find Your Perfect Vehicle</h2>
+                          <p>Select a vehicle type to explore our wide range of quality cars</p>
+                        </div> -->
+
+                                                <!-- Swiper Container -->
+                                                <div class="vehicle-type-swiper-container">
+                                                    <div class="vehicle-type-swiper swiper">
+                                                        <div class="swiper-wrapper">
+                                                            <!-- Hatchback -->
+                                                            <div class="vehicle-type-card swiper-slide"
+                                                                data-type="Hybrid">
+                                                                <div class="vehicle-icon-wrapper">
+                                                                    <img src="assets/img/icon/hybrid2.png"
+                                                                        alt="Hybrid" />
+                                                                </div>
+                                                                <h6 class="vehicle-type-name">Hybrid</h6>
+                                                            </div>
+
+                                                            <!-- SUV -->
+                                                            <div class="vehicle-type-card swiper-slide" data-type="suv">
+                                                                <div class="vehicle-icon-wrapper">
+                                                                    <img src="assets/img/icon/hatchback2.png"
+                                                                        alt="Hatchback" />
+                                                                </div>
+                                                                <h6 class="vehicle-type-name">Hatchback</h6>
+                                                            </div>
+
+                                                            <!-- Sedan -->
+                                                            <div class="vehicle-type-card swiper-slide"
+                                                                data-type="sedan">
+                                                                <div class="vehicle-icon-wrapper">
+                                                                    <img src="assets/img/icon/sedan2.png" alt="Sedan" />
+                                                                </div>
+                                                                <h6 class="vehicle-type-name">Sedan</h6>
+                                                            </div>
+
+
+                                                            <!-- Suv -->
+                                                            <div class="vehicle-type-card swiper-slide" data-type="SUV">
+                                                                <div class="vehicle-icon-wrapper">
+                                                                    <img src="assets/img/icon/suv2.png" alt="SUV" />
+                                                                </div>
+                                                                <h6 class="vehicle-type-name">SUV</h6>
+                                                            </div>
+
+                                                            <!-- Coupe -->
+                                                            <div class="vehicle-type-card swiper-slide"
+                                                                data-type="European">
+                                                                <div class="vehicle-icon-wrapper">
+                                                                    <img src="assets/img/icon/european.png"
+                                                                        alt="European" />
+                                                                </div>
+                                                                <h6 class="vehicle-type-name">European</h6>
+                                                            </div>
+
+                                                            <!-- Wagon -->
+                                                            <div class="vehicle-type-card swiper-slide"
+                                                                data-type="Station Wagon">
+                                                                <div class="vehicle-icon-wrapper">
+                                                                    <img src="assets/img/icon/wagon2.png"
+                                                                        alt="Station Wagon" />
+                                                                </div>
+                                                                <h6 class="vehicle-type-name">Station Wagon</h6>
+                                                            </div>
+
+                                                            <!-- Wagon -->
+                                                            <div class="vehicle-type-card swiper-slide"
+                                                                data-type="wagon">
+                                                                <div class="vehicle-icon-wrapper">
+                                                                    <img src="assets/img/icon/family-van.png"
+                                                                        alt="Wagon" />
+                                                                </div>
+                                                                <h6 class="vehicle-type-name">Family Van</h6>
+                                                            </div>
+
+
+                                                            <div class="vehicle-type-card swiper-slide" data-type="mpv">
+                                                                <div class="vehicle-icon-wrapper">
+                                                                    <img src="assets/img/icon/truck.png" alt="MPV" />
+                                                                </div>
+                                                                <h6 class="vehicle-type-name">Truck</h6>
+                                                            </div>
+
+                                                            <!-- MPV -->
+                                                            <!-- <div class="vehicle-type-card swiper-slide" data-type="mpv">
+                                <div class="vehicle-icon-wrapper">
+                                  <img src="assets/img/icon/truck.png" alt="MPV" />
                                 </div>
-                            </form>
+                                <h6 class="vehicle-type-name">Truck 1</h6>
+                              </div> -->
+
+                                                            <!-- Wagon -->
+                                                            <div class="vehicle-type-card swiper-slide"
+                                                                data-type="commercial">
+                                                                <div class="vehicle-icon-wrapper">
+                                                                    <img src="assets/img/icon/commercial.png"
+                                                                        alt="Commercial" />
+                                                                </div>
+                                                                <h6 class="vehicle-type-name">Commercial</h6>
+                                                            </div>
+
+                                                            <!-- MPV -->
+                                                            <div class="vehicle-type-card swiper-slide" data-type="SUV">
+                                                                <div class="vehicle-icon-wrapper">
+                                                                    <img src="assets/img/icon/suv2 copy.png"
+                                                                        alt="SUV" />
+                                                                </div>
+                                                                <h6 class="vehicle-type-name">SUV</h6>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <!-- Navigation Buttons -->
+                                                        <!-- <div class="swiper-button-next vehicle-swiper-next">
+                            <i class="fas fa-chevron-right"></i>
+                          </div>
+                          <div class="swiper-button-prev vehicle-swiper-prev">
+                            <i class="fas fa-chevron-left"></i>
+                          </div> -->
+
+                                                        <!-- Pagination Dots -->
+                                                        <div class="swiper-pagination vehicle-swiper-pagination"></div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Search Results Display -->
+                                                <div class="search-results hidden" id="searchResults">
+                                                    <h3 id="resultTitle">Loading...</h3>
+                                                    <p id="resultDescription">Please wait...</p>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </form>
                         </div>
                     </div>
                 </div>
@@ -381,7 +504,7 @@
     </section>
 
     <!-- vehicle type search section -->
-    <section class="vehicle-type-search-section">
+    <!-- <section class="vehicle-type-search-section">
         <div class="container">
             <div class="section-title-center">
                 <h6>Browse By Type</h6>
@@ -389,7 +512,6 @@
                 <p>Select a vehicle type to explore our wide range of quality cars</p>
             </div>
 
-            <!-- Swiper Container -->
             <div class="vehicle-type-swiper-container">
                 <div class="vehicle-type-swiper swiper swiper-initialized swiper-horizontal swiper-pointer-events">
                     <div class="swiper-wrapper" id="swiper-wrapper-bc5af0fb2da9da7b" aria-live="off"
@@ -442,7 +564,6 @@
                             </div>
                             <h6 class="vehicle-type-name">UTF</h6>
                         </div>
-                        <!-- Hatchback -->
                         <div class="vehicle-type-card swiper-slide" data-type="hatchback" data-swiper-slide-index="0"
                             style="width: 200px; margin-right: 30px;" role="group" aria-label="1 / 8">
                             <div class="vehicle-icon-wrapper">
@@ -451,7 +572,6 @@
                             <h6 class="vehicle-type-name">HYBRID</h6>
                         </div>
 
-                        <!-- SUV -->
                         <div class="vehicle-type-card swiper-slide" data-type="suv" data-swiper-slide-index="1"
                             style="width: 200px; margin-right: 30px;" role="group" aria-label="2 / 8">
                             <div class="vehicle-icon-wrapper">
@@ -460,7 +580,6 @@
                             <h6 class="vehicle-type-name">HATCHBACK</h6>
                         </div>
 
-                        <!-- Sedan -->
                         <div class="vehicle-type-card swiper-slide" data-type="sedan" data-swiper-slide-index="2"
                             style="width: 200px; margin-right: 30px;" role="group" aria-label="3 / 8">
                             <div class="vehicle-icon-wrapper">
@@ -469,7 +588,6 @@
                             <h6 class="vehicle-type-name">SEDAN</h6>
                         </div>
 
-                        <!-- Coupe -->
                         <div class="vehicle-type-card swiper-slide swiper-slide-prev" data-type="coupe"
                             data-swiper-slide-index="3" style="width: 200px; margin-right: 30px;" role="group"
                             aria-label="4 / 8">
@@ -479,7 +597,6 @@
                             <h6 class="vehicle-type-name">COUPE</h6>
                         </div>
 
-                        <!-- Wagon -->
                         <div class="vehicle-type-card swiper-slide swiper-slide-active" data-type="wagon"
                             data-swiper-slide-index="4" style="width: 200px; margin-right: 30px;" role="group"
                             aria-label="5 / 8">
@@ -489,7 +606,6 @@
                             <h6 class="vehicle-type-name">WAGON</h6>
                         </div>
 
-                        <!-- MPV -->
                         <div class="vehicle-type-card swiper-slide swiper-slide-next" data-type="mpv"
                             data-swiper-slide-index="5" style="width: 200px; margin-right: 30px;" role="group"
                             aria-label="6 / 8">
@@ -499,7 +615,6 @@
                             <h6 class="vehicle-type-name">MPV</h6>
                         </div>
 
-                        <!-- Wagon -->
                         <div class="vehicle-type-card swiper-slide" data-type="wagon" data-swiper-slide-index="6"
                             style="width: 200px; margin-right: 30px;" role="group" aria-label="7 / 8">
                             <div class="vehicle-icon-wrapper">
@@ -508,7 +623,6 @@
                             <h6 class="vehicle-type-name">SUV</h6>
                         </div>
 
-                        <!-- MPV -->
                         <div class="vehicle-type-card swiper-slide" data-type="mpv" data-swiper-slide-index="7"
                             style="width: 200px; margin-right: 30px;" role="group" aria-label="8 / 8">
                             <div class="vehicle-icon-wrapper">
@@ -565,25 +679,15 @@
                             <h6 class="vehicle-type-name">MPV</h6>
                         </div>
                     </div>
-
-                    <!-- Navigation Buttons -->
-                    <!-- <div class="swiper-button-next vehicle-swiper-next">
-          <i class="fas fa-chevron-right"></i>
-        </div>
-        <div class="swiper-button-prev vehicle-swiper-prev">
-          <i class="fas fa-chevron-left"></i>
-        </div> -->
-
                 </div>
             </div>
 
-            <!-- Search Results Display -->
             <div class="search-results hidden" id="searchResults">
                 <h3 id="resultTitle">Loading...</h3>
                 <p id="resultDescription">Please wait...</p>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Car Section Start -->
     <section class="car-section car-sock-section fix section-padding section-bg">
@@ -941,7 +1045,6 @@
             </div>
         </div>
     </footer>
-
 
     <!--<< All JS Plugins >>-->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
