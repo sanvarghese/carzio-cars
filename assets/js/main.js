@@ -407,12 +407,12 @@ if ($(".vehicle-type-swiper").length > 0) {
     centeredSlides: false,
     observer: true,
     observeParents: true,
-    
+    // autoplay: false,
     // Auto-play configuration
     autoplay: {
-      delay: 3000, // 3 seconds delay between slides
-      disableOnInteraction: false, // Continue autoplay after user interaction
-      pauseOnMouseEnter: true, // Pause autoplay when mouse enters slider
+      delay: 3000, 
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true, 
     },
     
     // Breakpoints for responsive design
