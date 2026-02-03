@@ -1166,20 +1166,12 @@ function initializeCarSearchForm() {
   }
 }
 
-//>> FINANCE APPLICATION FORM FUNCTIONALITY - ADDED HERE <<//
-function initializeFinanceApplicationForm() {
-  // Check if finance application form exists on the page
-  const financeForms = document.querySelector('.finance-application-container');
-  if (!financeForms) return;
+// added financial page functions
 
-  // Initialize Flatpickr for date inputs in full form
-  if (typeof flatpickr !== 'undefined') {
-    flatpickr(".datepicker", {
-      dateFormat: "d/m/Y",
-      allowInput: true,
-      disableMobile: true
-    });
-  }
+// Finance Page Wizard Functionality
+function initializeFinanceWizard() {
+  // Only run on finance page
+  if (!document.querySelector('.finace-section')) return;
 
   // Form type toggle functionality
   const fullAppBtn = document.getElementById('fullApplicationBtn');
@@ -1187,7 +1179,6 @@ function initializeFinanceApplicationForm() {
   const fullForm = document.getElementById('fullApplicationForm');
   const quickForm = document.getElementById('quickApplicationForm');
 
-  // Check if form elements exist
   if (!fullAppBtn || !quickAppBtn || !fullForm || !quickForm) return;
 
   // Initialize with full form active
@@ -1216,7 +1207,88 @@ function initializeFinanceApplicationForm() {
     fullForm.classList.remove('active');
   });
 
-  // Quick Apply button - Show privacy popup instead of immediate submission
+  // Wizard Variables
+  let currentStep = 1;
+  const totalSteps = 7;
+  let isJointApplication = false;
+
+  // Get DOM elements for wizard
+  const progressSteps = document.querySelectorAll('.step');
+  const nextButtons = document.querySelectorAll('.next-step');
+  const prevButtons = document.querySelectorAll('.prev-step');
+  const fillLaterButtons = document.querySelectorAll('.fill-later');
+  const jointApplicationRadios = document.querySelectorAll('input[name="jointApplication"]');
+  const jointApplicantSections = document.querySelectorAll('.joint-applicant-section');
+
+  // Initialize wizard
+  updateProgress();
+
+  // Handle joint application toggle
+  jointApplicationRadios.forEach(radio => {
+    radio.addEventListener('change', function () {
+      isJointApplication = this.value === 'yes';
+      toggleJointApplicantSections(isJointApplication);
+    });
+  });
+
+  // Next button functionality
+  nextButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const nextStep = parseInt(this.dataset.next);
+      if (validateStep(currentStep)) {
+        goToStep(nextStep);
+      }
+    });
+  });
+
+  // Previous button functionality
+  prevButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const prevStep = parseInt(this.dataset.prev);
+      goToStep(prevStep);
+    });
+  });
+
+  // Fill later button functionality
+  fillLaterButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      alert('This section will be saved and can be completed later.');
+      // You can implement AJAX save functionality here
+    });
+  });
+
+  // Apply for Finance button in full form
+  const applyButton = document.querySelector('.apply-finance');
+  if (applyButton) {
+    applyButton.addEventListener('click', function () {
+      if (validateStep(7)) {
+        // Open privacy declaration popup for full form
+        $.magnificPopup.open({
+          items: {
+            src: '#privacy-declaration-popup',
+            type: 'inline'
+          },
+          callbacks: {
+            open: function () {
+              // Reset checkbox when popup opens
+              document.getElementById('privacyAgreement').checked = false;
+              document.getElementById('confirmPrivacyBtn').disabled = true;
+
+              // Change confirm button to handle full form submission
+              const confirmBtn = document.getElementById('confirmPrivacyBtn');
+              confirmBtn.onclick = function () {
+                if (document.getElementById('privacyAgreement').checked) {
+                  submitFullApplication();
+                }
+              };
+            }
+          }
+        });
+      }
+    });
+  }
+
+  // Quick Apply button
   const quickApplyBtn = document.getElementById('quickApplyBtn');
   if (quickApplyBtn) {
     quickApplyBtn.addEventListener('click', function () {
@@ -1243,7 +1315,10 @@ function initializeFinanceApplicationForm() {
   const privacyCheckbox = document.getElementById('privacyAgreement');
   if (privacyCheckbox) {
     privacyCheckbox.addEventListener('change', function () {
-      document.getElementById('confirmPrivacyBtn').disabled = !this.checked;
+      const confirmBtn = document.getElementById('confirmPrivacyBtn');
+      if (confirmBtn) {
+        confirmBtn.disabled = !this.checked;
+      }
     });
   }
 
@@ -1252,7 +1327,12 @@ function initializeFinanceApplicationForm() {
   if (confirmPrivacyBtn) {
     confirmPrivacyBtn.addEventListener('click', function () {
       if (document.getElementById('privacyAgreement').checked) {
-        submitQuickApplication();
+        // Check which form is active
+        if (fullForm.classList.contains('active')) {
+          submitFullApplication();
+        } else {
+          submitQuickApplication();
+        }
       }
     });
   }
@@ -1264,9 +1344,95 @@ function initializeFinanceApplicationForm() {
     });
   });
 
+  // Finance Calculator Button
+  const showCalculatorBtn = document.getElementById('showCalculatorBtn');
+  if (showCalculatorBtn) {
+    showCalculatorBtn.addEventListener('click', function () {
+      $.magnificPopup.open({
+        items: {
+          src: '#finance-calculator-modal',
+          type: 'inline'
+        },
+        mainClass: 'mfp-fade',
+        removalDelay: 300
+      });
+    });
+  }
+
+  // Function to navigate to specific step
+  function goToStep(step) {
+    // Hide current step
+    document.getElementById(`step${currentStep}`)?.classList.remove('active');
+
+    // Update progress steps
+    progressSteps.forEach((progressStep, index) => {
+      if (index + 1 < step) {
+        progressStep.classList.add('completed');
+        progressStep.classList.remove('active');
+      } else if (index + 1 === step) {
+        progressStep.classList.add('active');
+        progressStep.classList.remove('completed');
+      } else {
+        progressStep.classList.remove('active', 'completed');
+      }
+    });
+
+    // Show new step
+    document.getElementById(`step${step}`)?.classList.add('active');
+    currentStep = step;
+
+    // Scroll to top of form
+    const wizardForms = document.querySelector('.wizard-forms');
+    if (wizardForms) {
+      wizardForms.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+
+    updateProgress();
+  }
+
+  // Function to validate current step
+  function validateStep(step) {
+    const currentStepElement = document.getElementById(`step${step}`);
+    if (!currentStepElement) return true;
+
+    // Remove any existing invalid classes
+    const fields = currentStepElement.querySelectorAll('.is-invalid');
+    fields.forEach(field => {
+      field.classList.remove('is-invalid');
+      const errorDiv = field.nextElementSibling;
+      if (errorDiv && errorDiv.classList.contains('invalid-feedback')) {
+        errorDiv.remove();
+      }
+    });
+
+    // Always return true since fields are not required
+    return true;
+  }
+
+  // Function to toggle joint applicant sections
+  function toggleJointApplicantSections(show) {
+    jointApplicantSections.forEach(section => {
+      section.style.display = show ? 'block' : 'none';
+    });
+  }
+
+  // Function to update progress bar
+  function updateProgress() {
+    const progressBar = document.querySelector('.progress-bar');
+    const percentage = ((currentStep - 1) / (totalSteps - 1)) * 100;
+    if (progressBar) {
+      progressBar.style.background = `linear-gradient(to right, var(--theme) ${percentage}%, var(--border) ${percentage}%)`;
+    }
+  }
+
   // Function to validate quick form
   function validateQuickForm() {
     const quickForm = document.getElementById('quickApplicationForm');
+    if (!quickForm) return false;
+
     const requiredFields = quickForm.querySelectorAll('[required]');
     let isValid = true;
 
@@ -1391,191 +1557,6 @@ function initializeFinanceApplicationForm() {
     }, 1500);
   }
 
-  // Function to switch from quick to full form
-  window.switchToFullForm = function () {
-    fullAppBtn.click();
-  };
-
-  // Wizard code
-  let currentStep = 1;
-  const totalSteps = 7;
-  let isJointApplication = false;
-
-  // Get DOM elements for wizard
-  const wizardSteps = document.querySelectorAll('.wizard-step');
-  const progressSteps = document.querySelectorAll('.step');
-  const nextButtons = document.querySelectorAll('.next-step');
-  const prevButtons = document.querySelectorAll('.prev-step');
-  const fillLaterButtons = document.querySelectorAll('.fill-later');
-  const jointApplicationRadios = document.querySelectorAll('input[name="jointApplication"]');
-  const jointApplicantSections = document.querySelectorAll('.joint-applicant-section');
-
-  // Initialize wizard
-  updateProgress();
-
-  // Handle joint application toggle
-  if (jointApplicationRadios.length > 0) {
-    jointApplicationRadios.forEach(radio => {
-      radio.addEventListener('change', function () {
-        isJointApplication = this.value === 'yes';
-        toggleJointApplicantSections(isJointApplication);
-      });
-    });
-  }
-
-  // Next button functionality
-  if (nextButtons.length > 0) {
-    nextButtons.forEach(button => {
-      button.addEventListener('click', function () {
-        const nextStep = parseInt(this.dataset.next);
-        if (validateStep(currentStep)) {
-          goToStep(nextStep);
-        }
-      });
-    });
-  }
-
-  // Previous button functionality
-  if (prevButtons.length > 0) {
-    prevButtons.forEach(button => {
-      button.addEventListener('click', function () {
-        const prevStep = parseInt(this.dataset.prev);
-        goToStep(prevStep);
-      });
-    });
-  }
-
-  // Fill later button functionality
-  if (fillLaterButtons.length > 0) {
-    fillLaterButtons.forEach(button => {
-      button.addEventListener('click', function () {
-        alert('This section will be saved and can be completed later.');
-        // You can implement AJAX save functionality here
-      });
-    });
-  }
-
-  // Apply for Finance button in full form - Add privacy popup here too
-  const applyButton = document.querySelector('.apply-finance');
-  if (applyButton) {
-    applyButton.addEventListener('click', function () {
-      if (validateStep(7)) {
-        // Open privacy declaration popup for full form
-        $.magnificPopup.open({
-          items: {
-            src: '#privacy-declaration-popup',
-            type: 'inline'
-          },
-          callbacks: {
-            open: function () {
-              // Reset checkbox when popup opens
-              document.getElementById('privacyAgreement').checked = false;
-              document.getElementById('confirmPrivacyBtn').disabled = true;
-
-              // Change confirm button to handle full form submission
-              const confirmBtn = document.getElementById('confirmPrivacyBtn');
-              confirmBtn.onclick = function () {
-                if (document.getElementById('privacyAgreement').checked) {
-                  submitFullApplication();
-                }
-              };
-            }
-          }
-        });
-      }
-    });
-  }
-
-  // Function to navigate to specific step
-  function goToStep(step) {
-    // Hide current step
-    const currentStepElement = document.getElementById(`step${currentStep}`);
-    if (currentStepElement) {
-      currentStepElement.classList.remove('active');
-    }
-
-    // Update progress steps
-    if (progressSteps.length > 0) {
-      progressSteps.forEach((progressStep, index) => {
-        if (index + 1 < step) {
-          progressStep.classList.add('completed');
-          progressStep.classList.remove('active');
-        } else if (index + 1 === step) {
-          progressStep.classList.add('active');
-          progressStep.classList.remove('completed');
-        } else {
-          progressStep.classList.remove('active', 'completed');
-        }
-      });
-    }
-
-    // Show new step
-    const newStepElement = document.getElementById(`step${step}`);
-    if (newStepElement) {
-      newStepElement.classList.add('active');
-    }
-    currentStep = step;
-
-    // Scroll to top of form
-    const wizardForms = document.querySelector('.wizard-forms');
-    if (wizardForms) {
-      wizardForms.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  }
-
-  // Function to validate current step
-  function validateStep(step) {
-    const currentStepElement = document.getElementById(`step${step}`);
-    if (!currentStepElement) return true;
-
-    // Remove any existing invalid classes
-    const fields = currentStepElement.querySelectorAll('.is-invalid');
-    fields.forEach(field => {
-      field.classList.remove('is-invalid');
-      const errorDiv = field.nextElementSibling;
-      if (errorDiv && errorDiv.classList.contains('invalid-feedback')) {
-        errorDiv.remove();
-      }
-    });
-
-    // Always return true since fields are not required
-    return true;
-  }
-
-  // Function to toggle joint applicant sections
-  function toggleJointApplicantSections(show) {
-    jointApplicantSections.forEach(section => {
-      section.style.display = show ? 'block' : 'none';
-    });
-  }
-
-  // Function to update progress bar
-  function updateProgress() {
-    const progressBar = document.querySelector('.progress-bar');
-    if (progressBar) {
-      const percentage = ((currentStep - 1) / (totalSteps - 1)) * 100;
-      progressBar.style.background = `linear-gradient(to right, var(--theme) ${percentage}%, var(--border) ${percentage}%)`;
-    }
-  }
-
-  // Finance calculator modal
-  const showCalculatorBtn = document.getElementById('showCalculatorBtn');
-  if (showCalculatorBtn) {
-    showCalculatorBtn.addEventListener('click', function () {
-      $.magnificPopup.open({
-        items: {
-          src: '#finance-calculator-modal',
-          type: 'inline'
-        },
-        mainClass: 'mfp-fade',
-        removalDelay: 300
-      });
-    });
-  }
-
   // Function to submit full application
   function submitFullApplication() {
     // Collect form data
@@ -1633,7 +1614,7 @@ function initializeFinanceApplicationForm() {
     // Add income row
     if (e.target.classList.contains('btn-outline-theme') && e.target.textContent.includes('Add Income')) {
       e.preventDefault();
-      const table = e.target.closest('.table-responsive').querySelector('tbody');
+      const table = e.target.closest('.table-responsive')?.querySelector('tbody');
       if (table && table.rows.length > 0) {
         const newRow = table.rows[0].cloneNode(true);
         table.appendChild(newRow);
@@ -1644,23 +1625,36 @@ function initializeFinanceApplicationForm() {
     if (e.target.classList.contains('btn-outline-theme') && e.target.textContent.includes('Add Expense')) {
       e.preventDefault();
       const expenseSection = e.target.closest('.expenditure-section');
-      if (expenseSection) {
-        const expenseRow = expenseSection.querySelector('.row').cloneNode(true);
-        expenseSection.insertBefore(expenseRow, e.target);
-      }
+      const expenseRow = expenseSection.querySelector('.row').cloneNode(true);
+      expenseSection.insertBefore(expenseRow, e.target);
     }
 
     // Add reference
     if (e.target.classList.contains('btn-outline-theme') && e.target.textContent.includes('Add Reference')) {
       e.preventDefault();
       const referenceSection = e.target.closest('.reference-section');
-      if (referenceSection) {
-        const referenceClone = referenceSection.cloneNode(true);
-        referenceSection.parentNode.insertBefore(referenceClone, referenceSection.nextSibling);
-      }
+      const referenceClone = referenceSection.cloneNode(true);
+      referenceSection.parentNode.insertBefore(referenceClone, referenceSection.nextSibling);
     }
   });
+
+  // Function to switch from quick to full form
+  window.switchToFullForm = function () {
+    if (fullAppBtn) {
+      fullAppBtn.click();
+    }
+  };
+
+  // Make goToStep function available globally
+  window.goToStep = goToStep;
 }
+
+// Initialize finance wizard when document is ready
+$(document).ready(function () {
+  initializeFinanceWizard();
+});
+
+
 
   loader();
 })(jQuery); // End jQuery
