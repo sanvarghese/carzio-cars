@@ -251,21 +251,36 @@
       <div class="car-details-wrapper">
         <!-- Full Width Car Gallery - MODIFIED LAYOUT -->
         <div class="row car-gallery-container wow fadeInUp" data-wow-delay=".3s">
+
+          <!-- Car Header with Title and Price -->
+          <div class="row car-details-header wow fadeInUp" data-wow-delay=".4s">
+
+            <div class="col-md-8">
+              <div class="car-title-section">
+                <h1>Toyota Supra 2024</h1>
+                <div class="car-subtitle">
+                  Premium Sports Coupe | Manual Transmission | Low Mileage
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="car-price-section">
+                <div class="main-price">$38,570</div>
+                <div class="price-subtitle">Excluding on-road costs</div>
+              </div>
+            </div>
+          </div>
+
           <!-- Left Column for Thumbnails -->
 
           <!-- Right Column for Main Image -->
 
           <div class="col-lg-10 col-md-9 col-sm-12">
             <div class="car-gallery-wrapper">
-              <!-- Car Badges -->
-              <!-- <div class="car-badges">
-                <span class="car-badge featured">Featured</span>
-                <span class="car-badge new">2024 Model</span>
-              </div> -->
-
               <!-- Main Image with Magnific Popup -->
-              <a href="assets/img/car/details/car-11.jpg" class="main-car-image image-popup">
-                <img src="assets/img/car/details/car-11.jpg" alt="Toyota Supra - Front View" id="mainCarImage">
+              <a href="assets/img/car/details/car-12.jpg" class="main-car-image image-popup-gallery"
+                title="Toyota Supra - Front View">
+                <img src="assets/img/car/details/car-12.jpg" alt="2008 Toyota Vitz" id="mainCarImage">
                 <div class="image-overlay">
                   <i class="fa-solid fa-expand"></i>
                 </div>
@@ -273,51 +288,99 @@
             </div>
           </div>
 
+          <!-- Replace your current thumbnail section with this -->
           <div class="col-lg-2 col-md-3 col-sm-12">
             <div class="car-thumbnails-vertical">
-              <div class="thumbnail-item active" data-image="assets/img/car/details/car-12.jpg">
-                <img src="assets/img/car/details/car-12.jpg" alt="Front View">
-              </div>
-              <div class="thumbnail-item" data-image="assets/img/car/details/car-13.jpg">
-                <img src="assets/img/car/details/car-13.jpg" alt="Side View">
-              </div>
-              <div class="thumbnail-item" data-image="assets/img/car/details/car-14.jpg">
-                <img src="assets/img/car/details/car-14.jpg" alt="Rear View">
-              </div>
-              <div class="thumbnail-item" data-image="assets/img/car/details/car-15.jpg">
-                <img src="assets/img/car/details/car-15.jpg" alt="Interior">
-              </div>
-              <!-- <div class="thumbnail-item" data-image="assets/img/car/details/car-16.jpg">
-                <img src="assets/img/car/details/car-16.jpg" alt="Dashboard">
-              </div> -->
-
+              <a href="assets/img/car/details/car-12.jpg" class="thumbnail-item active image-popup-gallery"
+                data-image="assets/img/car/details/car-12.jpg" title="Back View">
+                <img src="assets/img/car/details/car-12.jpg" alt="2008 Toyota Vitz">
+              </a>
+              <a href="assets/img/car/details/car-13.jpg" class="thumbnail-item image-popup-gallery"
+                data-image="assets/img/car/details/car-13.jpg" title="Side View">
+                <img src="assets/img/car/details/car-13.jpg" alt="2008 Toyota Vitz">
+              </a>
+              <a href="assets/img/car/details/car-14.jpg" class="thumbnail-item image-popup-gallery"
+                data-image="assets/img/car/details/car-14.jpg" title="2008 Toyota Vitz">
+                <img src="assets/img/car/details/car-14.jpg" alt="2008 Toyota Vitz">
+              </a>
+              <a href="assets/img/car/details/car-15.jpg" class="thumbnail-item image-popup-gallery"
+                data-image="assets/img/car/details/car-15.jpg" title="2008 Toyota Vitz">
+                <img src="assets/img/car/details/car-15.jpg" alt="2008 Toyota Vitz">
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Car Header with Title and Price -->
-        <div class="row car-details-header wow fadeInUp" data-wow-delay=".4s">
 
-          <div class="col-md-8">
-            <div class="car-title-section">
-              <h1>Toyota Supra 2024</h1>
-              <div class="car-subtitle">
-                Premium Sports Coupe | Manual Transmission | Low Mileage
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="car-price-section">
-              <div class="main-price">$38,570</div>
-              <div class="price-subtitle">Excluding on-road costs</div>
-            </div>
-          </div>
-        </div>
 
         <!-- Main Content Area -->
         <div class="row">
+
+
           <!-- Left Column - Main Content -->
           <div class="col-lg-8">
+
+            <!-- Finance Calculator Section -->
+            <div class="finance-section wow fadeInUp" data-wow-delay=".7s">
+              <div class="finance-calculator card-shadow">
+                <h3><i class="fa-solid fa-calculator me-2"></i> Apply Finance</h3>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="input-group-finance">
+                      <label for="vehicleCost">Vehicle Cost ($)</label>
+                      <input type="number" id="vehicleCost" placeholder="Enter vehicle cost" value="38570">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="input-group-finance">
+                      <label for="cashDeposit">Cash Deposit ($)</label>
+                      <input type="number" id="cashDeposit" placeholder="Enter cash deposit" value="5000">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="input-group-finance">
+                      <label for="tradeIn">Trade In ($)</label>
+                      <input type="number" id="tradeIn" placeholder="Enter trade-in value" value="0">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="input-group-finance">
+                  <label>Loan Term (months)</label>
+                  <div class="loan-term-buttons">
+                    <button class="loan-term-btn" data-months="24">24 mths</button>
+                    <button class="loan-term-btn" data-months="36">36 mths</button>
+                    <button class="loan-term-btn active" data-months="48">48 mths</button>
+                    <button class="loan-term-btn" data-months="60">60 mths</button>
+                    <button class="loan-term-btn" data-months="72">72 mths</button>
+                  </div>
+                </div>
+
+                <div class="row align-items-center">
+                  <div class="col-md-8">
+                    <div class="finance-summary">
+                      <h4 class="text-white">Estimated Monthly Payment: <span class="text-theme"
+                          id="monthlyPayment">$850</span></h4>
+                      <p class="text-muted mb-0">Based on 8.75% interest rate</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <button class="theme-btn w-100" id="applyFinanceBtn">
+                      <i class="fa-solid fa-file-contract me-2"></i> Apply Now
+                    </button>
+                  </div>
+                </div>
+
+                <div class="finance-disclaimer">
+                  * On Road Costs and Clean Car fee or rebate may apply. Finance calculation based on a 48 months month
+                  term, $5,000 cash deposit / $0 trade in and with an example annual fixed interest rate of 8.75%. The
+                  total payable amount is $46,731, which includes $8,161 of interest. Actual interest rate may be higher
+                  or lower. Includes an establishment fee of $495 & $8.00 per month account fee. Estimate only, not an
+                  offer of finance. Terms, conditions and lending criteria apply. Price Includes GST.
+                </div>
+              </div>
+            </div>
+
             <!-- Quick Info Section -->
             <div class="car-quick-info wow fadeInUp" data-wow-delay=".5s">
               <div class="info-item-box">
@@ -524,66 +587,7 @@
               </div>
             </div>
 
-            <!-- Finance Calculator Section -->
-            <div class="finance-section wow fadeInUp" data-wow-delay=".7s">
-              <div class="finance-calculator card-shadow">
-                <h3><i class="fa-solid fa-calculator me-2"></i> Apply Finance</h3>
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="input-group-finance">
-                      <label for="vehicleCost">Vehicle Cost ($)</label>
-                      <input type="number" id="vehicleCost" placeholder="Enter vehicle cost" value="38570">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="input-group-finance">
-                      <label for="cashDeposit">Cash Deposit ($)</label>
-                      <input type="number" id="cashDeposit" placeholder="Enter cash deposit" value="5000">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="input-group-finance">
-                      <label for="tradeIn">Trade In ($)</label>
-                      <input type="number" id="tradeIn" placeholder="Enter trade-in value" value="0">
-                    </div>
-                  </div>
-                </div>
 
-                <div class="input-group-finance">
-                  <label>Loan Term (months)</label>
-                  <div class="loan-term-buttons">
-                    <button class="loan-term-btn" data-months="24">24 mths</button>
-                    <button class="loan-term-btn" data-months="36">36 mths</button>
-                    <button class="loan-term-btn active" data-months="48">48 mths</button>
-                    <button class="loan-term-btn" data-months="60">60 mths</button>
-                    <button class="loan-term-btn" data-months="72">72 mths</button>
-                  </div>
-                </div>
-
-                <div class="row align-items-center">
-                  <div class="col-md-8">
-                    <div class="finance-summary">
-                      <h4 class="text-white">Estimated Monthly Payment: <span class="text-theme"
-                          id="monthlyPayment">$850</span></h4>
-                      <p class="text-muted mb-0">Based on 8.75% interest rate</p>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <button class="theme-btn w-100" id="applyFinanceBtn">
-                      <i class="fa-solid fa-file-contract me-2"></i> Apply Now
-                    </button>
-                  </div>
-                </div>
-
-                <div class="finance-disclaimer">
-                  * On Road Costs and Clean Car fee or rebate may apply. Finance calculation based on a 48 months month
-                  term, $5,000 cash deposit / $0 trade in and with an example annual fixed interest rate of 8.75%. The
-                  total payable amount is $46,731, which includes $8,161 of interest. Actual interest rate may be higher
-                  or lower. Includes an establishment fee of $495 & $8.00 per month account fee. Estimate only, not an
-                  offer of finance. Terms, conditions and lending criteria apply. Price Includes GST.
-                </div>
-              </div>
-            </div>
 
             <!-- Details Grid Sections -->
             <div class="details-grid wow fadeInUp" data-wow-delay=".8s">
@@ -1002,103 +1006,63 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    // Set current year in footer
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
 
     // Initialize Wow.js
     new WOW().init();
 
     // Finance Calculator Logic
     document.addEventListener('DOMContentLoaded', function () {
-      // Loan term buttons functionality
-      const loanTermButtons = document.querySelectorAll('.loan-term-btn');
-      loanTermButtons.forEach(button => {
-        button.addEventListener('click', function () {
-          // Remove active class from all buttons
-          loanTermButtons.forEach(btn => btn.classList.remove('active'));
-          // Add active class to clicked button
-          this.classList.add('active');
-        });
+
+      // Initialize Magnific Popup for image gallery with sliding
+      $('.image-popup-gallery').magnificPopup({
+        type: 'image',
+        gallery: {
+          enabled: true,
+          navigateByImgClick: true,
+          preload: [0, 1],
+          arrowMarkup: '<button title="%title%" type="button" class=" swiper mfp-arrow mfp-arrow-%dir%"><i class="fa-solid fa-chevron-%dir%"></i></button>',
+          tPrev: 'Previous (Left arrow key)',
+          tNext: 'Next (Right arrow key)',
+          tCounter: '<span class="mfp-counter">%curr% of %total%</span>'
+        },
+        zoom: {
+          enabled: true,
+          duration: 300,
+          easing: 'ease-in-out'
+        },
+        callbacks: {
+          beforeOpen: function () {
+            this.st.mainClass = 'mfp-zoom-in';
+          }
+        }
       });
 
-      // Apply Finance Button functionality
-      const applyFinanceBtn = document.getElementById('applyFinanceBtn');
-      if (applyFinanceBtn) {
-        applyFinanceBtn.addEventListener('click', function (e) {
-          e.preventDefault();
-
-          // Get values from input fields
-          const vehicleCost = parseFloat(document.getElementById('vehicleCost').value) || 0;
-          const cashDeposit = parseFloat(document.getElementById('cashDeposit').value) || 0;
-          const tradeIn = parseFloat(document.getElementById('tradeIn').value) || 0;
-
-          // Get selected loan term
-          const activeTermBtn = document.querySelector('.loan-term-btn.active');
-          const loanTerm = activeTermBtn ? parseInt(activeTermBtn.getAttribute('data-months')) : 48;
-
-          // Calculate loan amount
-          const loanAmount = vehicleCost - cashDeposit - tradeIn;
-
-          // Simple interest calculation (8.75% annual rate)
-          const annualInterestRate = 0.0875;
-          const monthlyInterestRate = annualInterestRate / 12;
-          const totalInterest = loanAmount * annualInterestRate * (loanTerm / 12);
-          const totalPayable = loanAmount + totalInterest;
-          const monthlyPayment = totalPayable / loanTerm;
-
-          // Show alert with calculation (in real implementation, you would show this in a modal or dedicated section)
-          alert(`Finance Calculation:\n\n` +
-            `Loan Amount: $${loanAmount.toFixed(2)}\n` +
-            `Loan Term: ${loanTerm} months\n` +
-            `Monthly Payment: $${monthlyPayment.toFixed(2)}\n` +
-            `Total Payable: $${totalPayable.toFixed(2)}\n` +
-            `Total Interest: $${totalInterest.toFixed(2)}\n\n` +
-            `This is an estimate. Please contact us for accurate finance options.`);
-        });
-      }
-
-      // Image Gallery Functionality
+      // Image Gallery Thumbnail Functionality
       const mainCarImage = document.getElementById('mainCarImage');
+      const mainImageLink = document.querySelector('.main-car-image');
       const thumbnailItems = document.querySelectorAll('.car-thumbnails-vertical .thumbnail-item');
 
-      // Thumbnail click event for vertical layout
+      // Thumbnail click event
       thumbnailItems.forEach(thumb => {
-        thumb.addEventListener('click', function () {
+        thumb.addEventListener('click', function (e) {
+          // Don't prevent default - let Magnific Popup handle the click
+
           // Remove active class from all thumbnails
           thumbnailItems.forEach(item => item.classList.remove('active'));
 
           // Add active class to clicked thumbnail
           this.classList.add('active');
 
-          // Get the image source from data attribute
-          const newImageSrc = this.getAttribute('data-image');
+          // Get the image source from href attribute
+          const newImageSrc = this.getAttribute('href');
 
           // Update main image
           mainCarImage.src = newImageSrc;
-
-          // Update main image link for popup
-          const mainImageLink = document.querySelector('.main-car-image');
           mainImageLink.href = newImageSrc;
 
-          // Optional: Scroll the clicked thumbnail into view if it's partially visible
+          // Scroll thumbnail into view
           this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         });
-      });
-
-      // Initialize Magnific Popup for image gallery
-      $('.image-popup').magnificPopup({
-        type: 'image',
-        gallery: {
-          enabled: true
-        },
-        zoom: {
-          enabled: true,
-          duration: 300,
-          easing: 'ease-in-out',
-          opener: function (openerElement) {
-            return openerElement.is('img') ? openerElement : openerElement.find('img');
-          }
-        }
       });
 
       // Initialize tooltips if needed
