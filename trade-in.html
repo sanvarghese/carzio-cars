@@ -147,7 +147,8 @@
         <!-- <p><i class="fa-regular fa-mail"></i> Email: contact@carziocars.co.nz</p> -->
         <div class="social-icon d-flex align-items-center">
           <a href="https://www.facebook.com/share/1Af4hq373F/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/carziocars?igsh=ZXdkbnY1aHRvc3Nr&utm_source=ig_contact_invite"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.instagram.com/carziocars?igsh=ZXdkbnY1aHRvc3Nr&utm_source=ig_contact_invite"><i
+              class="fa-brands fa-instagram"></i></a>
           <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
         </div>
       </div>
@@ -204,7 +205,7 @@
               <div class="buttons">
                 <div class="header__hamburger d-xl-none my-auto">
                   <div class="sidebar__toggle">
-                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-bars" style="font-size: x-large;"></i>
                   </div>
                 </div>
               </div>
@@ -237,10 +238,55 @@
   <!-- Trade In Form Section Start -->
   <section class="section-padding section-bg">
     <div class="container">
-      <div class="section-title-center text-center mb-5">
+      <!-- <div class="section-title-center text-center mb-5">
         <h6 class="section-subtitle">Get Your Car's Value</h6>
         <h2 class="section-title">Trade In Your Vehicle</h2>
         <p>Fill out the form below to get an instant valuation for your trade-in vehicle</p>
+      </div> -->
+
+      <!-- Title Area -->
+      <div class=" mb-5 wow fadeInUp" data-wow-delay=".2s">
+        <h6 class="section-subtitle text-theme">Trade In Your Car</h6>
+        <h1 class="section-title mb-3">Trade In Your Vehicle</h1>
+        <!-- <p class="lead text-muted">Get a fair valuation for your current car when you buy from us</p> -->
+      </div>
+
+      <!-- Example Trade-in Car Card (like in screenshot) -->
+      <div class="trade-in-example-card bg-dark text-white rounded-4 shadow-lg overflow-hidden mb-5 wow fadeInUp"
+        data-wow-delay=".3s">
+        <div class="row g-0 align-items-center">
+          <!-- Left - Car Image -->
+          <div class="col-md-4">
+            <a href="car-details.html">
+              <img src="assets/img/car/details/car-12.jpg" alt="2008 Toyota Vitz Hatchback Automatic"
+                class="img-fluid w-100 h-100 object-fit-cover">
+            </a>
+          </div>
+
+          <!-- Right - Car Info -->
+          <div class="col-md-8 p-4 p-md-5">
+            <h3 class="mb-3 fw-bold">2008 Toyota Vitz Hatchback Automatic</h3>
+            <div class="d-flex flex-wrap gap-4 mb-4 text-muted">
+              <div>
+                <i class="fa-solid fa-road me-2"></i>
+                88,989 km
+              </div>
+              <div>
+                <i class="fa-solid fa-engine me-2"></i>
+                1,490 cc
+              </div>
+              <div>
+                <i class="fa-solid fa-gear me-2"></i>
+                Automatic
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fs-5">Estimated Trade-in Value</span>
+              <h2 class="text-theme mb-0 fw-bold">$7,490</h2>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="trade-in-form-wrapper">
@@ -252,31 +298,31 @@
                 <h3 class="mb-4 text-white">Your Details</h3>
                 <div class="contact-form-items">
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <div class="form-clt mb-4">
                         <span>First Name *</span>
                         <input type="text" name="first_name" required placeholder="Enter your first name">
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <div class="form-clt mb-4">
                         <span>Last Name *</span>
                         <input type="text" name="last_name" required placeholder="Enter your last name">
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <div class="form-clt mb-4">
                         <span>Contact Number *</span>
                         <input type="tel" name="contact_number" required placeholder="Enter your contact number">
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <div class="form-clt mb-4">
                         <span>Email Address *</span>
                         <input type="email" name="email" required placeholder="Enter your email address">
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <div class="form-clt mb-4">
                         <span>Phone Number</span>
                         <input type="tel" name="phone_number" placeholder="Enter your phone number (optional)">
@@ -295,13 +341,13 @@
                 <h3 class="mb-4 text-white">Car Details</h3>
                 <div class="contact-form-items">
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <div class="form-clt mb-4">
                         <span>Number Plate *</span>
                         <input type="text" name="number_plate" required placeholder="e.g., ABC123">
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <div class="form-clt mb-4">
                         <span>Make (Brand) *</span>
                         <select name="car_make" required class="form-select">
@@ -324,7 +370,7 @@
                         </select>
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <div class="form-clt mb-4">
                         <span>Model *</span>
                         <select name="car_model" required class="form-select">
@@ -360,13 +406,13 @@
                         </select>
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <div class="form-clt mb-4">
                         <span>Kilometers (km) *</span>
                         <input type="number" name="kilometers" required placeholder="e.g., 150000">
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <div class="form-clt mb-4">
                         <span>Year *</span>
                         <select name="year" required class="form-select">
@@ -381,7 +427,7 @@
                         </select>
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <div class="form-clt mb-4">
                         <span>Transmission *</span>
                         <select name="transmission" required class="form-select">
@@ -393,13 +439,13 @@
                         </select>
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <div class="form-clt mb-4">
                         <span>Engine Size (cc) *</span>
                         <input type="number" name="engine_size" required placeholder="e.g., 2000">
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <div class="form-clt mb-4">
                         <span>Color *</span>
                         <select name="color" required class="form-select">
@@ -419,7 +465,7 @@
                         </select>
                       </div>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-4">
                       <div class="form-clt mb-4">
                         <span>Upload Photos</span>
                         <input type="file" name="car_photos[]" multiple accept="image/*" class="form-control">

@@ -26705,6 +26705,8 @@ span {
   .trade-in-form-wrapper h3 {
     font-size: 20px;
   }
+
+  
 }
 
 /* pre order page style start */
@@ -27834,7 +27836,7 @@ span {
 }
 
 .mfp-title {
-  font-size: 12px!important;
+  font-size: 12px !important;
 }
 
 .swiper.mfp-arrow:hover {
@@ -27872,12 +27874,12 @@ span {
 
 /* Close button */
 .mfp-close {
-  width: 30px!important;
-  height: 30px!important;
+  width: 30px !important;
+  height: 30px !important;
   text-align: center;
   align-items: center;
   /* background-color: red!important; */
-  border-radius: 12px!important;
+  border-radius: 12px !important;
   opacity: 0.8;
   transition: all 0.3s ease;
   /* color: white !important; */
@@ -27892,6 +27894,107 @@ span {
   /* transform: scale(1.1); */
 }
 
-.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close{
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
   top: 3px;
+}
+
+/* add additional style for car detail enquiry  popup */
+
+.car-action-buttons .btn {
+  min-width: 150px;
+  text-align: center;
+}
+
+.car-action-buttons .btn-dark {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid;
+}
+
+.car-action-buttons .btn-link {
+  color: #fafafa;
+  /* Gray text */
+  text-decoration: none;
+}
+
+.car-action-buttons .btn-outline-secondary {
+  border-color: #ccc;
+  color: #fafafa;
+}
+
+.enquiry-model-popup .modal-body {
+  background-color: var(--bg);
+}
+
+
+.modal-header {
+  border-bottom: none;
+  /* Match screenshot */
+}
+
+.enquiry-model-popup .modal-body label.text-danger::after {
+  content: '*';
+  /* Red asterisk */
+  color: red;
+}
+
+/* Enquiry Modal Dark Mode Enhancements */
+#enquiryModal .form-control::placeholder {
+  color: rgba(255,255,255,0.6) !important;
+}
+#enquiryModal .form-control:focus {
+  background-color: rgba(255,255,255,0.15) !important;
+  box-shadow: 0 0 0 3px rgba(189, 12, 7, 0.3) !important;
+  color: white;
+}
+#enquiryModal .form-check-input:checked {
+  background-color: var(--theme);
+  border-color: var(--theme);
+}
+
+/* trade in page extra added style */
+
+/* Trade-in example card - matches screenshot style */
+.trade-in-example-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trade-in-example-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.trade-in-example-card img {
+  transition: transform 0.4s ease;
+}
+
+.trade-in-example-card:hover img {
+  transform: scale(1.05);
+}
+
+.section-subtitle {
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 2.4rem;
+  }
+  .trade-in-example-card .row {
+    flex-direction: column;
+  }
+  .trade-in-example-card img {
+    height: 220px !important;
+  }
 }
