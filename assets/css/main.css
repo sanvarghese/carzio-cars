@@ -19050,7 +19050,7 @@ span {
   }
 
   .vehicle-type-search-section {
-    padding: 40px 0;
+    padding: 0 0;
   }
 
   .section-title-center h2 {
@@ -19082,12 +19082,15 @@ span {
   }
 
   .vehicle-type-card {
-    padding: 20px 10px;
+    padding: 12px 10px;
   }
 
   .vehicle-icon-wrapper {
-    width: 100px;
-    height: 30px;
+    /* width: 100px;
+    height: 30px; */
+  }
+  .feature-car-section{
+    padding: 0 0;
   }
 }
 
@@ -26124,3 +26127,9 @@ span {
     transform: translateY(-12px);
     box-shadow: 0 20px 50px rgba(189,12,7,0.35);
 }
+
+/* Mobile Filter Offcanvas */
+
+/* ──────────────────────────────────────────────── */
+/* Mobile-first responsive search form             */
+/* ──────────────────────────────────────────────── */

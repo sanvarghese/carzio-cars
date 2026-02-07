@@ -119,7 +119,8 @@
                         <div class="social-icon d-flex align-items-center">
                             <a href="https://www.facebook.com/share/1Af4hq373F/?mibextid=wwXIfr"><i
                                     class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/carziocars?igsh=ZXdkbnY1aHRvc3Nr&utm_source=ig_contact_invite"><i
+                            <a
+                                href="https://www.instagram.com/carziocars?igsh=ZXdkbnY1aHRvc3Nr&utm_source=ig_contact_invite"><i
                                     class="fa-brands fa-instagram"></i></a>
                         </div>
                     </div>
@@ -234,7 +235,7 @@
     </div>
 
     <!-- Feature Car Section Start -->
-    <section class="feature-car-section section-bg">
+    <section class="feature-car-section ">
         <div class="container">
             <div class="feature-car-wrapper">
                 <div class="row g-4 align-items-center">
@@ -244,8 +245,18 @@
                             <h2 class="text-center mb-5">Search Your Dream Car</h3>
                                 <form id="carSearchForm">
                                     <div class="row g-4">
+
+                                        <!-- Search Input -->
+                                        <div class="col-md-3 col-sm-12">
+                                            <div class="form-clt">
+                                                <span>Search</span>
+                                                <input type="text" class="form-control" id="searchInput"
+                                                    placeholder="e.g Model, Body, Color, Feature">
+                                            </div>
+                                        </div>
+
                                         <!-- Any Make -->
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 col-sm-4">
                                             <div class="form-clt">
                                                 <span>Any Make</span>
                                                 <select class="form-select" id="carMake">
@@ -265,7 +276,7 @@
                                         </div>
 
                                         <!-- Any Model -->
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 col-sm-4">
                                             <div class="form-clt">
                                                 <span>Any Model</span>
                                                 <select class="form-select" id="carModel">
@@ -284,36 +295,83 @@
                                             </div>
                                         </div>
 
-                                        <!-- Any Body Type -->
-                                        <div class="col-md-3">
+                                        <!-- Any Transmission -->
+                                        <div class="col-md-3 col-sm-4">
                                             <div class="form-clt">
-                                                <span>Any Body Type</span>
-                                                <select class="form-select" id="bodyType">
-                                                    <option value="">Select Body Type</option>
-                                                    <option value="sedan">Sedan</option>
-                                                    <option value="suv">SUV</option>
-                                                    <option value="hatchback">Hatchback</option>
-                                                    <option value="coupe">Coupe</option>
-                                                    <option value="convertible">Convertible</option>
-                                                    <option value="wagon">Wagon</option>
-                                                    <option value="pickup">Pickup Truck</option>
-                                                    <option value="minivan">Minivan</option>
-                                                    <option value="sports">Sports Car</option>
+                                                <span>Any Transmission</span>
+                                                <select class="form-select" id="carTransmission">
+                                                    <option value="">Select Model</option>
+                                                    <option value="camry">Camry</option>
+                                                    <option value="corolla">Corolla</option>
+                                                    <option value="civic">Civic</option>
+                                                    <option value="accord">Accord</option>
+                                                    <option value="mustang">Mustang</option>
+                                                    <option value="f150">F-150</option>
+                                                    <option value="3series">3 Series</option>
+                                                    <option value="5series">5 Series</option>
+                                                    <option value="cclass">C-Class</option>
+                                                    <option value="eclass">E-Class</option>
                                                 </select>
                                             </div>
                                         </div>
 
-                                        <!-- Search Input -->
+                                        <!-- Number of seats -->
                                         <div class="col-md-3">
                                             <div class="form-clt">
-                                                <span>Search</span>
-                                                <input type="text" class="form-control" id="searchInput"
-                                                    placeholder="e.g Model, Body, Color, Feature">
+                                                <span>Number of Seats</span>
+                                                <select class="form-select" id="carSeats">
+                                                    <option value="">Select Seats</option>
+                                                    <option value="any-number-of-seats">Any Number of Seats</option>
+                                                    <option value="2">2 Seats</option>
+                                                    <option value="3">3 Seats</option>
+                                                    <option value="4">4 Seats</option>
+                                                    <option value="5">5 Seats</option>
+                                                    <option value="6">6 Seats</option>
+                                                    <option value="7">7 Seats</option>
+                                                    <option value="8">8 Seats</option>
+                                                    <option value="9">9 or more Seats</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- Any color -->
+                                        <div class="col-md-3">
+                                            <div class="form-clt">
+                                                <span>Any color</span>
+                                                <select class="form-select" id="carColor">
+                                                    <option value="">Select Color</option>
+                                                    <option value="any-color">Any Color</option>
+                                                    <option value="black">Black</option>
+                                                    <option value="blue">Blue</option>
+                                                    <option value="gold">Gold</option>
+                                                    <option value="grey">Grey</option>
+                                                    <option value="red">Red</option>
+                                                    <option value="silver">Silver</option>
+                                                    <option value="white">White</option>
+                                                    <option value="yellow">Yellow</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- Any Body Type -->
+                                        <div class="col-md-3">
+                                            <div class="form-clt">
+                                                <span>Any Fuel Type</span>
+                                                <select class="form-select" id="fuel-type">
+                                                    <option value="">Select Fuel Type</option>
+                                                    <option value="petrol">Petrol</option>
+                                                    <option value="diesel">Diesel</option>
+                                                    <option value="hybrid">Hybrid</option>
+                                                    <option value="electric">Electric</option>
+                                                    <option value="lpg">LPG</option>
+                                                    <option value="alternative">Alternative</option>
+                                                    <option value="plug-in-hybrid">Plug-in hybrid</option>
+                                                </select>
                                             </div>
                                         </div>
 
                                         <!-- Price Range -->
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <div class="form-clt">
                                                 <span>Price Range: <span id="priceRangeDisplay">$5,000 -
                                                         $200,000</span></span>
@@ -325,9 +383,8 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                         <!-- Year Range -->
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <div class="form-clt">
                                                 <span>Year Range: <span id="yearRangeDisplay">2015 - 2026</span></span>
                                                 <div class="range-slider-container">
@@ -338,12 +395,17 @@
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <!-- Search Button -->
-                                        <div class="col-md-12">
-                                            <button type="submit" class="theme-btn">
-                                                Start Search <i class="fa-solid fa-magnifying-glass"></i>
-                                            </button>
+                                        <!-- Kilometers -->
+                                        <div class="col-md-4">
+                                            <div class="form-clt">
+                                                <span>Kilometers <span id="yearRangeDisplay">0 - 150k</span></span>
+                                                <div class="range-slider-container">
+                                                    <input type="range" class="range-slider" id="yearMin" min="2015"
+                                                        max="2026" value="2015" step="1">
+                                                    <input type="range" class="range-slider" id="yearMax" min="2015"
+                                                        max="2026" value="2026" step="1">
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <section class="vehicle-type-search-section">
@@ -637,9 +699,8 @@
                     <div class="row">
                         <div class="col-xl-4 col-lg-6 col-md-6">
                             <div class="car-box-items special-offer">
-                                <!-- Badge Example: Add badges as spans with classes for styling (e.g., on-sale, new, sold, in-transit) -->
                                 <div class="badges">
-                                    <span class="badge special">Special Offer</span> <!-- better than on-sale -->
+                                    <span class="badge special">Special Offer</span>
                                     <span class="badge on-sale">On Sale</span>
                                     <span class="badge new">New</span>
                                 </div>
