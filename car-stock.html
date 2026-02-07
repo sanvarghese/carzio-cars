@@ -153,7 +153,7 @@
         </div>
         <div class="container">
             <div class="row justify-content-between align-items-center">
-                <div class="col-6 col-md-4">
+                <div class="col-6 col-md-3">
                     <div class="navbar-2-left">
                         <div class="navbar-2-logo">
                             <a href="index.html">
@@ -162,7 +162,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-7">
+                <div class="col-6 col-md-9">
                     <div class="navbar-2-right">
                         <!-- right -->
                         <!-- general menu -->
@@ -187,6 +187,9 @@
                                         </li>
                                         <li>
                                             <a href="order.html" class="border-none"> Pre Order</a>
+                                        </li>
+                                        <li>
+                                            <a href="accessories.html" class="border-none">Accessories </a>
                                         </li>
                                         <li>
                                             <a href="contact.html" class="border-none"> Contact Us</a>
@@ -234,6 +237,7 @@
         </div>
     </div>
 
+
     <!-- Feature Car Section Start -->
     <section class="feature-car-section ">
         <div class="container">
@@ -242,81 +246,97 @@
                     <!-- Right Side - Enhanced Search Form -->
                     <div class="col-lg-12">
                         <div class="car-list-box">
-                            <h2 class="text-center mb-5">Search Your Dream Car</h3>
-                                <form id="carSearchForm">
-                                    <div class="row g-4">
+                            <h2 class="text-center mb-5">Search Your Dream Car</h2>
+                            <form id="carSearchForm">
+                                <div class="row g-4">
 
-                                        <!-- Search Input -->
-                                        <div class="col-md-3 col-sm-12">
-                                            <div class="form-clt">
-                                                <span>Search</span>
-                                                <input type="text" class="form-control" id="searchInput"
-                                                    placeholder="e.g Model, Body, Color, Feature">
-                                            </div>
+                                    <!-- Always visible filters on mobile -->
+                                    <div class="col-md-4 col-sm-12 co-12">
+                                        <div class="form-clt">
+                                            <span>Search</span>
+                                            <input type="text" class="form-control" id="searchInput"
+                                                placeholder="e.g Model, Body, Color, Feature">
                                         </div>
+                                    </div>
 
-                                        <!-- Any Make -->
-                                        <div class="col-md-3 col-sm-4">
-                                            <div class="form-clt">
-                                                <span>Any Make</span>
-                                                <select class="form-select" id="carMake">
-                                                    <option value="">Select Make</option>
-                                                    <option value="toyota">Toyota</option>
-                                                    <option value="honda">Honda</option>
-                                                    <option value="ford">Ford</option>
-                                                    <option value="bmw">BMW</option>
-                                                    <option value="mercedes">Mercedes-Benz</option>
-                                                    <option value="audi">Audi</option>
-                                                    <option value="nissan">Nissan</option>
-                                                    <option value="hyundai">Hyundai</option>
-                                                    <option value="mazda">Mazda</option>
-                                                    <option value="volkswagen">Volkswagen</option>
-                                                </select>
-                                            </div>
+                                    <div class="col-md-4 col-sm-4 col-4">
+                                        <div class="form-clt">
+                                            <span>Any Make</span>
+                                            <select class="form-select" id="carMake">
+                                                <option value="">Select Make</option>
+                                                <option value="toyota">Toyota</option>
+                                                <option value="honda">Honda</option>
+                                                <option value="ford">Ford</option>
+                                                <option value="bmw">BMW</option>
+                                                <option value="mercedes">Mercedes-Benz</option>
+                                                <option value="audi">Audi</option>
+                                                <option value="nissan">Nissan</option>
+                                                <option value="hyundai">Hyundai</option>
+                                                <option value="mazda">Mazda</option>
+                                                <option value="volkswagen">Volkswagen</option>
+                                            </select>
                                         </div>
+                                    </div>
 
-                                        <!-- Any Model -->
-                                        <div class="col-md-3 col-sm-4">
-                                            <div class="form-clt">
-                                                <span>Any Model</span>
-                                                <select class="form-select" id="carModel">
-                                                    <option value="">Select Model</option>
-                                                    <option value="camry">Camry</option>
-                                                    <option value="corolla">Corolla</option>
-                                                    <option value="civic">Civic</option>
-                                                    <option value="accord">Accord</option>
-                                                    <option value="mustang">Mustang</option>
-                                                    <option value="f150">F-150</option>
-                                                    <option value="3series">3 Series</option>
-                                                    <option value="5series">5 Series</option>
-                                                    <option value="cclass">C-Class</option>
-                                                    <option value="eclass">E-Class</option>
-                                                </select>
-                                            </div>
+                                    <div class="col-md-4 col-sm-4 col-4">
+                                        <div class="form-clt">
+                                            <span>Any Model</span>
+                                            <select class="form-select" id="carModel">
+                                                <option value="">Select Model</option>
+                                                <option value="camry">Camry</option>
+                                                <option value="corolla">Corolla</option>
+                                                <option value="civic">Civic</option>
+                                                <option value="accord">Accord</option>
+                                                <option value="mustang">Mustang</option>
+                                                <option value="f150">F-150</option>
+                                                <option value="3series">3 Series</option>
+                                                <option value="5series">5 Series</option>
+                                                <option value="cclass">C-Class</option>
+                                                <option value="eclass">E-Class</option>
+                                            </select>
                                         </div>
+                                    </div>
 
+                                    <!-- Mobile Filters Toggle Button (Visible only on mobile) -->
+                                    <div class="col-md-3 col-sm-4 col-4 d-lg-none mb-3">
+                                        <!-- <button type="button" id="mobileFiltersToggle"
+                                            class=" d-flex justify-content-center align-items-center gap-2" style="font-size: 12px;">
+                                            <i class="fas fa-filter"></i>
+                                             Filter
+                                        </button> -->
+                                        <div class="form-clt">
+                                            <span>Filters</span>
+                                            <!-- <input type="button" class="form-control" id="mobileFiltersToggle"
+                                                placeholder="Filters"> -->
+                                            <button type="button" id="mobileFiltersToggle"
+                                                class=" d-flex justify-content-center align-items-center gap-2"
+                                                style="font-size: 12px;">
+                                                <i class="fas fa-filter"></i>
+                                                <!-- <span>Show All Filters</span> -->
+                                                <span class="m-0">
+                                                    Filters
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Hidden filters on mobile -->
+                                    <div class="row mobile-hidden-filters">
                                         <!-- Any Transmission -->
-                                        <div class="col-md-3 col-sm-4">
+                                        <div class="col-md-3 col-sm-4 col-4">
                                             <div class="form-clt">
                                                 <span>Any Transmission</span>
                                                 <select class="form-select" id="carTransmission">
-                                                    <option value="">Select Model</option>
-                                                    <option value="camry">Camry</option>
-                                                    <option value="corolla">Corolla</option>
-                                                    <option value="civic">Civic</option>
-                                                    <option value="accord">Accord</option>
-                                                    <option value="mustang">Mustang</option>
-                                                    <option value="f150">F-150</option>
-                                                    <option value="3series">3 Series</option>
-                                                    <option value="5series">5 Series</option>
-                                                    <option value="cclass">C-Class</option>
-                                                    <option value="eclass">E-Class</option>
+                                                    <option value="">Select Transmission</option>
+                                                    <option value="automatic">Automatic</option>
+                                                    <option value="manual">Manual</option>
+                                                    <option value="semi-automatic">Semi-Automatic</option>
                                                 </select>
                                             </div>
                                         </div>
 
                                         <!-- Number of seats -->
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 col-sm-3 col-3">
                                             <div class="form-clt">
                                                 <span>Number of Seats</span>
                                                 <select class="form-select" id="carSeats">
@@ -335,9 +355,9 @@
                                         </div>
 
                                         <!-- Any color -->
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 col-sm-3 col-3">
                                             <div class="form-clt">
-                                                <span>Any color</span>
+                                                <span>Any Color</span>
                                                 <select class="form-select" id="carColor">
                                                     <option value="">Select Color</option>
                                                     <option value="any-color">Any Color</option>
@@ -353,8 +373,8 @@
                                             </div>
                                         </div>
 
-                                        <!-- Any Body Type -->
-                                        <div class="col-md-3">
+                                        <!-- Any Fuel Type -->
+                                        <div class="col-md-3 col-sm-3 col-3">
                                             <div class="form-clt">
                                                 <span>Any Fuel Type</span>
                                                 <select class="form-select" id="fuel-type">
@@ -371,7 +391,7 @@
                                         </div>
 
                                         <!-- Price Range -->
-                                        <div class="col-md-4">
+                                        <div class="col-md-4 col-sm-3 col-4">
                                             <div class="form-clt">
                                                 <span>Price Range: <span id="priceRangeDisplay">$5,000 -
                                                         $200,000</span></span>
@@ -383,8 +403,9 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                         <!-- Year Range -->
-                                        <div class="col-md-4">
+                                        <div class="col-md-4 col-sm-3 col-4">
                                             <div class="form-clt">
                                                 <span>Year Range: <span id="yearRangeDisplay">2015 - 2026</span></span>
                                                 <div class="range-slider-container">
@@ -395,270 +416,84 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                         <!-- Kilometers -->
-                                        <div class="col-md-4">
+                                        <div class="col-md-4 col-4">
                                             <div class="form-clt">
-                                                <span>Kilometers <span id="yearRangeDisplay">0 - 150k</span></span>
+                                                <span>Kilometers: <span id="kmRangeDisplay">0 - 150k</span></span>
                                                 <div class="range-slider-container">
-                                                    <input type="range" class="range-slider" id="yearMin" min="2015"
-                                                        max="2026" value="2015" step="1">
-                                                    <input type="range" class="range-slider" id="yearMax" min="2015"
-                                                        max="2026" value="2026" step="1">
+                                                    <input type="range" class="range-slider" id="kmMin" min="0"
+                                                        max="150000" value="0" step="1000">
+                                                    <input type="range" class="range-slider" id="kmMax" min="0"
+                                                        max="150000" value="150000" step="1000">
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <section class="vehicle-type-search-section">
-                                            <div class="container">
-                                                <div class="vehicle-type-grid">
-                                                    <!-- Hatchback -->
-                                                    <div class="vehicle-type-card" data-type="Hybrid">
-                                                        <div class="vehicle-icon-wrapper">
-                                                            <img src="assets/img/icon/hybrid2.png" alt="Hybrid" />
-                                                        </div>
-                                                        <h6 class="vehicle-type-name">Hybrid</h6>
-                                                    </div>
+                                        <!-- Search Button -->
+                                        <div class="col-md-12 col-12  my-4">
+                                            <button type="submit" class="theme-btn">
+                                                Start Search <i class="fa-solid fa-magnifying-glass"></i>
+                                            </button>
+                                        </div>
 
-                                                    <!-- SUV -->
-                                                    <div class="vehicle-type-card" data-type="suv">
-                                                        <div class="vehicle-icon-wrapper">
-                                                            <img src="assets/img/icon/hatchback2.png" alt="Hatchback" />
+                                        <!-- Vehicle Type Grid -->
+                                        <div class="col-12 ">
+                                            <section class="vehicle-type-search-section">
+                                                <div class="container">
+                                                    <div class="vehicle-type-grid">
+                                                        <!-- Vehicle type cards remain the same -->
+                                                        <div class="vehicle-type-card" data-type="Hybrid">
+                                                            <div class="vehicle-icon-wrapper">
+                                                                <img src="assets/img/icon/hybrid2.png" alt="Hybrid" />
+                                                            </div>
+                                                            <h6 class="vehicle-type-name">Hybrid</h6>
                                                         </div>
-                                                        <h6 class="vehicle-type-name">Hatchback</h6>
-                                                    </div>
-
-                                                    <!-- Sedan -->
-                                                    <div class="vehicle-type-card" data-type="sedan">
-                                                        <div class="vehicle-icon-wrapper">
-                                                            <img src="assets/img/icon/sedan2.png" alt="Sedan" />
+                                                        <div class="vehicle-type-card" data-type="suv">
+                                                            <div class="vehicle-icon-wrapper">
+                                                                <img src="assets/img/icon/hatchback2.png"
+                                                                    alt="Hatchback" />
+                                                            </div>
+                                                            <h6 class="vehicle-type-name">Hatchback</h6>
                                                         </div>
-                                                        <h6 class="vehicle-type-name">Sedan</h6>
-                                                    </div>
-
-                                                    <!-- Wagon -->
-                                                    <div class="vehicle-type-card" data-type="Station Wagon">
-                                                        <div class="vehicle-icon-wrapper">
-                                                            <img src="assets/img/icon/wagon2.png" alt="Station Wagon" />
+                                                        <div class="vehicle-type-card" data-type="sedan">
+                                                            <div class="vehicle-icon-wrapper">
+                                                                <img src="assets/img/icon/sedan2.png" alt="Sedan" />
+                                                            </div>
+                                                            <h6 class="vehicle-type-name">Sedan</h6>
                                                         </div>
-                                                        <h6 class="vehicle-type-name">Station Wagon</h6>
-                                                    </div>
-
-                                                    <!-- Van -->
-                                                    <div class="vehicle-type-card" data-type="wagon">
-                                                        <div class="vehicle-icon-wrapper">
-                                                            <img src="assets/img/icon/family-van.png" alt="Wagon" />
+                                                        <div class="vehicle-type-card" data-type="Station Wagon">
+                                                            <div class="vehicle-icon-wrapper">
+                                                                <img src="assets/img/icon/wagon2.png"
+                                                                    alt="Station Wagon" />
+                                                            </div>
+                                                            <h6 class="vehicle-type-name">Station Wagon</h6>
                                                         </div>
-                                                        <h6 class="vehicle-type-name">Van</h6>
-                                                    </div>
-
-                                                    <div class="vehicle-type-card" data-type="SUV">
-                                                        <div class="vehicle-icon-wrapper">
-                                                            <img src="assets/img/icon/suv2 copy.png" alt="SUV" />
+                                                        <div class="vehicle-type-card" data-type="wagon">
+                                                            <div class="vehicle-icon-wrapper">
+                                                                <img src="assets/img/icon/family-van.png" alt="Wagon" />
+                                                            </div>
+                                                            <h6 class="vehicle-type-name">Van</h6>
                                                         </div>
-                                                        <h6 class="vehicle-type-name">RV/SUV</h6>
+                                                        <div class="vehicle-type-card" data-type="SUV">
+                                                            <div class="vehicle-icon-wrapper">
+                                                                <img src="assets/img/icon/suv2 copy.png" alt="SUV" />
+                                                            </div>
+                                                            <h6 class="vehicle-type-name">RV/SUV</h6>
+                                                        </div>
                                                     </div>
                                                 </div>
-
-                                                <!-- Search Results Display -->
-                                                <div class="search-results hidden" id="searchResults">
-                                                    <h3 id="resultTitle">Loading...</h3>
-                                                    <p id="resultDescription">Please wait...</p>
-                                                </div>
-                                            </div>
-                                        </section>
+                                            </section>
+                                        </div>
                                     </div>
-                                </form>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- vehicle type search section -->
-    <!-- <section class="vehicle-type-search-section">
-        <div class="container">
-            <div class="section-title-center">
-                <h6>Browse By Type</h6>
-                <h2>Find Your Perfect Vehicle</h2>
-                <p>Select a vehicle type to explore our wide range of quality cars</p>
-            </div>
-
-            <div class="vehicle-type-swiper-container">
-                <div class="vehicle-type-swiper swiper swiper-initialized swiper-horizontal swiper-pointer-events">
-                    <div class="swiper-wrapper" id="swiper-wrapper-bc5af0fb2da9da7b" aria-live="off"
-                        style="cursor: grab; transition-duration: 0ms; transform: translate3d(-2300px, 0px, 0px);">
-                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate" data-type="sedan"
-                            data-swiper-slide-index="2" style="width: 200px; margin-right: 30px;" role="group"
-                            aria-label="3 / 8">
-                            <div class="vehicle-icon-wrapper">
-                                <img src="assets/img/icon/sedan.png" alt="Sedan">
-                            </div>
-                            <h6 class="vehicle-type-name">SEDAN</h6>
-                        </div>
-                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
-                            data-type="coupe" data-swiper-slide-index="3" style="width: 200px; margin-right: 30px;"
-                            role="group" aria-label="4 / 8">
-                            <div class="vehicle-icon-wrapper">
-                                <img src="assets/img/icon/coupe.png" alt="Coupe">
-                            </div>
-                            <h6 class="vehicle-type-name">COUPE</h6>
-                        </div>
-                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
-                            data-type="wagon" data-swiper-slide-index="4" style="width: 200px; margin-right: 30px;"
-                            role="group" aria-label="5 / 8">
-                            <div class="vehicle-icon-wrapper">
-                                <img src="assets/img/icon/wagon.png" alt="Wagon">
-                            </div>
-                            <h6 class="vehicle-type-name">WAGON</h6>
-                        </div>
-                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
-                            data-type="mpv" data-swiper-slide-index="5" style="width: 200px; margin-right: 30px;"
-                            role="group" aria-label="6 / 8">
-                            <div class="vehicle-icon-wrapper">
-                                <img src="assets/img/icon/mpv.png" alt="MPV">
-                            </div>
-                            <h6 class="vehicle-type-name">MPV</h6>
-                        </div>
-                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate" data-type="wagon"
-                            data-swiper-slide-index="6" style="width: 200px; margin-right: 30px;" role="group"
-                            aria-label="7 / 8">
-                            <div class="vehicle-icon-wrapper">
-                                <img src="assets/img/icon/suv.png" alt="Wagon">
-                            </div>
-                            <h6 class="vehicle-type-name">SUV</h6>
-                        </div>
-                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate" data-type="mpv"
-                            data-swiper-slide-index="7" style="width: 200px; margin-right: 30px;" role="group"
-                            aria-label="8 / 8">
-                            <div class="vehicle-icon-wrapper">
-                                <img src="assets/img/icon/ute.png" alt="MPV">
-                            </div>
-                            <h6 class="vehicle-type-name">UTF</h6>
-                        </div>
-                        <div class="vehicle-type-card swiper-slide" data-type="hatchback" data-swiper-slide-index="0"
-                            style="width: 200px; margin-right: 30px;" role="group" aria-label="1 / 8">
-                            <div class="vehicle-icon-wrapper">
-                                <img src="assets/img/icon/hybrid.png" alt="Hybrid">
-                            </div>
-                            <h6 class="vehicle-type-name">HYBRID</h6>
-                        </div>
-
-                        <div class="vehicle-type-card swiper-slide" data-type="suv" data-swiper-slide-index="1"
-                            style="width: 200px; margin-right: 30px;" role="group" aria-label="2 / 8">
-                            <div class="vehicle-icon-wrapper">
-                                <img src="assets/img/icon/hatchback.png" alt="Hatchback">
-                            </div>
-                            <h6 class="vehicle-type-name">HATCHBACK</h6>
-                        </div>
-
-                        <div class="vehicle-type-card swiper-slide" data-type="sedan" data-swiper-slide-index="2"
-                            style="width: 200px; margin-right: 30px;" role="group" aria-label="3 / 8">
-                            <div class="vehicle-icon-wrapper">
-                                <img src="assets/img/icon/sedan.png" alt="Sedan">
-                            </div>
-                            <h6 class="vehicle-type-name">SEDAN</h6>
-                        </div>
-
-                        <div class="vehicle-type-card swiper-slide swiper-slide-prev" data-type="coupe"
-                            data-swiper-slide-index="3" style="width: 200px; margin-right: 30px;" role="group"
-                            aria-label="4 / 8">
-                            <div class="vehicle-icon-wrapper">
-                                <img src="assets/img/icon/coupe.png" alt="Coupe">
-                            </div>
-                            <h6 class="vehicle-type-name">COUPE</h6>
-                        </div>
-
-                        <div class="vehicle-type-card swiper-slide swiper-slide-active" data-type="wagon"
-                            data-swiper-slide-index="4" style="width: 200px; margin-right: 30px;" role="group"
-                            aria-label="5 / 8">
-                            <div class="vehicle-icon-wrapper">
-                                <img src="assets/img/icon/wagon.png" alt="Wagon">
-                            </div>
-                            <h6 class="vehicle-type-name">WAGON</h6>
-                        </div>
-
-                        <div class="vehicle-type-card swiper-slide swiper-slide-next" data-type="mpv"
-                            data-swiper-slide-index="5" style="width: 200px; margin-right: 30px;" role="group"
-                            aria-label="6 / 8">
-                            <div class="vehicle-icon-wrapper">
-                                <img src="assets/img/icon/mpv.png" alt="MPV">
-                            </div>
-                            <h6 class="vehicle-type-name">MPV</h6>
-                        </div>
-
-                        <div class="vehicle-type-card swiper-slide" data-type="wagon" data-swiper-slide-index="6"
-                            style="width: 200px; margin-right: 30px;" role="group" aria-label="7 / 8">
-                            <div class="vehicle-icon-wrapper">
-                                <img src="assets/img/icon/suv.png" alt="Wagon">
-                            </div>
-                            <h6 class="vehicle-type-name">SUV</h6>
-                        </div>
-
-                        <div class="vehicle-type-card swiper-slide" data-type="mpv" data-swiper-slide-index="7"
-                            style="width: 200px; margin-right: 30px;" role="group" aria-label="8 / 8">
-                            <div class="vehicle-icon-wrapper">
-                                <img src="assets/img/icon/ute.png" alt="MPV">
-                            </div>
-                            <h6 class="vehicle-type-name">UTF</h6>
-                        </div>
-                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate" data-type="hatchback"
-                            data-swiper-slide-index="0" style="width: 200px; margin-right: 30px;" role="group"
-                            aria-label="1 / 8">
-                            <div class="vehicle-icon-wrapper">
-                                <img src="assets/img/icon/hybrid.png" alt="Hybrid">
-                            </div>
-                            <h6 class="vehicle-type-name">HYBRID</h6>
-                        </div>
-                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate" data-type="suv"
-                            data-swiper-slide-index="1" style="width: 200px; margin-right: 30px;" role="group"
-                            aria-label="2 / 8">
-                            <div class="vehicle-icon-wrapper">
-                                <img src="assets/img/icon/hatchback.png" alt="Hatchback">
-                            </div>
-                            <h6 class="vehicle-type-name">HATCHBACK</h6>
-                        </div>
-                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate" data-type="sedan"
-                            data-swiper-slide-index="2" style="width: 200px; margin-right: 30px;" role="group"
-                            aria-label="3 / 8">
-                            <div class="vehicle-icon-wrapper">
-                                <img src="assets/img/icon/sedan.png" alt="Sedan">
-                            </div>
-                            <h6 class="vehicle-type-name">SEDAN</h6>
-                        </div>
-                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
-                            data-type="coupe" data-swiper-slide-index="3" style="width: 200px; margin-right: 30px;"
-                            role="group" aria-label="4 / 8">
-                            <div class="vehicle-icon-wrapper">
-                                <img src="assets/img/icon/coupe.png" alt="Coupe">
-                            </div>
-                            <h6 class="vehicle-type-name">COUPE</h6>
-                        </div>
-                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
-                            data-type="wagon" data-swiper-slide-index="4" style="width: 200px; margin-right: 30px;"
-                            role="group" aria-label="5 / 8">
-                            <div class="vehicle-icon-wrapper">
-                                <img src="assets/img/icon/wagon.png" alt="Wagon">
-                            </div>
-                            <h6 class="vehicle-type-name">WAGON</h6>
-                        </div>
-                        <div class="vehicle-type-card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
-                            data-type="mpv" data-swiper-slide-index="5" role="group" aria-label="6 / 8"
-                            style="width: 200px; margin-right: 30px;">
-                            <div class="vehicle-icon-wrapper">
-                                <img src="assets/img/icon/mpv.png" alt="MPV">
-                            </div>
-                            <h6 class="vehicle-type-name">MPV</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="search-results hidden" id="searchResults">
-                <h3 id="resultTitle">Loading...</h3>
-                <p id="resultDescription">Please wait...</p>
-            </div>
-        </div>
-    </section> -->
 
     <!-- Car Section Start -->
     <section class="car-section car-sock-section fix section-padding section-bg">
@@ -964,6 +799,9 @@
                                     <a href="order.html"> Pre Order</a>
                                 </li>
                                 <li>
+                                    <a href="accessories.html">Accessories</a>
+                                </li>
+                                <li>
                                     <a href="contact.html">Contact Us</a>
                                 </li>
                             </ul>
@@ -1026,6 +864,7 @@
         </div>
     </footer>
 
+
     <!--<< All JS Plugins >>-->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <!--<< Viewport Js >>-->
@@ -1048,6 +887,32 @@
     <script src="assets/js/wow.min.js"></script>
     <!--<< Main.js >>-->
     <script src="assets/js/main.js"></script>
+
+    <script>
+        // Mobile filters toggle functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileFiltersToggle = document.getElementById('mobileFiltersToggle');
+            const mobileHiddenFilters = document.querySelector('.mobile-hidden-filters');
+            const toggleText = mobileFiltersToggle.querySelector('span');
+            const toggleIcon = mobileFiltersToggle.querySelector('i');
+
+            if (mobileFiltersToggle && mobileHiddenFilters) {
+                mobileFiltersToggle.addEventListener('click', function () {
+                    mobileHiddenFilters.classList.toggle('active');
+
+                    if (mobileHiddenFilters.classList.contains('active')) {
+                        toggleText.textContent = 'Hide Filters';
+                        toggleIcon.className = 'fas fa-times';
+                    } else {
+                        toggleText.textContent = 'Filters';
+                        toggleIcon.className = 'fas fa-filter';
+                    }
+                });
+            }
+
+
+        });
+    </script>
 </body>
 
 </html>

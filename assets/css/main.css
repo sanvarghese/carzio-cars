@@ -1389,11 +1389,19 @@ span {
   .cta-sale-wrapper {
     padding: 50px 40px;
   }
+
+  .feature-car-wrapper .car-list-box {
+    padding: 32px 0;
+  }
 }
 
 @media (max-width: 575px) {
   .cta-sale-wrapper {
     padding: 40px 30px;
+  }
+
+  .feature-car-wrapper .car-list-box {
+    padding: 32px 0 !important;
   }
 }
 
@@ -2081,12 +2089,12 @@ span {
   top: 100%;
   inset-inline-start: 0;
   min-width: 240px;
-  background: var(--white);
+  background: var(--bg);
   z-index: 99999;
   visibility: hidden;
   opacity: 0;
   transform-origin: top center;
-  color: var(--header);
+  color: var(--white);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
@@ -15992,15 +16000,15 @@ span {
 
 .navbar-2 .container .navbar-2-right .main-menu ul li .submenu {
   position: absolute;
-  top: 100%;
+  top: 0;
   inset-inline-start: 0;
   min-width: 240px;
-  background: var(--white);
+  background: transparent;
   z-index: 99999;
   visibility: hidden;
   opacity: 0;
   transform-origin: top center;
-  color: var(--header);
+  color: var(--white);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
@@ -19089,7 +19097,8 @@ span {
     /* width: 100px;
     height: 30px; */
   }
-  .feature-car-section{
+
+  .feature-car-section {
     padding: 0 0;
   }
 }
@@ -20879,6 +20888,7 @@ span {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 .car-section-3-short .left-section,
@@ -20886,12 +20896,15 @@ span {
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-bottom: 12px;
 }
 
 .car-section-3-short .left-section button,
 .car-section-3-short #suggested-car-btns-3 button {
   padding-bottom: 10px;
   transition: color 0.3s;
+  /* margin-bottom: 12px; */
+
 }
 
 .car-section-3-short .left-section button:hover,
@@ -25903,13 +25916,15 @@ span {
 
 /* Enquiry Modal Dark Mode Enhancements */
 #enquiryModal .form-control::placeholder {
-  color: rgba(255,255,255,0.6) !important;
+  color: rgba(255, 255, 255, 0.6) !important;
 }
+
 #enquiryModal .form-control:focus {
-  background-color: rgba(255,255,255,0.15) !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
   box-shadow: 0 0 0 3px rgba(189, 12, 7, 0.3) !important;
   color: white;
 }
+
 #enquiryModal .form-check-input:checked {
   background-color: var(--theme);
   border-color: var(--theme);
@@ -25920,13 +25935,13 @@ span {
 /* Trade-in example card - matches screenshot style */
 .trade-in-example-card {
   background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .trade-in-example-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
 .trade-in-example-card img {
@@ -25953,9 +25968,11 @@ span {
   .section-title {
     font-size: 2.4rem;
   }
+
   .trade-in-example-card .row {
     flex-direction: column;
   }
+
   .trade-in-example-card img {
     height: 220px !important;
   }
@@ -25963,41 +25980,43 @@ span {
 
 /* car stock page special offer style */
 
-.car-box-items.special-offer .car-list-items{
+.car-box-items.special-offer .car-list-items {
   background-color: var(--theme);
 }
 
-.car-section .car-box-items.special-offer .car-titile h4 a{
+.car-section .car-box-items.special-offer .car-titile h4 a {
   color: white;
 }
 
-.car-box-items.special-offer .price-items .finance-info{
+.car-box-items.special-offer .price-items .finance-info {
   background-color: #fafafa;
 }
 
-.car-box-items.special-offer .theme-btn{
+.car-box-items.special-offer .theme-btn {
   background-color: white;
   color: var(--theme);
 }
 
-.car-box-items.special-offer .car-list-items .price-items h3{
-  color: white!important;
+.car-box-items.special-offer .car-list-items .price-items h3 {
+  color: white !important;
 }
-.car-box-items.special-offer .car-list-items .price-items .offer-price{
-  color: white!important;
+
+.car-box-items.special-offer .car-list-items .price-items .offer-price {
+  color: white !important;
   text-decoration: line-through;
-    font-size: 16px;
+  font-size: 16px;
 
 }
-.car-box-items.special-offer .car-list-items .price-items span{
+
+.car-box-items.special-offer .car-list-items .price-items span {
   color: white;
 }
 
 /* Improved Badge for Special */
 .car-box-items.special-offer .badges .badge.special {
-    background: var(--theme);
-    color: white;
-    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.5);
+  background: var(--theme);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 77, 77, 0.5);
 }
 
 /* accessories page style */
@@ -26056,76 +26075,77 @@ span {
 
 /* Enhanced hover effect with details reveal */
 .accessory-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 16px;
-    background: #111;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-    transition: all 0.4s ease;
-    height: 280px; /* adjust as needed */
-    margin-bottom: 26px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #111;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+  height: 280px;
+  /* adjust as needed */
+  margin-bottom: 26px;
 }
 
 .accessory-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-    filter: brightness(0.85);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  filter: brightness(0.85);
 }
 
 .accessory-item:hover img {
-    transform: scale(1.08);
-    filter: brightness(1);
+  transform: scale(1.08);
+  filter: brightness(1);
 }
 
 /* Always visible product name (initial state) */
 .product-name-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 30px 25px 25px;
-    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
-    color: white;
-    z-index: 3;
-    transition: all 0.4s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 25px 25px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+  color: white;
+  z-index: 3;
+  transition: all 0.4s ease;
 }
 
 /* On hover: hide initial name */
 .accessory-item:hover .product-name-overlay {
-    opacity: 0;
-    transform: translateY(20px);
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 /* Hover details layer */
 .hover-details {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 40px 25px 30px;
-    background: linear-gradient(to top, rgba(189,12,7,0.92) 0%, rgba(0,0,0,0.75) 60%);
-    color: white;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-    z-index: 2;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 25px 30px;
+  background: linear-gradient(to top, rgba(189, 12, 7, 0.92) 0%, rgba(0, 0, 0, 0.75) 60%);
+  color: white;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .accessory-item:hover .hover-details {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Optional: card lift on hover */
 .accessory-item:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 50px rgba(189,12,7,0.35);
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(189, 12, 7, 0.35);
 }
 
 /* Mobile Filter Offcanvas */
@@ -26133,3 +26153,92 @@ span {
 /* ──────────────────────────────────────────────── */
 /* Mobile-first responsive search form             */
 /* ──────────────────────────────────────────────── */
+/* Mobile Filters Styles */
+#mobileFiltersToggle {
+  padding: 12px 20px;
+  font-size: 15px;
+  background-color: var(--theme2);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#mobileFiltersToggle:hover {
+  background-color: var(--theme2);
+  transform: translateY(-2px);
+}
+
+/* Mobile hidden filters - initially hidden on mobile */
+.mobile-hidden-filters {
+  width: 100%;
+}
+
+/* Show all filters on desktop */
+@media (min-width: 992px) {
+  .mobile-hidden-filters {
+    display: flex !important;
+    flex-wrap: wrap;
+  }
+
+  #mobileFiltersToggle {
+    display: none !important;
+  }
+
+  .mobile-hidden-filters .col-md-3,
+  .mobile-hidden-filters .col-md-4,
+  .mobile-hidden-filters .col-12 {
+    display: block !important;
+  }
+}
+
+/* Hide filters on mobile initially */
+@media (max-width: 991.98px) {
+  .mobile-hidden-filters {
+    display: none;
+    flex-wrap: wrap;
+  }
+
+  .mobile-hidden-filters.active {
+    display: flex;
+    animation: slideDown 0.3s ease-out;
+  }
+
+  .mobile-hidden-filters .col-md-3,
+  .mobile-hidden-filters .col-md-4,
+  .mobile-hidden-filters .col-12 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    margin-bottom: 15px;
+  }
+
+  .vehicle-type-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .vehicle-type-card {
+    margin-bottom: 10px !important;
+  }
+}
+
+/* Animation for showing filters */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button text adjustment */
+#mobileFiltersToggle .fas {
+  font-size: 14px;
+}
