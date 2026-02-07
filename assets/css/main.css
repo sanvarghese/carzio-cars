@@ -26059,7 +26059,8 @@ span {
     background: #111;
     box-shadow: 0 8px 25px rgba(0,0,0,0.4);
     transition: all 0.4s ease;
-    height: 320px; /* adjust as needed */
+    height: 280px; /* adjust as needed */
+    margin-bottom: 26px;
 }
 
 .accessory-item img {
