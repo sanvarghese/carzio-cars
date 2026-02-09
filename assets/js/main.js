@@ -1,21 +1,3 @@
-/*----------------------------------------------------------------
--------------------------------------------------------------------
-CSS TABLE OF CONTENTS
--------------------------------------------------------------------
-
-01. header
-02. animated text with swiper slider
-03. magnificPopup
-04. counter up
-05. wow animation
-06. nice select
-07. swiper slider
-08. search popup
-09. mousecursor 
-09. preloader 
-10. car search form
-
-------------------------------------------------------------------*/
 
 (function ($) {
   "use strict";
@@ -1643,11 +1625,6 @@ CSS TABLE OF CONTENTS
       }
     });
 
-
-
-
-
-
     // Function to switch from quick to full form
     window.switchToFullForm = function () {
       if (fullAppBtn) {
@@ -1789,7 +1766,7 @@ CSS TABLE OF CONTENTS
 
   // Initialize finance wizard when document is ready
   $(document).ready(function () {
-    
+
     initializeFinanceWizard();
 
     // Car details page
