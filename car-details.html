@@ -1060,7 +1060,6 @@
     </div>
   </div>
 
-
   <!--<< All JS Plugins >>-->
   <script src="assets/js/jquery-3.7.1.min.js"></script>
   <!--<< Viewport Js >>-->
@@ -1085,81 +1084,8 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-
     // Initialize Wow.js
     new WOW().init();
-
-    // Finance Calculator Logic
-    document.addEventListener('DOMContentLoaded', function () {
-
-      // Initialize Magnific Popup for image gallery with sliding
-      $('.image-popup-gallery').magnificPopup({
-        type: 'image',
-        gallery: {
-          enabled: true,
-          navigateByImgClick: true,
-          preload: [0, 1],
-          arrowMarkup: '<button title="%title%" type="button" class=" swiper mfp-arrow mfp-arrow-%dir%"><i class="fa-solid fa-chevron-%dir%"></i></button>',
-          tPrev: 'Previous (Left arrow key)',
-          tNext: 'Next (Right arrow key)',
-          tCounter: '<span class="mfp-counter">%curr% of %total%</span>'
-        },
-        zoom: {
-          enabled: true,
-          duration: 300,
-          easing: 'ease-in-out'
-        },
-        callbacks: {
-          beforeOpen: function () {
-            this.st.mainClass = 'mfp-zoom-in';
-          }
-        }
-      });
-
-      // Image Gallery Thumbnail Functionality
-      const mainCarImage = document.getElementById('mainCarImage');
-      const mainImageLink = document.querySelector('.main-car-image');
-      const thumbnailItems = document.querySelectorAll('.car-thumbnails-vertical .thumbnail-item');
-
-      // Thumbnail click event
-      thumbnailItems.forEach(thumb => {
-        thumb.addEventListener('click', function (e) {
-          // Don't prevent default - let Magnific Popup handle the click
-
-          // Remove active class from all thumbnails
-          thumbnailItems.forEach(item => item.classList.remove('active'));
-
-          // Add active class to clicked thumbnail
-          this.classList.add('active');
-
-          // Get the image source from href attribute
-          const newImageSrc = this.getAttribute('href');
-
-          // Update main image
-          mainCarImage.src = newImageSrc;
-          mainImageLink.href = newImageSrc;
-
-          // Scroll thumbnail into view
-          this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        });
-      });
-
-      // Enquiry Form Submission (Placeholder - Add AJAX if needed)
-      const enquiryForm = document.getElementById('enquiryForm');
-      if (enquiryForm) {
-        enquiryForm.addEventListener('submit', function (e) {
-          e.preventDefault();
-          // Validate and submit via AJAX here
-          alert('Enquiry submitted successfully!');
-          bootstrap.Modal.getInstance(document.getElementById('enquiryModal')).hide();
-        });
-      }
-
-      // Initialize tooltips if needed
-      $('[data-bs-toggle="tooltip"]').tooltip();
-    });
-
-
   </script>
 </body>
 

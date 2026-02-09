@@ -888,31 +888,6 @@
     <!--<< Main.js >>-->
     <script src="assets/js/main.js"></script>
 
-    <script>
-        // Mobile filters toggle functionality
-        document.addEventListener('DOMContentLoaded', function () {
-            const mobileFiltersToggle = document.getElementById('mobileFiltersToggle');
-            const mobileHiddenFilters = document.querySelector('.mobile-hidden-filters');
-            const toggleText = mobileFiltersToggle.querySelector('span');
-            const toggleIcon = mobileFiltersToggle.querySelector('i');
-
-            if (mobileFiltersToggle && mobileHiddenFilters) {
-                mobileFiltersToggle.addEventListener('click', function () {
-                    mobileHiddenFilters.classList.toggle('active');
-
-                    if (mobileHiddenFilters.classList.contains('active')) {
-                        toggleText.textContent = 'Hide Filters';
-                        toggleIcon.className = 'fas fa-times';
-                    } else {
-                        toggleText.textContent = 'Filters';
-                        toggleIcon.className = 'fas fa-filter';
-                    }
-                });
-            }
-
-
-        });
-    </script>
 </body>
 
 </html>
