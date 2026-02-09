@@ -92,7 +92,7 @@ CSS TABLE OF CONTENTS
 
       function updatePriceDisplay() {
         if (!priceMin || !priceMax || !priceDisplay) return;
-        
+
         let minVal = parseInt(priceMin.value);
         let maxVal = parseInt(priceMax.value);
 
@@ -120,7 +120,7 @@ CSS TABLE OF CONTENTS
 
       function updateYearDisplay() {
         if (!yearMin || !yearMax || !yearDisplay) return;
-        
+
         let minVal = parseInt(yearMin.value);
         let maxVal = parseInt(yearMax.value);
 
@@ -509,36 +509,36 @@ CSS TABLE OF CONTENTS
           crossFade: true
         },
       });
-      
+
       $(".vehicle-type-swiper").hover(
-        function() {
+        function () {
           vehicleTypeSwiper.autoplay.stop();
           $(this).addClass("autoplay-paused");
         },
-        function() {
+        function () {
           vehicleTypeSwiper.autoplay.start();
           $(this).removeClass("autoplay-paused");
         }
       );
-      
-      $(document).on('click', '.vehicle-type-card', function() {
+
+      $(document).on('click', '.vehicle-type-card', function () {
         vehicleTypeSwiper.autoplay.stop();
         $(".vehicle-type-card").removeClass("active");
         $(this).addClass("active");
-        
+
         const vehicleType = $(this).data("type");
         const vehicleName = $(this).find(".vehicle-type-name").text().trim();
-        
+
         $("#resultTitle").text(`${vehicleName} Vehicles`);
         $("#resultDescription").text(`Showing all ${vehicleName.toLowerCase()} vehicles in our inventory.`);
         $("#searchResults").removeClass("hidden");
-        
+
         setTimeout(() => {
           if (!vehicleTypeSwiper.autoplay.running) {
             vehicleTypeSwiper.autoplay.start();
           }
         }, 5000);
-        
+
         console.log(`Selected vehicle type: ${vehicleType}`);
       });
     }
@@ -1067,9 +1067,14 @@ CSS TABLE OF CONTENTS
           (t.style.visibility = "visible");
       }
     }
+
+
+
+
     $(function () {
       mousecursor();
     });
+
   }); // End Document Ready Function
 
   function loader() {
@@ -1084,576 +1089,716 @@ CSS TABLE OF CONTENTS
   // adde finance page functions
 
   //>> CAR SEARCH FORM FUNCTIONALITY - ADDED HERE <<//
-function initializeCarSearchForm() {
-  // Price Range Slider
-  const priceMin = document.getElementById('priceMin');
-  const priceMax = document.getElementById('priceMax');
-  const priceDisplay = document.getElementById('priceRangeDisplay');
+  function initializeCarSearchForm() {
+    // Price Range Slider
+    const priceMin = document.getElementById('priceMin');
+    const priceMax = document.getElementById('priceMax');
+    const priceDisplay = document.getElementById('priceRangeDisplay');
 
-  function updatePriceDisplay() {
-    if (!priceMin || !priceMax || !priceDisplay) return;
-    
-    let minVal = parseInt(priceMin.value);
-    let maxVal = parseInt(priceMax.value);
+    function updatePriceDisplay() {
+      if (!priceMin || !priceMax || !priceDisplay) return;
 
-    // Ensure min is always less than max
-    if (minVal > maxVal) {
-      [minVal, maxVal] = [maxVal, minVal];
-      priceMin.value = minVal;
-      priceMax.value = maxVal;
+      let minVal = parseInt(priceMin.value);
+      let maxVal = parseInt(priceMax.value);
+
+      // Ensure min is always less than max
+      if (minVal > maxVal) {
+        [minVal, maxVal] = [maxVal, minVal];
+        priceMin.value = minVal;
+        priceMax.value = maxVal;
+      }
+
+      priceDisplay.textContent = `${minVal.toLocaleString()} - ${maxVal.toLocaleString()}`;
     }
 
-    priceDisplay.textContent = `${minVal.toLocaleString()} - ${maxVal.toLocaleString()}`;
-  }
-
-  if (priceMin && priceMax && priceDisplay) {
-    priceMin.addEventListener('input', updatePriceDisplay);
-    priceMax.addEventListener('input', updatePriceDisplay);
-    // Initialize display
-    updatePriceDisplay();
-  }
-
-  // Year Range Slider
-  const yearMin = document.getElementById('yearMin');
-  const yearMax = document.getElementById('yearMax');
-  const yearDisplay = document.getElementById('yearRangeDisplay');
-
-  function updateYearDisplay() {
-    if (!yearMin || !yearMax || !yearDisplay) return;
-    
-    let minVal = parseInt(yearMin.value);
-    let maxVal = parseInt(yearMax.value);
-
-    // Ensure min is always less than max
-    if (minVal > maxVal) {
-      [minVal, maxVal] = [maxVal, minVal];
-      yearMin.value = minVal;
-      yearMax.value = maxVal;
+    if (priceMin && priceMax && priceDisplay) {
+      priceMin.addEventListener('input', updatePriceDisplay);
+      priceMax.addEventListener('input', updatePriceDisplay);
+      // Initialize display
+      updatePriceDisplay();
     }
 
-    yearDisplay.textContent = `${minVal} - ${maxVal}`;
+    // Year Range Slider
+    const yearMin = document.getElementById('yearMin');
+    const yearMax = document.getElementById('yearMax');
+    const yearDisplay = document.getElementById('yearRangeDisplay');
+
+    function updateYearDisplay() {
+      if (!yearMin || !yearMax || !yearDisplay) return;
+
+      let minVal = parseInt(yearMin.value);
+      let maxVal = parseInt(yearMax.value);
+
+      // Ensure min is always less than max
+      if (minVal > maxVal) {
+        [minVal, maxVal] = [maxVal, minVal];
+        yearMin.value = minVal;
+        yearMax.value = maxVal;
+      }
+
+      yearDisplay.textContent = `${minVal} - ${maxVal}`;
+    }
+
+    if (yearMin && yearMax && yearDisplay) {
+      yearMin.addEventListener('input', updateYearDisplay);
+      yearMax.addEventListener('input', updateYearDisplay);
+      // Initialize display
+      updateYearDisplay();
+    }
+
+    // Form submission handler
+    const carSearchForm = document.getElementById('carSearchForm');
+    if (carSearchForm) {
+      carSearchForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const formData = {
+          make: document.getElementById('carMake')?.value || '',
+          model: document.getElementById('carModel')?.value || '',
+          bodyType: document.getElementById('bodyType')?.value || '',
+          searchQuery: document.getElementById('searchInput')?.value || '',
+          priceMin: priceMin?.value || '',
+          priceMax: priceMax?.value || '',
+          yearMin: yearMin?.value || '',
+          yearMax: yearMax?.value || ''
+        };
+
+        console.log('Search Parameters:', formData);
+
+        // Add your search logic here
+        alert('Searching for cars with your criteria...');
+      });
+    }
   }
 
-  if (yearMin && yearMax && yearDisplay) {
-    yearMin.addEventListener('input', updateYearDisplay);
-    yearMax.addEventListener('input', updateYearDisplay);
-    // Initialize display
-    updateYearDisplay();
-  }
+  // added financial page functions
 
-  // Form submission handler
-  const carSearchForm = document.getElementById('carSearchForm');
-  if (carSearchForm) {
-    carSearchForm.addEventListener('submit', function (e) {
-      e.preventDefault();
+  // Finance Page Wizard Functionality
+  function initializeFinanceWizard() {
+    // Only run on finance page
+    if (!document.querySelector('.finace-section')) return;
 
-      const formData = {
-        make: document.getElementById('carMake')?.value || '',
-        model: document.getElementById('carModel')?.value || '',
-        bodyType: document.getElementById('bodyType')?.value || '',
-        searchQuery: document.getElementById('searchInput')?.value || '',
-        priceMin: priceMin?.value || '',
-        priceMax: priceMax?.value || '',
-        yearMin: yearMin?.value || '',
-        yearMax: yearMax?.value || ''
-      };
+    // Form type toggle functionality
+    const fullAppBtn = document.getElementById('fullApplicationBtn');
+    const quickAppBtn = document.getElementById('quickApplicationBtn');
+    const fullForm = document.getElementById('fullApplicationForm');
+    const quickForm = document.getElementById('quickApplicationForm');
 
-      console.log('Search Parameters:', formData);
+    if (!fullAppBtn || !quickAppBtn || !fullForm || !quickForm) return;
 
-      // Add your search logic here
-      alert('Searching for cars with your criteria...');
-    });
-  }
-}
-
-// added financial page functions
-
-// Finance Page Wizard Functionality
-function initializeFinanceWizard() {
-  // Only run on finance page
-  if (!document.querySelector('.finace-section')) return;
-
-  // Form type toggle functionality
-  const fullAppBtn = document.getElementById('fullApplicationBtn');
-  const quickAppBtn = document.getElementById('quickApplicationBtn');
-  const fullForm = document.getElementById('fullApplicationForm');
-  const quickForm = document.getElementById('quickApplicationForm');
-
-  if (!fullAppBtn || !quickAppBtn || !fullForm || !quickForm) return;
-
-  // Initialize with full form active
-  fullAppBtn.classList.add('active');
-  fullForm.classList.add('active');
-  quickForm.classList.remove('active');
-
-  // Full Application button click
-  fullAppBtn.addEventListener('click', function () {
-    this.classList.add('active');
-    quickAppBtn.classList.remove('active');
+    // Initialize with full form active
+    fullAppBtn.classList.add('active');
     fullForm.classList.add('active');
     quickForm.classList.remove('active');
 
-    // Reset wizard to step 1 when switching to full form
-    if (typeof goToStep === 'function') {
-      goToStep(1);
-    }
-  });
+    // Full Application button click
+    fullAppBtn.addEventListener('click', function () {
+      this.classList.add('active');
+      quickAppBtn.classList.remove('active');
+      fullForm.classList.add('active');
+      quickForm.classList.remove('active');
 
-  // Quick Application button click
-  quickAppBtn.addEventListener('click', function () {
-    this.classList.add('active');
-    fullAppBtn.classList.remove('active');
-    quickForm.classList.add('active');
-    fullForm.classList.remove('active');
-  });
-
-  // Wizard Variables
-  let currentStep = 1;
-  const totalSteps = 7;
-  let isJointApplication = false;
-
-  // Get DOM elements for wizard
-  const progressSteps = document.querySelectorAll('.step');
-  const nextButtons = document.querySelectorAll('.next-step');
-  const prevButtons = document.querySelectorAll('.prev-step');
-  const fillLaterButtons = document.querySelectorAll('.fill-later');
-  const jointApplicationRadios = document.querySelectorAll('input[name="jointApplication"]');
-  const jointApplicantSections = document.querySelectorAll('.joint-applicant-section');
-
-  // Initialize wizard
-  updateProgress();
-
-  // Handle joint application toggle
-  jointApplicationRadios.forEach(radio => {
-    radio.addEventListener('change', function () {
-      isJointApplication = this.value === 'yes';
-      toggleJointApplicantSections(isJointApplication);
-    });
-  });
-
-  // Next button functionality
-  nextButtons.forEach(button => {
-    button.addEventListener('click', function () {
-      const nextStep = parseInt(this.dataset.next);
-      if (validateStep(currentStep)) {
-        goToStep(nextStep);
-      }
-    });
-  });
-
-  // Previous button functionality
-  prevButtons.forEach(button => {
-    button.addEventListener('click', function () {
-      const prevStep = parseInt(this.dataset.prev);
-      goToStep(prevStep);
-    });
-  });
-
-  // Fill later button functionality
-  fillLaterButtons.forEach(button => {
-    button.addEventListener('click', function () {
-      alert('This section will be saved and can be completed later.');
-      // You can implement AJAX save functionality here
-    });
-  });
-
-  // Apply for Finance button in full form
-  const applyButton = document.querySelector('.apply-finance');
-  if (applyButton) {
-    applyButton.addEventListener('click', function () {
-      if (validateStep(7)) {
-        // Open privacy declaration popup for full form
-        $.magnificPopup.open({
-          items: {
-            src: '#privacy-declaration-popup',
-            type: 'inline'
-          },
-          callbacks: {
-            open: function () {
-              // Reset checkbox when popup opens
-              document.getElementById('privacyAgreement').checked = false;
-              document.getElementById('confirmPrivacyBtn').disabled = true;
-
-              // Change confirm button to handle full form submission
-              const confirmBtn = document.getElementById('confirmPrivacyBtn');
-              confirmBtn.onclick = function () {
-                if (document.getElementById('privacyAgreement').checked) {
-                  submitFullApplication();
-                }
-              };
-            }
-          }
-        });
-      }
-    });
-  }
-
-  // Quick Apply button
-  const quickApplyBtn = document.getElementById('quickApplyBtn');
-  if (quickApplyBtn) {
-    quickApplyBtn.addEventListener('click', function () {
-      if (validateQuickForm()) {
-        // Open privacy declaration popup
-        $.magnificPopup.open({
-          items: {
-            src: '#privacy-declaration-popup',
-            type: 'inline'
-          },
-          callbacks: {
-            open: function () {
-              // Reset checkbox when popup opens
-              document.getElementById('privacyAgreement').checked = false;
-              document.getElementById('confirmPrivacyBtn').disabled = true;
-            }
-          }
-        });
-      }
-    });
-  }
-
-  // Privacy agreement checkbox change handler
-  const privacyCheckbox = document.getElementById('privacyAgreement');
-  if (privacyCheckbox) {
-    privacyCheckbox.addEventListener('change', function () {
-      const confirmBtn = document.getElementById('confirmPrivacyBtn');
-      if (confirmBtn) {
-        confirmBtn.disabled = !this.checked;
-      }
-    });
-  }
-
-  // Confirm Privacy button
-  const confirmPrivacyBtn = document.getElementById('confirmPrivacyBtn');
-  if (confirmPrivacyBtn) {
-    confirmPrivacyBtn.addEventListener('click', function () {
-      if (document.getElementById('privacyAgreement').checked) {
-        // Check which form is active
-        if (fullForm.classList.contains('active')) {
-          submitFullApplication();
-        } else {
-          submitQuickApplication();
-        }
-      }
-    });
-  }
-
-  // Close popup buttons
-  document.querySelectorAll('.close-popup').forEach(button => {
-    button.addEventListener('click', function () {
-      $.magnificPopup.close();
-    });
-  });
-
-  // Finance Calculator Button
-  const showCalculatorBtn = document.getElementById('showCalculatorBtn');
-  if (showCalculatorBtn) {
-    showCalculatorBtn.addEventListener('click', function () {
-      $.magnificPopup.open({
-        items: {
-          src: '#finance-calculator-modal',
-          type: 'inline'
-        },
-        mainClass: 'mfp-fade',
-        removalDelay: 300
-      });
-    });
-  }
-
-  // Function to navigate to specific step
-  function goToStep(step) {
-    // Hide current step
-    document.getElementById(`step${currentStep}`)?.classList.remove('active');
-
-    // Update progress steps
-    progressSteps.forEach((progressStep, index) => {
-      if (index + 1 < step) {
-        progressStep.classList.add('completed');
-        progressStep.classList.remove('active');
-      } else if (index + 1 === step) {
-        progressStep.classList.add('active');
-        progressStep.classList.remove('completed');
-      } else {
-        progressStep.classList.remove('active', 'completed');
+      // Reset wizard to step 1 when switching to full form
+      if (typeof goToStep === 'function') {
+        goToStep(1);
       }
     });
 
-    // Show new step
-    document.getElementById(`step${step}`)?.classList.add('active');
-    currentStep = step;
+    // Quick Application button click
+    quickAppBtn.addEventListener('click', function () {
+      this.classList.add('active');
+      fullAppBtn.classList.remove('active');
+      quickForm.classList.add('active');
+      fullForm.classList.remove('active');
+    });
 
-    // Scroll to top of form
-    const wizardForms = document.querySelector('.wizard-forms');
-    if (wizardForms) {
-      wizardForms.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
+    // Wizard Variables
+    let currentStep = 1;
+    const totalSteps = 7;
+    let isJointApplication = false;
 
+    // Get DOM elements for wizard
+    const progressSteps = document.querySelectorAll('.step');
+    const nextButtons = document.querySelectorAll('.next-step');
+    const prevButtons = document.querySelectorAll('.prev-step');
+    const fillLaterButtons = document.querySelectorAll('.fill-later');
+    const jointApplicationRadios = document.querySelectorAll('input[name="jointApplication"]');
+    const jointApplicantSections = document.querySelectorAll('.joint-applicant-section');
+
+    // Initialize wizard
     updateProgress();
-  }
 
-  // Function to validate current step
-  function validateStep(step) {
-    const currentStepElement = document.getElementById(`step${step}`);
-    if (!currentStepElement) return true;
-
-    // Remove any existing invalid classes
-    const fields = currentStepElement.querySelectorAll('.is-invalid');
-    fields.forEach(field => {
-      field.classList.remove('is-invalid');
-      const errorDiv = field.nextElementSibling;
-      if (errorDiv && errorDiv.classList.contains('invalid-feedback')) {
-        errorDiv.remove();
-      }
+    // Handle joint application toggle
+    jointApplicationRadios.forEach(radio => {
+      radio.addEventListener('change', function () {
+        isJointApplication = this.value === 'yes';
+        toggleJointApplicantSections(isJointApplication);
+      });
     });
 
-    // Always return true since fields are not required
-    return true;
-  }
-
-  // Function to toggle joint applicant sections
-  function toggleJointApplicantSections(show) {
-    jointApplicantSections.forEach(section => {
-      section.style.display = show ? 'block' : 'none';
-    });
-  }
-
-  // Function to update progress bar
-  function updateProgress() {
-    const progressBar = document.querySelector('.progress-bar');
-    const percentage = ((currentStep - 1) / (totalSteps - 1)) * 100;
-    if (progressBar) {
-      progressBar.style.background = `linear-gradient(to right, var(--theme) ${percentage}%, var(--border) ${percentage}%)`;
-    }
-  }
-
-  // Function to validate quick form
-  function validateQuickForm() {
-    const quickForm = document.getElementById('quickApplicationForm');
-    if (!quickForm) return false;
-
-    const requiredFields = quickForm.querySelectorAll('[required]');
-    let isValid = true;
-
-    requiredFields.forEach(field => {
-      if (!field.value.trim()) {
-        isValid = false;
-        field.classList.add('is-invalid');
-
-        // Add validation message if not exists
-        if (!field.nextElementSibling || !field.nextElementSibling.classList.contains('invalid-feedback')) {
-          const errorDiv = document.createElement('div');
-          errorDiv.className = 'invalid-feedback';
-          errorDiv.textContent = 'This field is required';
-          field.parentNode.appendChild(errorDiv);
+    // Next button functionality
+    nextButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        const nextStep = parseInt(this.dataset.next);
+        if (validateStep(currentStep)) {
+          goToStep(nextStep);
         }
-      } else {
+      });
+    });
+
+    // Previous button functionality
+    prevButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        const prevStep = parseInt(this.dataset.prev);
+        goToStep(prevStep);
+      });
+    });
+
+    // Fill later button functionality
+    fillLaterButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        alert('This section will be saved and can be completed later.');
+        // You can implement AJAX save functionality here
+      });
+    });
+
+    // Apply for Finance button in full form
+    const applyButton = document.querySelector('.apply-finance');
+    if (applyButton) {
+      applyButton.addEventListener('click', function () {
+        if (validateStep(7)) {
+          // Open privacy declaration popup for full form
+          $.magnificPopup.open({
+            items: {
+              src: '#privacy-declaration-popup',
+              type: 'inline'
+            },
+            callbacks: {
+              open: function () {
+                // Reset checkbox when popup opens
+                document.getElementById('privacyAgreement').checked = false;
+                document.getElementById('confirmPrivacyBtn').disabled = true;
+
+                // Change confirm button to handle full form submission
+                const confirmBtn = document.getElementById('confirmPrivacyBtn');
+                confirmBtn.onclick = function () {
+                  if (document.getElementById('privacyAgreement').checked) {
+                    submitFullApplication();
+                  }
+                };
+              }
+            }
+          });
+        }
+      });
+    }
+
+    // Quick Apply button
+    const quickApplyBtn = document.getElementById('quickApplyBtn');
+    if (quickApplyBtn) {
+      quickApplyBtn.addEventListener('click', function () {
+        if (validateQuickForm()) {
+          // Open privacy declaration popup
+          $.magnificPopup.open({
+            items: {
+              src: '#privacy-declaration-popup',
+              type: 'inline'
+            },
+            callbacks: {
+              open: function () {
+                // Reset checkbox when popup opens
+                document.getElementById('privacyAgreement').checked = false;
+                document.getElementById('confirmPrivacyBtn').disabled = true;
+              }
+            }
+          });
+        }
+      });
+    }
+
+    // Privacy agreement checkbox change handler
+    const privacyCheckbox = document.getElementById('privacyAgreement');
+    if (privacyCheckbox) {
+      privacyCheckbox.addEventListener('change', function () {
+        const confirmBtn = document.getElementById('confirmPrivacyBtn');
+        if (confirmBtn) {
+          confirmBtn.disabled = !this.checked;
+        }
+      });
+    }
+
+    // Confirm Privacy button
+    const confirmPrivacyBtn = document.getElementById('confirmPrivacyBtn');
+    if (confirmPrivacyBtn) {
+      confirmPrivacyBtn.addEventListener('click', function () {
+        if (document.getElementById('privacyAgreement').checked) {
+          // Check which form is active
+          if (fullForm.classList.contains('active')) {
+            submitFullApplication();
+          } else {
+            submitQuickApplication();
+          }
+        }
+      });
+    }
+
+    // Close popup buttons
+    document.querySelectorAll('.close-popup').forEach(button => {
+      button.addEventListener('click', function () {
+        $.magnificPopup.close();
+      });
+    });
+
+    // Finance Calculator Button
+    const showCalculatorBtn = document.getElementById('showCalculatorBtn');
+    if (showCalculatorBtn) {
+      showCalculatorBtn.addEventListener('click', function () {
+        $.magnificPopup.open({
+          items: {
+            src: '#finance-calculator-modal',
+            type: 'inline'
+          },
+          mainClass: 'mfp-fade',
+          removalDelay: 300
+        });
+      });
+    }
+
+    // Function to navigate to specific step
+    function goToStep(step) {
+      // Hide current step
+      document.getElementById(`step${currentStep}`)?.classList.remove('active');
+
+      // Update progress steps
+      progressSteps.forEach((progressStep, index) => {
+        if (index + 1 < step) {
+          progressStep.classList.add('completed');
+          progressStep.classList.remove('active');
+        } else if (index + 1 === step) {
+          progressStep.classList.add('active');
+          progressStep.classList.remove('completed');
+        } else {
+          progressStep.classList.remove('active', 'completed');
+        }
+      });
+
+      // Show new step
+      document.getElementById(`step${step}`)?.classList.add('active');
+      currentStep = step;
+
+      // Scroll to top of form
+      const wizardForms = document.querySelector('.wizard-forms');
+      if (wizardForms) {
+        wizardForms.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+
+      updateProgress();
+    }
+
+    // Function to validate current step
+    function validateStep(step) {
+      const currentStepElement = document.getElementById(`step${step}`);
+      if (!currentStepElement) return true;
+
+      // Remove any existing invalid classes
+      const fields = currentStepElement.querySelectorAll('.is-invalid');
+      fields.forEach(field => {
         field.classList.remove('is-invalid');
         const errorDiv = field.nextElementSibling;
         if (errorDiv && errorDiv.classList.contains('invalid-feedback')) {
           errorDiv.remove();
         }
-      }
-    });
+      });
 
-    // Validate email format
-    const emailField = quickForm.querySelector('input[type="email"]');
-    if (emailField && emailField.value) {
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailPattern.test(emailField.value)) {
-        isValid = false;
-        emailField.classList.add('is-invalid');
-        if (!emailField.nextElementSibling || !emailField.nextElementSibling.classList.contains('invalid-feedback')) {
-          const errorDiv = document.createElement('div');
-          errorDiv.className = 'invalid-feedback';
-          errorDiv.textContent = 'Please enter a valid email address';
-          emailField.parentNode.appendChild(errorDiv);
-        }
+      // Always return true since fields are not required
+      return true;
+    }
+
+    // Function to toggle joint applicant sections
+    function toggleJointApplicantSections(show) {
+      jointApplicantSections.forEach(section => {
+        section.style.display = show ? 'block' : 'none';
+      });
+    }
+
+    // Function to update progress bar
+    function updateProgress() {
+      const progressBar = document.querySelector('.progress-bar');
+      const percentage = ((currentStep - 1) / (totalSteps - 1)) * 100;
+      if (progressBar) {
+        progressBar.style.background = `linear-gradient(to right, var(--theme) ${percentage}%, var(--border) ${percentage}%)`;
       }
     }
 
-    // Validate date fields
-    const dateFields = quickForm.querySelectorAll('input[type="date"]');
-    dateFields.forEach(field => {
-      if (field.hasAttribute('required') && !field.value) {
-        isValid = false;
-        field.classList.add('is-invalid');
-        if (!field.nextElementSibling || !field.nextElementSibling.classList.contains('invalid-feedback')) {
-          const errorDiv = document.createElement('div');
-          errorDiv.className = 'invalid-feedback';
-          errorDiv.textContent = 'Please select a date';
-          field.parentNode.appendChild(errorDiv);
-        }
-      }
-    });
+    // Function to validate quick form
+    function validateQuickForm() {
+      const quickForm = document.getElementById('quickApplicationForm');
+      if (!quickForm) return false;
 
-    if (!isValid) {
-      // Scroll to first invalid field
-      const firstInvalid = quickForm.querySelector('.is-invalid');
-      if (firstInvalid) {
-        firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-      return false;
-    }
+      const requiredFields = quickForm.querySelectorAll('[required]');
+      let isValid = true;
 
-    return true;
-  }
+      requiredFields.forEach(field => {
+        if (!field.value.trim()) {
+          isValid = false;
+          field.classList.add('is-invalid');
 
-  // Function to submit quick application
-  function submitQuickApplication() {
-    // Collect form data
-    const formData = new FormData();
-    const quickForm = document.getElementById('quickApplicationForm');
-    const formFields = quickForm.querySelectorAll('input, select, textarea');
-
-    formFields.forEach(field => {
-      if (field.name && field.name.startsWith('quick_')) {
-        if (field.type === 'file' && field.files.length > 0) {
-          formData.append(field.name, field.files[0]);
-        } else {
-          formData.append(field.name, field.value);
-        }
-      }
-    });
-
-    // Add privacy agreement to form data
-    formData.append('privacy_agreed', 'yes');
-
-    // Show loading state
-    const confirmBtn = document.getElementById('confirmPrivacyBtn');
-    const originalText = confirmBtn.innerHTML;
-    confirmBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Processing...';
-    confirmBtn.disabled = true;
-
-    // Simulate API call
-    setTimeout(() => {
-      // Close privacy popup
-      $.magnificPopup.close();
-
-      // Show success popup
-      setTimeout(() => {
-        $.magnificPopup.open({
-          items: {
-            src: '#success-popup',
-            type: 'inline'
+          // Add validation message if not exists
+          if (!field.nextElementSibling || !field.nextElementSibling.classList.contains('invalid-feedback')) {
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'invalid-feedback';
+            errorDiv.textContent = 'This field is required';
+            field.parentNode.appendChild(errorDiv);
           }
-        });
-      }, 300);
-
-      // Reset quick form
-      quickForm.querySelectorAll('input, select, textarea').forEach(field => {
-        if (field.type !== 'submit' && field.type !== 'button' && field.type !== 'file') {
-          field.value = '';
-        }
-        if (field.type === 'file') {
-          field.value = '';
+        } else {
+          field.classList.remove('is-invalid');
+          const errorDiv = field.nextElementSibling;
+          if (errorDiv && errorDiv.classList.contains('invalid-feedback')) {
+            errorDiv.remove();
+          }
         }
       });
 
-      // Reset button state
-      confirmBtn.innerHTML = originalText;
-      confirmBtn.disabled = false;
-    }, 1500);
+      // Validate email format
+      const emailField = quickForm.querySelector('input[type="email"]');
+      if (emailField && emailField.value) {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(emailField.value)) {
+          isValid = false;
+          emailField.classList.add('is-invalid');
+          if (!emailField.nextElementSibling || !emailField.nextElementSibling.classList.contains('invalid-feedback')) {
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'invalid-feedback';
+            errorDiv.textContent = 'Please enter a valid email address';
+            emailField.parentNode.appendChild(errorDiv);
+          }
+        }
+      }
+
+      // Validate date fields
+      const dateFields = quickForm.querySelectorAll('input[type="date"]');
+      dateFields.forEach(field => {
+        if (field.hasAttribute('required') && !field.value) {
+          isValid = false;
+          field.classList.add('is-invalid');
+          if (!field.nextElementSibling || !field.nextElementSibling.classList.contains('invalid-feedback')) {
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'invalid-feedback';
+            errorDiv.textContent = 'Please select a date';
+            field.parentNode.appendChild(errorDiv);
+          }
+        }
+      });
+
+      if (!isValid) {
+        // Scroll to first invalid field
+        const firstInvalid = quickForm.querySelector('.is-invalid');
+        if (firstInvalid) {
+          firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        return false;
+      }
+
+      return true;
+    }
+
+    // Function to submit quick application
+    function submitQuickApplication() {
+      // Collect form data
+      const formData = new FormData();
+      const quickForm = document.getElementById('quickApplicationForm');
+      const formFields = quickForm.querySelectorAll('input, select, textarea');
+
+      formFields.forEach(field => {
+        if (field.name && field.name.startsWith('quick_')) {
+          if (field.type === 'file' && field.files.length > 0) {
+            formData.append(field.name, field.files[0]);
+          } else {
+            formData.append(field.name, field.value);
+          }
+        }
+      });
+
+      // Add privacy agreement to form data
+      formData.append('privacy_agreed', 'yes');
+
+      // Show loading state
+      const confirmBtn = document.getElementById('confirmPrivacyBtn');
+      const originalText = confirmBtn.innerHTML;
+      confirmBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Processing...';
+      confirmBtn.disabled = true;
+
+      // Simulate API call
+      setTimeout(() => {
+        // Close privacy popup
+        $.magnificPopup.close();
+
+        // Show success popup
+        setTimeout(() => {
+          $.magnificPopup.open({
+            items: {
+              src: '#success-popup',
+              type: 'inline'
+            }
+          });
+        }, 300);
+
+        // Reset quick form
+        quickForm.querySelectorAll('input, select, textarea').forEach(field => {
+          if (field.type !== 'submit' && field.type !== 'button' && field.type !== 'file') {
+            field.value = '';
+          }
+          if (field.type === 'file') {
+            field.value = '';
+          }
+        });
+
+        // Reset button state
+        confirmBtn.innerHTML = originalText;
+        confirmBtn.disabled = false;
+      }, 1500);
+    }
+
+    // Function to submit full application
+    function submitFullApplication() {
+      // Collect form data
+      const formData = new FormData();
+
+      // Add all form fields from full form
+      const formFields = document.querySelectorAll('#fullApplicationForm input, #fullApplicationForm select, #fullApplicationForm textarea');
+      formFields.forEach(field => {
+        if (field.name) {
+          if (field.type === 'file' && field.files.length > 0) {
+            formData.append(field.name, field.files[0]);
+          } else {
+            formData.append(field.name, field.value);
+          }
+        }
+      });
+
+      // Add privacy agreement to form data
+      formData.append('privacy_agreed', 'yes');
+
+      // Show loading state
+      const confirmBtn = document.getElementById('confirmPrivacyBtn');
+      const originalText = confirmBtn.innerHTML;
+      confirmBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Processing...';
+      confirmBtn.disabled = true;
+
+      // Simulate API call
+      setTimeout(() => {
+        // Close privacy popup
+        $.magnificPopup.close();
+
+        // Show success popup
+        setTimeout(() => {
+          $.magnificPopup.open({
+            items: {
+              src: '#success-popup',
+              type: 'inline'
+            }
+          });
+        }, 300);
+
+        // Reset full form after success
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000);
+
+        // Reset button state
+        confirmBtn.innerHTML = originalText;
+        confirmBtn.disabled = false;
+      }, 1500);
+    }
+
+    // Add event listeners for dynamic form elements
+    document.addEventListener('click', function (e) {
+      // Add income row
+      if (e.target.classList.contains('btn-outline-theme') && e.target.textContent.includes('Add Income')) {
+        e.preventDefault();
+        const table = e.target.closest('.table-responsive')?.querySelector('tbody');
+        if (table && table.rows.length > 0) {
+          const newRow = table.rows[0].cloneNode(true);
+          table.appendChild(newRow);
+        }
+      }
+
+      // Add expense row
+      if (e.target.classList.contains('btn-outline-theme') && e.target.textContent.includes('Add Expense')) {
+        e.preventDefault();
+        const expenseSection = e.target.closest('.expenditure-section');
+        const expenseRow = expenseSection.querySelector('.row').cloneNode(true);
+        expenseSection.insertBefore(expenseRow, e.target);
+      }
+
+      // Add reference
+      if (e.target.classList.contains('btn-outline-theme') && e.target.textContent.includes('Add Reference')) {
+        e.preventDefault();
+        const referenceSection = e.target.closest('.reference-section');
+        const referenceClone = referenceSection.cloneNode(true);
+        referenceSection.parentNode.insertBefore(referenceClone, referenceSection.nextSibling);
+      }
+    });
+
+
+
+
+
+
+    // Function to switch from quick to full form
+    window.switchToFullForm = function () {
+      if (fullAppBtn) {
+        fullAppBtn.click();
+      }
+    };
+
+    // Make goToStep function available globally
+    window.goToStep = goToStep;
   }
 
-  // Function to submit full application
-  function submitFullApplication() {
-    // Collect form data
-    const formData = new FormData();
 
-    // Add all form fields from full form
-    const formFields = document.querySelectorAll('#fullApplicationForm input, #fullApplicationForm select, #fullApplicationForm textarea');
-    formFields.forEach(field => {
-      if (field.name) {
-        if (field.type === 'file' && field.files.length > 0) {
-          formData.append(field.name, field.files[0]);
-        } else {
-          formData.append(field.name, field.value);
+  // Functionalities for car details page
+  function initCarDetailsPage() {
+    // Early exit if we're not on a car details page
+    if (!document.querySelector('.car-thumbnails-vertical') &&
+      !document.getElementById('mainCarImage')) {
+      return;
+    }
+
+    // 1. Magnific Popup for image gallery (with your custom arrow + zoom)
+    $('.image-popup-gallery').magnificPopup({
+      type: 'image',
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1],
+        arrowMarkup: '<button title="%title%" type="button" class="swiper mfp-arrow mfp-arrow-%dir%"><i class="fa-solid fa-chevron-%dir%"></i></button>',
+        tPrev: 'Previous (Left arrow key)',
+        tNext: 'Next (Right arrow key)',
+        tCounter: '<span class="mfp-counter">%curr% of %total%</span>'
+      },
+      zoom: {
+        enabled: true,
+        duration: 300,
+        easing: 'ease-in-out'
+      },
+      callbacks: {
+        beforeOpen: function () {
+          this.st.mainClass = 'mfp-zoom-in';
         }
       }
     });
 
-    // Add privacy agreement to form data
-    formData.append('privacy_agreed', 'yes');
+    // 2. Thumbnail → main image switching
+    const mainCarImage = document.getElementById('mainCarImage');
+    const mainImageLink = document.querySelector('.main-car-image');
+    const thumbnailItems = document.querySelectorAll('.car-thumbnails-vertical .thumbnail-item');
 
-    // Show loading state
-    const confirmBtn = document.getElementById('confirmPrivacyBtn');
-    const originalText = confirmBtn.innerHTML;
-    confirmBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Processing...';
-    confirmBtn.disabled = true;
+    if (!mainCarImage || !thumbnailItems.length) return;
 
-    // Simulate API call
-    setTimeout(() => {
-      // Close privacy popup
-      $.magnificPopup.close();
+    thumbnailItems.forEach(thumb => {
+      thumb.addEventListener('click', function (e) {
+        // Let Magnific Popup handle navigation/zoom — we just update preview
 
-      // Show success popup
-      setTimeout(() => {
-        $.magnificPopup.open({
-          items: {
-            src: '#success-popup',
-            type: 'inline'
-          }
-        });
-      }, 300);
+        // Remove active from all
+        thumbnailItems.forEach(item => item.classList.remove('active'));
 
-      // Reset full form after success
-      setTimeout(() => {
-        window.location.reload();
-      }, 3000);
+        // Activate clicked one
+        this.classList.add('active');
 
-      // Reset button state
-      confirmBtn.innerHTML = originalText;
-      confirmBtn.disabled = false;
-    }, 1500);
+        // Update main preview image
+        const newSrc = this.getAttribute('href');
+        if (newSrc) {
+          mainCarImage.src = newSrc;
+          if (mainImageLink) mainImageLink.href = newSrc;
+        }
+
+        // Smooth scroll thumbnail into view (nice UX)
+        this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    });
+
+    // 3. Enquiry form (very basic version – enhance later with fetch/axios if needed)
+    const enquiryForm = document.getElementById('enquiryForm');
+    if (enquiryForm) {
+      enquiryForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // ← Here you can later add real validation + AJAX/fetch
+        // For now: simple feedback
+        alert('Enquiry submitted successfully!');
+
+        // Close modal (assuming Bootstrap modal)
+        const modalEl = document.getElementById('enquiryModal');
+        if (modalEl) {
+          bootstrap.Modal.getInstance(modalEl)?.hide();
+        }
+      });
+    }
+
+    // 4. Optional: tooltips (already using Bootstrap)
+    $('[data-bs-toggle="tooltip"]').tooltip();
   }
 
-  // Add event listeners for dynamic form elements
-  document.addEventListener('click', function (e) {
-    // Add income row
-    if (e.target.classList.contains('btn-outline-theme') && e.target.textContent.includes('Add Income')) {
-      e.preventDefault();
-      const table = e.target.closest('.table-responsive')?.querySelector('tbody');
-      if (table && table.rows.length > 0) {
-        const newRow = table.rows[0].cloneNode(true);
-        table.appendChild(newRow);
+  // Functionalities for car stock page
+  function initMobileFiltersToggle() {
+    // Early return if elements don't exist (not on car-stock page)
+    const toggleBtn = document.getElementById('mobileFiltersToggle');
+    const hiddenPanel = document.querySelector('.mobile-hidden-filters');
+
+    if (!toggleBtn || !hiddenPanel) {
+      return;
+    }
+
+    const textSpan = toggleBtn.querySelector('span');
+    const icon = toggleBtn.querySelector('i');
+
+    // Safety check — if text/icon missing → still allow toggle, but no text/icon change
+    if (!textSpan || !icon) {
+      console.warn('Mobile filters toggle: span or icon element missing');
+    }
+
+    toggleBtn.addEventListener('click', function () {
+      hiddenPanel.classList.toggle('active');
+
+      const isOpen = hiddenPanel.classList.contains('active');
+
+      // Update text
+      if (textSpan) {
+        textSpan.textContent = isOpen ? 'Hide Filters' : 'Filters';
       }
-    }
 
-    // Add expense row
-    if (e.target.classList.contains('btn-outline-theme') && e.target.textContent.includes('Add Expense')) {
-      e.preventDefault();
-      const expenseSection = e.target.closest('.expenditure-section');
-      const expenseRow = expenseSection.querySelector('.row').cloneNode(true);
-      expenseSection.insertBefore(expenseRow, e.target);
-    }
+      // Update icon (Font Awesome classes)
+      if (icon) {
+        icon.className = isOpen
+          ? 'fas fa-times'
+          : 'fas fa-filter';
+      }
 
-    // Add reference
-    if (e.target.classList.contains('btn-outline-theme') && e.target.textContent.includes('Add Reference')) {
-      e.preventDefault();
-      const referenceSection = e.target.closest('.reference-section');
-      const referenceClone = referenceSection.cloneNode(true);
-      referenceSection.parentNode.insertBefore(referenceClone, referenceSection.nextSibling);
-    }
+      // Optional: accessibility improvement
+      toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // Optional: set initial ARIA state
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    toggleBtn.setAttribute('aria-controls', 'mobile-hidden-filters'); // if it has an id
+  }
+
+  // Initialize finance wizard when document is ready
+  $(document).ready(function () {
+    
+    initializeFinanceWizard();
+
+    // Car details page
+    initCarDetailsPage();
+
+    // Car stock listing page
+    initMobileFiltersToggle();
+
   });
-
-  // Function to switch from quick to full form
-  window.switchToFullForm = function () {
-    if (fullAppBtn) {
-      fullAppBtn.click();
-    }
-  };
-
-  // Make goToStep function available globally
-  window.goToStep = goToStep;
-}
-
-// Initialize finance wizard when document is ready
-$(document).ready(function () {
-  initializeFinanceWizard();
-});
-
 
 
   loader();
