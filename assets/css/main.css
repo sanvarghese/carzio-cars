@@ -4761,10 +4761,14 @@ span {
   flex: 1;
 }
 
-.section-title-area .section-title h2 {
+.section-title h2 {
   margin-bottom: 0;
   font-size: 36px;
   color: var(--white);
+}
+
+.section-title h2 span{
+  color: var(--theme);
 }
 
 
