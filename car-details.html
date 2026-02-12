@@ -60,7 +60,7 @@
 
   <a id="whatsapp-chat" class="whatsapp-chat" href="https://web.whatsapp.com/" target="_blank"
     rel="noopener noreferrer">
-    <i class="fa-brands fa-whatsapp"></i> 
+    <i class="fa-brands fa-whatsapp"></i>
   </a>
 
   <!-- Offcanvas Area Start -->
@@ -194,7 +194,7 @@
                     <li>
                       <a href="order.html" class="border-none"> Pre Order</a>
                     </li>
-                     <li>
+                    <li>
                       <a href="accessories.html">Accessories</a>
                     </li>
                     <li>
@@ -277,10 +277,6 @@
             </div>
           </div>
 
-          <!-- Left Column for Thumbnails -->
-
-          <!-- Right Column for Main Image -->
-
           <div class="col-lg-10 col-md-9 col-sm-12">
             <div class="car-gallery-wrapper">
               <!-- Main Image with Magnific Popup -->
@@ -291,6 +287,12 @@
                   <i class="fa-solid fa-expand"></i>
                 </div>
               </a>
+
+              <!-- ── NEW: Video play button overlay ── -->
+              <button type="button" class="video-play-btn" data-bs-toggle="modal" data-bs-target="#videoModal"
+                aria-label="Play video">
+                <i class="fa-solid fa-play"></i>
+              </button>
             </div>
           </div>
 
@@ -321,7 +323,6 @@
         <div class="row">
           <!-- Left Column - Main Content -->
           <div class="col-lg-8">
-
             <!-- New Action Buttons Section (Added Here) -->
             <div
               class="car-action-buttons mt-4 d-flex justify-content-between align-items-center flex-wrap wow fadeInUp"
@@ -611,8 +612,6 @@
               </div>
             </div>
 
-
-
             <!-- Details Grid Sections -->
             <div class="details-grid wow fadeInUp" data-wow-delay=".8s">
               <!-- Car Details Section -->
@@ -645,7 +644,8 @@
                   </div>
                 </div>
               </div>
-              <div class="sidebar-card wow fadeInUp" data-wow-delay=".7s">
+
+              <!-- <div class="sidebar-card wow fadeInUp" data-wow-delay=".7s">
                 <h3><i class="fa-solid fa-list-check me-2"></i> Key Specifications</h3>
                 <ul class="list-unstyled">
                   <li class="d-flex justify-content-between py-2 border-bottom">
@@ -681,7 +681,32 @@
                     <span class="fw-medium">3 Years</span>
                   </li>
                 </ul>
-              </div>
+              </div> -->
+
+              <!-- <div class="sidebar-card wow fadeInUp mt-4" data-wow-delay=".7s">
+                <h3><i class="fa-regular fa-video me-2"></i> Video Highlights</h3>
+                <div class="video-highlights">
+                  <div class="highlight-item mb-3">
+                    <div class="ratio ratio-16x9">
+                      <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/palMj0iq-3g?si=Vb3P7BfB_4HlBYiS" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="mt-2">
+                      <h6 class="text-white">Quick Walkaround</h6>
+                      <a href="#" class="text-theme" data-bs-toggle="tab" data-bs-target="#video">View Full Gallery <i
+                          class="fa-solid fa-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                  <div class="text-center mt-3">
+                    <button class="theme-btn-3 w-100" data-bs-toggle="tab" data-bs-target="#video">
+                      <i class="fa-regular fa-play-circle me-2"></i> Watch All Videos
+                    </button>
+                  </div>
+                </div>
+              </div> -->
 
             </div>
 
@@ -718,7 +743,6 @@
             <!-- Contact Card -->
             <div class="sidebar-card wow fadeInUp" data-wow-delay=".6s">
               <h3><i class="fa-solid fa-phone me-2"></i> Contact Dealer</h3>
-
               <div class="dealer-info mb-4">
                 <div class="d-flex align-items-center mb-3">
                   <div class="me-3">
@@ -1035,6 +1059,32 @@
     </div>
   </div>
 
+  <!-- Video Modal -->
+  <div class="modal fade video-modal" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title text-white" id="videoModalLabel">Toyota Supra 2024 – Walkaround</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0 ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/eSxxXh_ilHE?si=bKCGICb5YtXug9Gp"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('videoModal').addEventListener('hidden.bs.modal', function () {
+      var iframe = document.getElementById('youtubeIframe');
+      iframe.src = iframe.src;   // reset src → stops video
+    });
+  </script>
+
   <!--<< All JS Plugins >>-->
   <script src="assets/js/jquery-3.7.1.min.js"></script>
   <!--<< Bootstrap Js >>-->
@@ -1054,6 +1104,7 @@
   <script src="assets/js/wow.min.js"></script>
   <!--<< Main.js >>-->
   <script src="assets/js/main.js"></script>
+
 
   <script>
     // Initialize Wow.js

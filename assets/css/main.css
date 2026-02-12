@@ -3164,6 +3164,7 @@ span {
   width: 100%;
   border-bottom: 1px solid #eeeeee;
 }
+
 .navbar-2 .container .navbar-2-right .main-menu ul li .submenu li a:hover {
   color: var(--white) !important;
 }
@@ -4767,7 +4768,7 @@ span {
   color: var(--white);
 }
 
-.section-title h2 span{
+.section-title h2 span {
   color: var(--theme);
 }
 
@@ -15835,7 +15836,7 @@ span {
 
 .navbar-2 .container .navbar-2-right .main-menu ul li .submenu li:hover>a::after {
   color: var(--theme);
-  
+
 }
 
 .navbar-2 .container .navbar-2-right .main-menu ul li .submenu li:hover>.submenu {
@@ -25747,4 +25748,57 @@ span {
 /* Button text adjustment */
 #mobileFiltersToggle .fas {
   font-size: 14px;
+}
+
+
+/* Video play button on main image */
+.video-play-btn {
+  position: absolute;
+  top: 8%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  color: white;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s ease;
+  z-index: 15;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.video-play-btn:hover {
+  background: var(--theme, #e74c3c);
+  transform: translate(-50%, -50%) scale(1.12);
+  border-color: var(--theme, #e74c3c);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+.video-play-btn i {
+  margin-left: 4px;
+  /* small nudge for perfect centering with fa-play */
+}
+
+/* Make sure main image stays clickable */
+/* .main-car-image {
+  position: relative;
+  z-index: 10;
+  display: block;
+} */
+
+/* Optional: darken image a tiny bit when video button is visible */
+.car-gallery-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.25));
+  z-index: 5;
+  pointer-events: none;
+  border-radius: inherit;
 }
