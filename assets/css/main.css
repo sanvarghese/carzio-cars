@@ -23981,12 +23981,55 @@ span {
   justify-content: center;
   transform: scale(0.9);
   transition: transform 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  top: 260px;
+  left: 500px;
 }
 
 .main-car-image:hover .image-overlay i {
   transform: scale(1);
   background: rgba(189, 12, 7, 1);
 }
+
+
+
+
+
+
+.video-section iframe {
+  border-radius: 12px;
+}
+
+.video-card h6 {
+  font-weight: 500;
+}
+
+.video-card {
+  transition: 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Badges position adjustment */
 .car-gallery-wrapper .car-badges {
@@ -25356,6 +25399,8 @@ span {
     display: none;
   }
 }
+
+/* prev next  button closing issue solved by this css */
 .mfp-arrow i {
   pointer-events: none;
 }
