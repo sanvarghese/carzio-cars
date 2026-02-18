@@ -5530,7 +5530,8 @@ span {
 
 /* Vehicle Grid */
 .vehicle-type-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 30px;
   margin-top: 40px;
@@ -7519,7 +7520,9 @@ span {
   .car-box-items .car-list-items .price-items h3 {
     font-size: 16px;
   }
-
+  .feature-car-wrapper .car-list-box .form-clt span{
+    font-size: 12px !important;
+  }
 }
 
 @media(max-width: 1784px) {
@@ -22643,6 +22646,9 @@ span {
     flex-direction: column;
     align-items: flex-start;
   }
+  .car-section.car-sock-section button{
+    font-size: 12px;
+  }
 }
 
 .car-section.car-sock-section button {
@@ -24045,7 +24051,7 @@ span {
     font-size: 14px;
   }
 }
-  
+
 
 
 
@@ -25754,7 +25760,7 @@ span {
 /* ──────────────────────────────────────────────── */
 /* Mobile Filters Styles */
 #mobileFiltersToggle {
-  padding: 12px 20px;
+  padding: 9px 20px;
   font-size: 15px;
   background-color: var(--theme2);
   border: none;
@@ -25762,6 +25768,7 @@ span {
   color: white;
   transition: all 0.3s ease;
   cursor: pointer;
+  width: 100%;
 }
 
 #mobileFiltersToggle:hover {
@@ -25815,8 +25822,8 @@ span {
 
   .vehicle-type-grid {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px !important;
+    /* grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important; */
   }
 
   .vehicle-type-card {
