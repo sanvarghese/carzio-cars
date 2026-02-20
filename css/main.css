@@ -14622,11 +14622,17 @@ span {
   .footer-3 {
     padding-top: 100px 0px;
   }
+  .footer-3-contact {
+    margin-bottom: 12px;
+  }
 }
 
 @media (max-width: 991px) {
   .footer-3 {
     padding-top: 80px 0;
+  }
+  .footer-3-contact {
+    margin-bottom: 12px;
   }
 }
 
@@ -14651,7 +14657,6 @@ span {
 .footer-3-contact div.icon i {
   font-size: 20px;
   /* color: #dadada; */
-
   color: var(--white);
 }
 
@@ -22635,7 +22640,7 @@ span {
 
 @media (max-width: 767px) {
   .car-image img {
-    height: 180px;
+    height: 300px;
   }
 
   .car-list-items {
